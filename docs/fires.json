@@ -1,18 +1,17 @@
 {
-  "updated_at": "2026-08-28T14:16:37.160623+09:00",
+  "updated_at": "2026-08-28T14:25:35.936999+09:00",
   "fires": [
     {
       "source": "구글뉴스",
-      "title": "인천 해상서 석유 운반선 화재로 2명 사망…5시간만에 진화(종합2보) - 연합뉴스",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1uX3V3M01pZFdKT2Y3QUkwYjczXzJrRVRmQURSMFBiV01YaXBYN3hXMjdVVThqTVJQb3JPQ3VfUkxaajF5eWxOV3JEQUhVdVNwWS1NZ2pxU0tsUmNyMUlyVNIBYEFVX3lxTE1uX3V3M01pZFdKT2Y3QUkwYjczXzJrRVRmQURSMFBiV01YaXBYN3hXMjdVVThqTVJQb3JPQ3VfUkxaajF5eWxOV3JEQUhVdVNwWS1NZ2pxU0tsUmNyMUlyVA?oc=5",
-      "published": "2026-08-28T06:00:31+09:00",
-      "raw_text": "인천 해상서 석유 운반선 화재로 2명 사망…5시간만에 진화(종합2보) - 연합뉴스",
+      "title": "인천 앞바다 7333t 유조선 불… 2명 사망·16명 구조 - 문화일보",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9EZXJoR2ZxSlktMWR1UHh1OXJpcDR0eC1Vb0lRX3dhbWRSc0VrREFFNnpaLWJBV05lV24yTFhDTy02SUdKa2wwQ3NlWTNHQU9P?oc=5",
+      "published": "2026-08-28T12:06:38+09:00",
+      "raw_text": "인천 앞바다 7333t 유조선 불… 2명 사망·16명 구조 - 문화일보",
       "region": "인천광역시",
       "id": "9f99a08cdd78",
       "lat": 37.4560044656442,
       "lon": 126.705258070068,
-      "distance_km": 25.1,
-      "first_seen": "2026-08-28T14:16:37.160519+09:00"
+      "distance_km": 25.1
     },
     {
       "source": "구글뉴스",
@@ -24,8 +23,7 @@
       "id": "4ebfa062ec50",
       "lat": 37.6360236390492,
       "lon": 127.216475764948,
-      "distance_km": 33.9,
-      "first_seen": "2026-08-28T14:16:37.160519+09:00"
+      "distance_km": 33.9
     },
     {
       "source": "구글뉴스",
@@ -37,8 +35,7 @@
       "id": "4291c3f6d54c",
       "lat": 37.1995372034717,
       "lon": 126.831477350333,
-      "distance_km": 51.0,
-      "first_seen": "2026-08-28T14:16:37.160519+09:00"
+      "distance_km": 51.0
     }
   ]
 }
