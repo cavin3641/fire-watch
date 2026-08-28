@@ -1,4 +1,44 @@
 {
-  "updated_at": "2026-08-28T10:46:01.263613+09:00",
-  "fires": []
+  "updated_at": "2026-08-28T14:16:37.160623+09:00",
+  "fires": [
+    {
+      "source": "구글뉴스",
+      "title": "인천 해상서 석유 운반선 화재로 2명 사망…5시간만에 진화(종합2보) - 연합뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1uX3V3M01pZFdKT2Y3QUkwYjczXzJrRVRmQURSMFBiV01YaXBYN3hXMjdVVThqTVJQb3JPQ3VfUkxaajF5eWxOV3JEQUhVdVNwWS1NZ2pxU0tsUmNyMUlyVNIBYEFVX3lxTE1uX3V3M01pZFdKT2Y3QUkwYjczXzJrRVRmQURSMFBiV01YaXBYN3hXMjdVVThqTVJQb3JPQ3VfUkxaajF5eWxOV3JEQUhVdVNwWS1NZ2pxU0tsUmNyMUlyVA?oc=5",
+      "published": "2026-08-28T06:00:31+09:00",
+      "raw_text": "인천 해상서 석유 운반선 화재로 2명 사망…5시간만에 진화(종합2보) - 연합뉴스",
+      "region": "인천광역시",
+      "id": "9f99a08cdd78",
+      "lat": 37.4560044656442,
+      "lon": 126.705258070068,
+      "distance_km": 25.1,
+      "first_seen": "2026-08-28T14:16:37.160519+09:00"
+    },
+    {
+      "source": "구글뉴스",
+      "title": "남양주 만두 공장서 화재… 60대 남성 연기 흡입, 건물 2개동 태워 - 조선일보",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPYlpKSjdJclZMdDJfVURJV0ZsQ0E0dEgwNkdnU1BzaFp2YTY1ZXRCWm5reWwwVHZMbGMtYmVyVlhDT3dJTkoxRmM4LUFyMUhhdndjMm9uMWl4RUtuOXo1ZjNxWWRlRlRrZml5dEtOZ2RLZ2hhMXBGandydUlrMk1nV3lhemVHVFgtR1d2bXhOOUQ?oc=5",
+      "published": "2026-08-27T14:34:59+09:00",
+      "raw_text": "남양주 만두 공장서 화재… 60대 남성 연기 흡입, 건물 2개동 태워 - 조선일보",
+      "region": "경기도 남양주",
+      "id": "4ebfa062ec50",
+      "lat": 37.6360236390492,
+      "lon": 127.216475764948,
+      "distance_km": 33.9,
+      "first_seen": "2026-08-28T14:16:37.160519+09:00"
+    },
+    {
+      "source": "구글뉴스",
+      "title": "화성 컨베이어 장치 제조공장서 화재…1시간 40여분 만에 진화 - 뉴스1",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE41dVhZOHloZnNYM0VLNW9Zb3lHTERYRHN3UFhUa2F3dDl1eWg2NDM2QWJoZjUybTR5b2ZPX1U2cWM1RG9UeC1aMHFwdDNFbkRhVDZwcmlYOC1KRkXSAVtBVV95cUxONXVYWTh5aGZzWDNFSzVvWW95R0xEWERzd1BYVGthd3Q5dXloNjQzNkFiaGY1Mm00eW9mT19VNnFjNURvVHgtWjBxcHQzRW5EYVQ2cHJpWDgtSkZF?oc=5",
+      "published": "2026-08-28T07:48:32+09:00",
+      "raw_text": "화성 컨베이어 장치 제조공장서 화재…1시간 40여분 만에 진화 - 뉴스1",
+      "region": "경기도 화성",
+      "id": "4291c3f6d54c",
+      "lat": 37.1995372034717,
+      "lon": 126.831477350333,
+      "distance_km": 51.0,
+      "first_seen": "2026-08-28T14:16:37.160519+09:00"
+    }
+  ]
 }
