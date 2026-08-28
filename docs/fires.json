@@ -1,6 +1,45 @@
 {
-  "updated_at": "2026-08-28T22:24:30.626028+09:00",
+  "updated_at": "2026-08-29T08:10:09.830762+09:00",
   "fires": [
+    {
+      "source": "구글뉴스",
+      "title": "인천 주택 화재로 1명 사망·4명 부상…밤사이 사건·사고 - KBS 뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9pT2lDV1RFWEZHTHgwMDNZRC1CMWkycUN0SmRiT0xJbktpYjRSbmE4RmxuY1pCWnJsYzBYbjQySHRxN0NkVFQ5RVJZd0tOcE5xTThVNkZ3NDNwMVk?oc=5",
+      "published": "2026-08-29T07:13:00+09:00",
+      "raw_text": "인천 주택 화재로 1명 사망·4명 부상…밤사이 사건·사고 - KBS 뉴스",
+      "region": "인천광역시",
+      "id": "fda3ebdc3849",
+      "lat": 37.4560044656442,
+      "lon": 126.705258070068,
+      "distance_km": 25.1,
+      "first_seen": "2026-08-29T08:10:09.830670+09:00"
+    },
+    {
+      "source": "구글뉴스",
+      "title": "인천 연수구 다가구주택서 화재…1명 심정지·4명 중경상 - 연합뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE42bFpJVTVPVEpIOUxvN2FkazNvekZ5TVQxU0FVY1JEakc3bXlHM1RUTXFVRDNUMGFZZndXUlZMaUZsUm1FY280N2hyUWNvNmdMQ0E2WnNPYW5aV3ZaR1JoV9IBYEFVX3lxTE42bFpJVTVPVEpIOUxvN2FkazNvekZ5TVQxU0FVY1JEakc3bXlHM1RUTXFVRDNUMGFZZndXUlZMaUZsUm1FY280N2hyUWNvNmdMQ0E2WnNPYW5aV3ZaR1JoVw?oc=5",
+      "published": "2026-08-29T05:28:22+09:00",
+      "raw_text": "인천 연수구 다가구주택서 화재…1명 심정지·4명 중경상 - 연합뉴스",
+      "region": "인천광역시 연수",
+      "id": "743ca1127c0a",
+      "lat": 37.4101013788809,
+      "lon": 126.678274850516,
+      "distance_km": 30.8,
+      "first_seen": "2026-08-29T08:10:09.830670+09:00"
+    },
+    {
+      "source": "구글뉴스",
+      "title": "인천 옥련동 다가구주택서 불…1명 심정지·4명 부상 - 경기일보",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8zUndNZlRuOG03OVZGNHB6LW81aXNSNXZPRGh3RlgyWEJnd0dNN2NBckN6c0h0ZTllQXBMS0VFdV9raE12VUhPTzhKbnNZZkMwRzdlRXF6cXQ0UEE?oc=5",
+      "published": "2026-08-29T07:37:31+09:00",
+      "raw_text": "인천 옥련동 다가구주택서 불…1명 심정지·4명 부상 - 경기일보",
+      "region": "인천광역시 옥련동",
+      "id": "ad74be9aef5f",
+      "lat": 37.4274077931912,
+      "lon": 126.655166478511,
+      "distance_km": 30.0,
+      "first_seen": "2026-08-29T08:10:09.830670+09:00"
+    },
     {
       "source": "구글뉴스",
       "title": "화성 동탄 상가주택서 화재…1명 부상·한때 대응 1단계(종합) - 연합뉴스",
@@ -11,8 +50,7 @@
       "id": "7385c2f615ce",
       "lat": 37.1995372034717,
       "lon": 126.831477350333,
-      "distance_km": 51.0,
-      "first_seen": "2026-08-28T22:24:30.625955+09:00"
+      "distance_km": 51.0
     },
     {
       "source": "구글뉴스",
