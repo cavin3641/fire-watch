@@ -1,6 +1,19 @@
 {
-  "updated_at": "2026-08-28T15:21:25.460426+09:00",
+  "updated_at": "2026-08-28T22:24:30.626028+09:00",
   "fires": [
+    {
+      "source": "구글뉴스",
+      "title": "화성 동탄 상가주택서 화재…1명 부상·한때 대응 1단계(종합) - 연합뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9sdzZpRDJhYThvak5TQXN4RUFodHhNcG9JUlo1TjEwWXY0dnMySjdxa2ZfQ0t3M3Y2OXQ3RjRyZW1CV0VzMlZhM1RXdVRBZmFQX2J1SFNiQ3l3Q1XSAWBBVV95cUxQSFlNQUQ5Y19KVTVIa2kxeU1KZTNNbjJ3eDBSdExmRkowR18yUDlWSGM3M3JxYktNRTFtV0k3WFZWa1ZPbHhjaWdiUFdPek1YUkpfV3I0SFFvSXd2WWFyZVE?oc=5",
+      "published": "2026-08-28T18:21:32+09:00",
+      "raw_text": "화성 동탄 상가주택서 화재…1명 부상·한때 대응 1단계(종합) - 연합뉴스",
+      "region": "경기도 화성",
+      "id": "7385c2f615ce",
+      "lat": 37.1995372034717,
+      "lon": 126.831477350333,
+      "distance_km": 51.0,
+      "first_seen": "2026-08-28T22:24:30.625955+09:00"
+    },
     {
       "source": "구글뉴스",
       "title": "남양주 식품공장 화재로 2개 동 피해…60대 남성 병원 이송 - 매일안전신문",
@@ -16,7 +29,7 @@
     {
       "source": "구글뉴스",
       "title": "화성 컨베이어 장치 제조공장서 화재…1시간 40여분 만에 진화 - 뉴스1",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE41dVhZOHloZnNYM0VLNW9Zb3lHTERYRHN3UFhUa2F3dDl1eWg2NDM2QWJoZjUybTR5b2ZPX1U2cWM1RG9UeC1aMHFwdDNFbkRhVDZwcmlYOC1KRkXSAVtBVV95cUxONXVYWTh5aGZzWDNFSzVvWW95R0xEWERzd1BYVGthd3Q5dXloNjQzNkFiaGY1Mm00eW9mT19VNnFjNURvVHgtWjBxcHQzRW5EYVQ2cHJpWDgtSkZF?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE55TVdDeVdINUVscERPdlNXZDRqMWtRVjVlblFvcU1Ib0lHdGNDbXVPeTdJZzl5R3BvTVlFa1plZnBFd0p0ZEFLd2FSeGthWkxjdnVjMGNB0gFbQVVfeXFMTjV1WFk4eWhmc1gzRUs1b1lveUdMRFhEc3dQWFRrYXd0OXV5aDY0MzZBYmhmNTJtNHlvZk9fVTZxYzVEb1R4LVowcXB0M0VuRGFUNnByaVg4LUpGRQ?oc=5",
       "published": "2026-08-28T07:48:32+09:00",
       "raw_text": "화성 컨베이어 장치 제조공장서 화재…1시간 40여분 만에 진화 - 뉴스1",
       "region": "경기도 화성",
