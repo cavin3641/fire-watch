@@ -14,13 +14,19 @@ def fetch(page_size=100):
         "pageNo": 1,
         "numOfRows": page_size,
     }
-    try:
-        res = requests.get(BASE_URL + API_PATH, params=params, timeout=15)
-        res.raise_for_status()
-        data = res.json()
-    except Exception as e:
-        print(f"  [실패] 재난문자 API: {e}")
+      data = None
+    for attempt in range(3):
+        try:
+            res = requests.get(BASE_URL + API_PATH, params=params, timeout=40)
+            res.raise_for_status()
+            data = res.json()
+            break
+        except Exception as e:
+            print(f"  [재시도 {attempt + 1}/3] 재난문자: {type(e).__name__}")
+    if data is None:
+        print("  [실패] 재난문자 API 접속 불가")
         return []
+      print(f"  [진단] header: {data.get('header')}")
     print(f"  [진단] 응답 키: {list(data.keys())}")
     body = data.get("body") or []
     if isinstance(body, dict):
