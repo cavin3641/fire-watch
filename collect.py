@@ -12,7 +12,7 @@ import config
 import filters
 import geocode
 import notify
-from sources import google_news, naver_news, disaster_msg
+from sources import google_news, naver_news, disaster_msg, local_news
 
 KST = timezone(timedelta(hours=9))
 
@@ -38,6 +38,8 @@ def collect_all():
     print("[2] 구글 뉴스 확인 중...")
     for kw in config.SEARCH_KEYWORDS:
         items += google_news.fetch(kw)
+    print("[2-1] 지역 언론 확인 중...")
+    items += local_news.fetch()
 
     print("[3] 네이버 뉴스 확인 중...")
     for kw in config.SEARCH_KEYWORDS:
