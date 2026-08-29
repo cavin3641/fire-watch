@@ -14,6 +14,7 @@ from urllib.parse import urlencode
 from datetime import datetime, timezone, timedelta
 
 import requests
+from pyproj import Transformer
 
 KST = timezone(timedelta(hours=9))
 
@@ -31,6 +32,46 @@ SIDO = {
     "28": "인천광역시",
     "41": "경기도",
 }
+
+# 소방청 좌표계(EPSG:5186) -> 위경도(EPSG:4326) 변환기
+_TRANS = Transformer.from_crs("EPSG:5186", "EPSG:4326", always_xy=True)
+
+
+def _to_latlon(gis_x, gis_y, region):
+    """소방청 좌표를 지도에 찍을 위경도로 바꿉니다.
+
+    사이트 자바스크립트와 동일하게 지역별 보정을 먼저 합니다.
+    이 좌표는 읍면동 중심이 아니라 실제 출동 지점입니다.
+    """
+    if not gis_x or not gis_y:
+        return None
+    x, y = float(gis_x), float(gis_y)
+
+    if any(k in region for k in ("경기", "인천", "서울", "강원")):
+        if y < 480000:
+            y += 100000
+    elif any(k in region for k in ("충청", "세종", "대전", "전라북도")):
+        if y < 390000:
+            y += 100000
+    elif any(k in region for k in ("전라남도", "경상남도", "대구", "부산", "울산", "광주")):
+        if y < 250000:
+            y += 100000
+    elif "경상북도" in region:
+        if y < 350000:
+            y += 100000
+    elif "제주" in region:
+        if y < 50000:
+            y += 50000
+
+    try:
+        lon, lat = _TRANS.transform(x, y)
+    except Exception:
+        return None
+    # 한반도 밖이면 버립니다
+    if not (33 < lat < 39 and 124 < lon < 132):
+        return None
+    return lat, lon
+
 
 MAX_PAGES = 12          # 시도당 최대 페이지 (한 페이지 5건 -> 최대 60건)
 SLEEP_SEC = 0.7         # 사이트에 부담 주지 않도록 쉬어 갑니다
@@ -80,7 +121,9 @@ def fetch():
                 if not region:
                     continue
 
-                results.append({
+                coords = _to_latlon(row.get("gisX"), row.get("gisY"), region)
+
+                item = {
                     "source": "소방출동",
                     "title": f"{kind} - {region}",
                     "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
@@ -88,7 +131,10 @@ def fetch():
                     "region": region,
                     "kind": kind,
                     "raw_text": f"{kind} {region} 화재 발생",
-                })
+                }
+                if coords:
+                    item["lat"], item["lon"] = coords
+                results.append(item)
                 got += 1
 
             if page >= payload.get("totalPages", 1):
