@@ -35,8 +35,16 @@ def send(text):
 
 def format_alert(fire):
     """알림 문구를 만듭니다. 여기 문구는 마음대로 바꾸세요."""
-    lines = [f"🔥 {fire.get('region') or '위치 미상'}"]
-    lines.append(fire.get("title", "")[:120])
+    grade = fire.get("grade") or ""
+    head = f"{grade} " if grade else ""
+    lines = [f"🔥 {head}{fire.get('region') or '위치 미상'}"]
+    if fire.get("kind"):
+        detail = fire["kind"]
+        if fire.get("scope"):
+            detail += f" · {fire['scope']}"
+        lines.append(detail)
+    if fire.get("source") != "소방출동":
+        lines.append(fire.get("title", "")[:120])
 
     tail = []
     if fire.get("distance_km") is not None:
@@ -46,6 +54,10 @@ def format_alert(fire):
     if tail:
         lines.append(" · ".join(tail))
 
-    if fire.get("url"):
+    if fire.get("in_news"):
+        lines.append("※ 뉴스 보도됨 - 경쟁 업체도 인지")
+    if fire.get("news_url"):
+        lines.append(fire["news_url"])
+    elif fire.get("url"):
         lines.append(fire["url"])
     return "\n".join(lines)

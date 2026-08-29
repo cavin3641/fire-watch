@@ -89,6 +89,8 @@ def process(items):
         located.append(f)
 
     print(f"    -> 좌표 확보 {len(located)}건")
+
+    # 우선순위 점수 (뉴스에 난 건은 경쟁이 몰리므로 감점)
     priority.mark_news_overlap(located)
     for f in located:
         f["score"] = priority.score(f)
@@ -135,7 +137,7 @@ def save(fires):
     }
     with open(config.OUTPUT_JSON, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
-    print(f"[8] 저장 완료 -> {config.OUTPUT_JSON} ({len(fires)}건)")
+    print(f"[9] 저장 완료 -> {config.OUTPUT_JSON} ({len(fires)}건)")
 
 
 def main():
@@ -154,7 +156,7 @@ def main():
 
     save(merge_and_trim(previous, fires))
 
-    print(f"[9] 새 소식 {len(new_ones)}건 알림 발송")
+    print(f"[10] 새 소식 {len(new_ones)}건 알림 발송")
     for f in new_ones:
         notify.send(notify.format_alert(f))
 
