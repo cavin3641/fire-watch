@@ -12,7 +12,7 @@ import config
 import filters
 import geocode
 import notify
-from sources import google_news, naver_news, disaster_msg, local_news
+from sources import google_news, naver_news, disaster_msg, local_news, fire_dispatch
 
 KST = timezone(timedelta(hours=9))
 
@@ -32,16 +32,20 @@ def collect_all():
     """1단계 - 모든 곳에서 소식을 긁어옵니다."""
     items = []
 
+    print("[0] 소방청 출동정보 확인 중...")
+    items += fire_dispatch.fetch()
+
     print("[1] 재난문자 확인 중...")
     items += disaster_msg.fetch()
 
     print("[2] 구글 뉴스 확인 중...")
     for kw in config.SEARCH_KEYWORDS:
         items += google_news.fetch(kw)
-    print("[2-1] 지역 언론 확인 중...")
+
+    print("[3] 지역 언론 확인 중...")
     items += local_news.fetch()
 
-    print("[3] 네이버 뉴스 확인 중...")
+    print("[4] 네이버 뉴스 확인 중...")
     for kw in config.SEARCH_KEYWORDS:
         items += naver_news.fetch(kw)
 

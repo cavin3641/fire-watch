@@ -61,16 +61,29 @@ NOISE_WORDS = [
 AGENCY_PATTERN = re.compile(r"(소방서|소방본부|소방청|안전공사|소방재난본부)\s*[,장]")
 
 
+# 소방청 출동정보의 화재 분류 중 '건물'로 볼 것
+DISPATCH_BUILDING = ["고층건물", "아파트", "일반화재"]
+
+
 def is_fire_news(item):
     """진짜 화재 '사건' 소식인지 판단합니다."""
     text = item.get("raw_text", "")
+
+    # 소방청 출동정보는 분류값으로 판단합니다
+    if item.get("source") == "소방출동":
+        kind = item.get("kind", "")
+        if "차량)" in kind:            # '일반화재(차량)' = 차만 탄 것
+            return False
+        return any(k in kind for k in DISPATCH_BUILDING)
 
     # 재난문자는 그 자체가 사건이므로 통과
     if item.get("source") == "재난문자":
         return "화재" in text or "불" in text
 
-        if "화재" not in text:
-        FIRE_WORDS = ["불이 나", "불이 났", "불에 타", "불길", "서 불", "에 불", "큰불", "잔불"]
+    # '불신', '불법', '불투명'처럼 '불'이 들어간 다른 낱말은 걸러냅니다
+    if "화재" not in text:
+        FIRE_WORDS = ["불이 나", "불이 났", "불에 타", "불길", "불을 껐",
+                      "서 불", "에 불", "불 나", "큰불", "잔불", "불꽃"]
         if not any(w in text for w in FIRE_WORDS):
             return False
     # 건물 화재만 남깁니다
@@ -150,10 +163,17 @@ def extract_region(item):
 
     # 2) 전국에서 이름이 겹치지 않는 시군구를 먼저 찾습니다
     #    ("전남광주 광양시"를 광주광역시로 잘못 읽는 것을 막습니다)
-    gun = _match_gun(text, regions.UNIQUE_SIGUNGU.keys())
-    if gun:
-        sido = regions.UNIQUE_SIGUNGU[gun]
-        return " ".join(x for x in (sido, gun, dong) if x)
+    # 제목 앞쪽에 나온 지명을 우선합니다.
+    # ("천안 성남면"의 뒤쪽 '성남'을 경기 성남시로 읽는 것을 막습니다)
+    best, best_pos = None, len(text) + 1
+    for g in regions.UNIQUE_SIGUNGU:
+        for suffix in ("시", "군", "구", ""):
+            pos = text.find(g + suffix)
+            if 0 <= pos < best_pos:
+                best, best_pos = g, pos
+                break
+    if best:
+        return " ".join(x for x in (regions.UNIQUE_SIGUNGU[best], best, dong) if x)
 
     # 3) 시도를 찾고, 그 안에서 시군구를 찾습니다
     for short, full in list(regions.SIDO_ALIASES.items()) + list(regions.SIDO.items()):
