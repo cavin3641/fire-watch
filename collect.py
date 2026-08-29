@@ -12,6 +12,7 @@ import config
 import filters
 import geocode
 import notify
+import priority
 from sources import google_news, naver_news, disaster_msg, local_news, fire_dispatch
 
 KST = timezone(timedelta(hours=9))
@@ -88,6 +89,13 @@ def process(items):
         located.append(f)
 
     print(f"    -> 좌표 확보 {len(located)}건")
+    priority.mark_news_overlap(located)
+    for f in located:
+        f["score"] = priority.score(f)
+        f["grade"] = priority.grade(f["score"])
+    located.sort(key=lambda x: -x["score"])
+    top = len([f for f in located if f["score"] >= 50])
+    print(f"[8] 우선방문 대상(★★ 이상) {top}건")
     return located
 
 
