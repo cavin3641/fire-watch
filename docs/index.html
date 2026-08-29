@@ -23,7 +23,10 @@
     display:flex; flex-direction:column;
     font-size:17px;
   }
-
+  .grade{font-size:15px; font-weight:800; letter-spacing:-1.5px; color:var(--hot); margin-right:7px}
+  .grade.g1{color:var(--cool)}
+  .card.top{background:rgba(255,90,31,.06)}
+  .tag.news{border-color:var(--cool); color:var(--cool)}
   header{
     padding:14px 18px calc(14px + env(safe-area-inset-top)) 18px;
     border-bottom:1px solid var(--line);
@@ -102,7 +105,8 @@ function elapsedText(iso) {
 /* ── 화면 그리기 ──────────────────────────────── */
 function render(data) {
   const fires = data.fires || [];
-  document.getElementById('count').textContent = fires.length;
+    const topN = fires.filter(f => (f.score || 0) >= 50).length;
+  document.getElementById('count').textContent = topN > 0 ? ('★' + topN + ' / ' + fires.length) : fires.length;
   document.getElementById('updated').textContent =
     new Date(data.updated_at).toLocaleTimeString('ko-KR', {hour:'2-digit', minute:'2-digit'}) + ' 갱신';
 
@@ -113,7 +117,7 @@ function render(data) {
     list.innerHTML = '<div class="empty">수도권에 잡힌 화재 소식이 없습니다.<br>10분마다 자동으로 확인합니다.</div>';
     return;
   }
-
+  fires.sort((a, b) => (b.score || 0) - (a.score || 0));
   const bounds = new kakao.maps.LatLngBounds();
 
   fires.forEach(f => {
@@ -133,14 +137,12 @@ function render(data) {
     /* 목록 카드 */
     const isOld = f.published && (Date.now() - new Date(f.published)) > 6 * 3600 * 1000;
     const card = document.createElement('div');
-    card.className = 'card';
+        card.className = 'card' + ((f.score || 0) >= 50 ? ' top' : '');
     card.innerHTML = `
       <div class="elapsed ${isOld ? 'old' : ''}">${elapsedText(f.published)}</div>
-      <div class="region">${f.region || '위치 미상'}</div>
-      <div class="title">${f.title || ''}</div>
+      <div class="region">${f.grade ? `<span class="grade ${f.grade.length < 2 ? 'g1' : ''}">${f.grade}</span>` : ''}${f.region || '위치 미상'}</div>
+      <div class="title">${f.kind ? (f.kind + (f.scope ? ' · ' + f.scope : '')) : (f.title || '')}</div>
       <div class="tags">
-        <span class="tag ${f.source === '재난문자' ? 'alert' : ''}">${f.source}</span>
-        ${f.distance_km != null ? `<span class="tag">${f.distance_km}km</span>` : ''}
       </div>`;
     card.onclick = () => {
       map.setLevel(5);
