@@ -1,18 +1,30 @@
 {
-  "updated_at": "2026-08-29T08:10:09.830762+09:00",
+  "updated_at": "2026-08-29T09:59:46.333257+09:00",
   "fires": [
     {
       "source": "구글뉴스",
+      "title": "김포 양촌읍 공장 화재…자체 진화 중 2명 경상 - 뉴시스",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE0xOHVNNFdIOHI4dVd6RkgydlgxOFByWGVlVks1Q1I5SHIzWWU5Q1VxbUdNQi03Sk5qM3F2cEloQ05wbWhKbUhaLTdsUE1NU2lRTk9IQVZ6a05nU1NJbVhKZNIBeEFVX3lxTE9mdDZCd0dxaW9vV29ZS1BQRDQwaTR0eE9Db1JKR2l4Ym1ydWVYZ0JGdmdwMzZ2aUFteDZjZ0VKbFh1U1diWm82ejlta2hibjZYdmtPdlpxaGdZTHM4MG1heTlwbDBDVTNJUHBmaEFHZGNKQk1BdEYtYg?oc=5",
+      "published": "2026-08-29T09:52:13+09:00",
+      "raw_text": "김포 양촌읍 공장 화재…자체 진화 중 2명 경상 - 뉴시스",
+      "region": "경기도 김포 양촌읍",
+      "id": "bbb5f91c6245",
+      "lat": 37.6571252239981,
+      "lon": 126.625498579495,
+      "distance_km": 18.2,
+      "first_seen": "2026-08-29T09:59:46.333170+09:00"
+    },
+    {
+      "source": "구글뉴스",
       "title": "인천 주택 화재로 1명 사망·4명 부상…밤사이 사건·사고 - KBS 뉴스",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9pT2lDV1RFWEZHTHgwMDNZRC1CMWkycUN0SmRiT0xJbktpYjRSbmE4RmxuY1pCWnJsYzBYbjQySHRxN0NkVFQ5RVJZd0tOcE5xTThVNkZ3NDNwMVk?oc=5",
-      "published": "2026-08-29T07:13:00+09:00",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBZb3g0UllCRUpuci1rLTkyb012ZGNZV3ROREZBWXBnRXItczdDRGdLYVRYVEJ1alU1bGZPZW4ySmxSM2xRQ0M0TFNIVnJ5NllCaGtYU1VhWmxlWmc?oc=5",
+      "published": "2026-08-29T09:33:00+09:00",
       "raw_text": "인천 주택 화재로 1명 사망·4명 부상…밤사이 사건·사고 - KBS 뉴스",
       "region": "인천광역시",
       "id": "fda3ebdc3849",
       "lat": 37.4560044656442,
       "lon": 126.705258070068,
-      "distance_km": 25.1,
-      "first_seen": "2026-08-29T08:10:09.830670+09:00"
+      "distance_km": 25.1
     },
     {
       "source": "구글뉴스",
@@ -24,21 +36,19 @@
       "id": "743ca1127c0a",
       "lat": 37.4101013788809,
       "lon": 126.678274850516,
-      "distance_km": 30.8,
-      "first_seen": "2026-08-29T08:10:09.830670+09:00"
+      "distance_km": 30.8
     },
     {
       "source": "구글뉴스",
-      "title": "인천 옥련동 다가구주택서 불…1명 심정지·4명 부상 - 경기일보",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8zUndNZlRuOG03OVZGNHB6LW81aXNSNXZPRGh3RlgyWEJnd0dNN2NBckN6c0h0ZTllQXBMS0VFdV9raE12VUhPTzhKbnNZZkMwRzdlRXF6cXQ0UEE?oc=5",
-      "published": "2026-08-29T07:37:31+09:00",
-      "raw_text": "인천 옥련동 다가구주택서 불…1명 심정지·4명 부상 - 경기일보",
+      "title": "인천 옥련동 다세대주택 화재, 1명 사망·4명 중경상 - 뉴시스",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1KY1hMbFRfUWtvaXM5eEY0cHJNUndPY2JXUFhWeFZzOF92UGVzZ2RjUGpsTVByQy1DRWRnWUVBSkxQQkRDQXNEYU8xNXZmelRwRW1iUUk2RW1nQ2NyOEIzYtIBeEFVX3lxTE5LN1MweGpyamtzbGlKUm5sanN1Um1VRmVUMlVvWmFMWmNMQXZKSTNuVmdjZFIzY1dMN3FFeW5HcG9aUkIwWE5ycXRiVGNfaDluclpiRGJ4d0oxTGR3NEQzMHdMRFc4V21xMXZTejNueERYSW9mYnRnQw?oc=5",
+      "published": "2026-08-29T09:51:54+09:00",
+      "raw_text": "인천 옥련동 다세대주택 화재, 1명 사망·4명 중경상 - 뉴시스",
       "region": "인천광역시 옥련동",
       "id": "ad74be9aef5f",
       "lat": 37.4274077931912,
       "lon": 126.655166478511,
-      "distance_km": 30.0,
-      "first_seen": "2026-08-29T08:10:09.830670+09:00"
+      "distance_km": 30.0
     },
     {
       "source": "구글뉴스",
