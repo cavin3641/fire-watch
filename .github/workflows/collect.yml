@@ -1,7 +1,7 @@
 name: fire-watch
 on:
   schedule:
-    - cron: "*/10 * * * *"
+          - cron: "7,37 * * * *"
   workflow_dispatch:
 permissions:
   contents: write
