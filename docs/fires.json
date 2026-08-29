@@ -1,6 +1,60 @@
 {
-  "updated_at": "2026-08-29T22:59:32.536054+09:00",
+  "updated_at": "2026-08-30T02:38:09.487891+09:00",
   "fires": [
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 서울특별시 송파구 풍납동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-08-30T01:52:31+09:00",
+      "region": "서울특별시 송파구 풍납동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "2차출동",
+      "status": "현장도착",
+      "raw_text": "일반화재(차량,주택) 서울특별시 송파구 풍납동 화재 발생",
+      "lat": 37.53067916413262,
+      "lon": 127.11184615709847,
+      "id": "df1c83816ad7",
+      "distance_km": 28.5,
+      "score": 51,
+      "grade": "★★",
+      "first_seen": "2026-08-30T02:38:09.487528+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 경기도 성남시 분당구 백현동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-08-30T01:00:19+09:00",
+      "region": "경기도 성남시 분당구 백현동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "1차출동",
+      "status": "귀소보고",
+      "raw_text": "일반화재(차량,주택) 경기도 성남시 분당구 백현동 화재 발생",
+      "lat": 37.383199498288924,
+      "lon": 127.09335726664114,
+      "id": "3dcb4891e2ba",
+      "distance_km": 38.3,
+      "score": 35,
+      "grade": "★",
+      "first_seen": "2026-08-30T02:38:09.487528+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 경기도 수원시 팔달구 구천동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-08-30T01:14:45+09:00",
+      "region": "경기도 수원시 팔달구 구천동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "1차출동",
+      "status": "출동보고",
+      "raw_text": "일반화재(차량,주택) 경기도 수원시 팔달구 구천동 화재 발생",
+      "lat": 37.27435432771228,
+      "lon": 127.0173975119441,
+      "id": "aa9b2b8b90f0",
+      "distance_km": 45.7,
+      "score": 23,
+      "grade": "",
+      "first_seen": "2026-08-30T02:38:09.487528+09:00"
+    },
     {
       "source": "소방출동",
       "title": "고층건물(3층이상,아파트) - 서울특별시 성북구 길음동",
@@ -416,6 +470,20 @@
       "first_seen": "2026-08-29T22:59:32.535725+09:00"
     },
     {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 경기도 양평군 용문면 다문리",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-08-28T23:41:17+09:00",
+      "region": "경기도 양평군 용문면 다문리",
+      "kind": "일반화재(차량,주택)",
+      "raw_text": "일반화재(차량,주택) 경기도 양평군 용문면 다문리 화재 발생",
+      "id": "173079bc9ab9",
+      "lat": 37.4888120111711,
+      "lon": 127.593755811871,
+      "distance_km": 69.7,
+      "first_seen": "2026-08-29T10:49:43.193318+09:00"
+    },
+    {
       "source": "구글뉴스",
       "title": "인천 아파트 거실서 화재…70대 남성 사망 - 뉴스1",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9CTk01a1JlM2pVVUVjWGpuRmhFZG5nM0lfWElWWS1ZZFlNNENlSUQyY0hUWUp2VTVTZUR6T0VYejJnM2JSbWc4Tzcta2ItSTRTYTNMX1hkRFR6UdIBWkFVX3lxTE9CTk01a1JlM2pVVUVjWGpuRmhFZG5nM0lfWElWWS1ZZFlNNENlSUQyY0hUWUp2VTVTZUR6T0VYejJnM2JSbWc4Tzcta2ItSTRTYTNMX1hkRFR6UQ?oc=5",
@@ -427,8 +495,7 @@
       "lon": 126.705258070068,
       "distance_km": 25.1,
       "score": 11,
-      "grade": "",
-      "first_seen": "2026-08-29T22:59:32.535725+09:00"
+      "grade": ""
     },
     {
       "source": "구글뉴스",
@@ -442,8 +509,7 @@
       "lon": 127.056693501258,
       "distance_km": 27.0,
       "score": 11,
-      "grade": "",
-      "first_seen": "2026-08-29T22:59:32.535725+09:00"
+      "grade": ""
     },
     {
       "source": "구글뉴스",
@@ -457,8 +523,7 @@
       "lon": 126.896273923703,
       "distance_km": 15.7,
       "score": 11,
-      "grade": "",
-      "first_seen": "2026-08-29T22:59:32.535725+09:00"
+      "grade": ""
     },
     {
       "source": "구글뉴스",
@@ -472,37 +537,21 @@
       "lon": 126.670826553603,
       "distance_km": 31.1,
       "score": 5,
-      "grade": "",
-      "first_seen": "2026-08-29T22:59:32.535725+09:00"
+      "grade": ""
     },
     {
       "source": "구글뉴스",
-      "title": "인천 연수구 아파트서 불‥70대 남성 사망 - MBC 뉴스",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9xcTE4Q2xEWW11UkVpMmFIOVRjOVdwOFJNOFowQ3Z1V28tSnJ1Rkt6NXZZaVVrSUt6ZWxzcFlELThYWDdLRmRLTlc4NlBRYjRCUG1fb3hJUnl0aFlpVjJJZjE0elVNaThOT1FFNC1GV21pUG4wczlF0gF3QVVfeXFMUC0yamdfOGJISXMxdEZjQ3J1SzRFcVlnM2pyS3g0bmlybWZsYWdKelZCZWZUa2RZZW9TUHlTVHJsbnBneXFHOEZyQ1FnMkZZX1lCby1BN3VUSURmanJ3MFVGS2c4VVM1S1RvUWdQS1F5djRaclAtUnM?oc=5",
-      "published": "2026-08-29T20:44:38+09:00",
-      "raw_text": "인천 연수구 아파트서 불‥70대 남성 사망 - MBC 뉴스",
+      "title": "인천 연수구 아파트서 불…70대 남성 사망 - KBS 뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9mbDFOYTNiSHlKakRFTHFHRVc4QW9JNkViLVNsZkdsZHBWT2JOYXBRMXBmNGtSdHFmWGtPLVhmd2pRbms1Q1IxRFhkWDNORC1kNDd1YXdTX2NqRU0?oc=5",
+      "published": "2026-08-29T20:16:00+09:00",
+      "raw_text": "인천 연수구 아파트서 불…70대 남성 사망 - KBS 뉴스",
       "region": "인천광역시 연수",
       "id": "239127a28561",
       "lat": 37.4101013788809,
       "lon": 126.678274850516,
       "distance_km": 30.8,
       "score": 5,
-      "grade": "",
-      "first_seen": "2026-08-29T22:59:32.535725+09:00"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 경기도 양평군 용문면 다문리",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-08-28T23:41:17+09:00",
-      "region": "경기도 양평군 용문면 다문리",
-      "kind": "일반화재(차량,주택)",
-      "raw_text": "일반화재(차량,주택) 경기도 양평군 용문면 다문리 화재 발생",
-      "id": "173079bc9ab9",
-      "lat": 37.4888120111711,
-      "lon": 127.593755811871,
-      "distance_km": 69.7,
-      "first_seen": "2026-08-29T10:49:43.193318+09:00"
+      "grade": ""
     },
     {
       "source": "구글뉴스",
