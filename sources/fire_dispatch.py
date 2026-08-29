@@ -130,6 +130,8 @@ def fetch():
                     "published": _parse_time(row.get("reptDt")),
                     "region": region,
                     "kind": kind,
+                    "scope": (row.get("dstrScopNm") or "").strip(),
+                    "status": (row.get("dstrStatNm") or "").strip(),
                     "raw_text": f"{kind} {region} 화재 발생",
                 }
                 if coords:
