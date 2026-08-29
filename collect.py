@@ -73,7 +73,12 @@ def process(items):
     print("[7] 좌표 변환 중...")
     located = []
     for f in in_area:
-        coords = geocode.to_coords(f.get("region"))
+        # 소방청이 준 실제 출동 지점 좌표가 있으면 그것을 씁니다.
+        # 읍면동 중심점보다 훨씬 정확합니다.
+        if f.get("lat") and f.get("lon"):
+            coords = (f["lat"], f["lon"])
+        else:
+            coords = geocode.to_coords(f.get("region"))
         if not coords:
             continue                      # 위치를 못 찾으면 지도에 못 올립니다
         f["lat"], f["lon"] = coords
