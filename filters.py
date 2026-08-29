@@ -69,8 +69,10 @@ def is_fire_news(item):
     if item.get("source") == "재난문자":
         return "화재" in text or "불" in text
 
-    if "화재" not in text and "불" not in text:
-        return False
+        if "화재" not in text:
+        FIRE_WORDS = ["불이 나", "불이 났", "불에 타", "불길", "서 불", "에 불", "큰불", "잔불"]
+        if not any(w in text for w in FIRE_WORDS):
+            return False
     # 건물 화재만 남깁니다
     if not any(f in text for f in FACILITY):
         return False
