@@ -1,6 +1,21 @@
 {
-  "updated_at": "2026-08-31T05:55:34.090743+09:00",
+  "updated_at": "2026-08-31T08:23:34.314078+09:00",
   "fires": [
+    {
+      "source": "구글뉴스",
+      "title": "[안전상황실·31일] 안성 물류센터서 화재 … 소방관 1명 경상 - 세이프타임즈",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1SWHFhenRDem94M3FqZHJYZmdvUFI0bjNoZFZyWEZYd2dob0FsMG13LWhmV1hkWjdhX3hBTmx2aXprNmFsWDRVd0lULTRXUjhxTkk2NWlyVTF6MTVJdjhBQjZSazRBa1FkUmoxZUk2ONIBc0FVX3lxTE5YUE5RbFdER29DRF9tVzVjdzQ0NW9BYkwtTXV4RzFRbTYxUXRXbE11cXpPMzB0QU93OEt4MTlRY3E5WW1xZWRqR2JkYXc4eHNHRVZ2Yk5NRDZnMFZMMHNxMWRLYk1nVWtSNXI2bE0xWHFmN3M?oc=5",
+      "published": "2026-08-31T06:49:35+09:00",
+      "raw_text": "[안전상황실·31일] 안성 물류센터서 화재 … 소방관 1명 경상 - 세이프타임즈",
+      "region": "경기도 안성",
+      "id": "b4d586fde126",
+      "lat": 37.0080705033715,
+      "lon": 127.27979032841,
+      "distance_km": 82.4,
+      "score": 0,
+      "grade": "",
+      "first_seen": "2026-08-31T08:23:34.313806+09:00"
+    },
     {
       "source": "소방출동",
       "title": "일반화재(차량,주택) - 서울특별시 성동구 성수동2가",
