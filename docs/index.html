@@ -6,7 +6,7 @@
 <title>화재 현장 상황판</title>
 
 <!-- ★ 아래 YOUR_JAVASCRIPT_KEY 를 카카오 JavaScript 키로 바꾸세요 ★ -->
-<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2c168b298897a976e326e3d0adbf984f"></script>
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2c168b298897a976e326e3d0adbf984f&libraries=services"></script>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
@@ -27,6 +27,10 @@
   .grade.g1{color:var(--cool)}
   .card.top{background:rgba(255,90,31,.06)}
   .tag.news{border-color:var(--cool); color:var(--cool)}
+    .addrbtn{grid-column:2; margin-top:8px; padding:7px 12px; font-size:14px; font-family:inherit;
+    background:var(--panel); color:var(--text); border:1px solid var(--line);
+    border-radius:6px; cursor:pointer; text-align:left; line-height:1.4}
+  .addrbtn.done{color:var(--warm); border-color:var(--hot); font-weight:600}
   header{
     padding:14px 18px calc(14px + env(safe-area-inset-top)) 18px;
     border-bottom:1px solid var(--line);
@@ -90,6 +94,8 @@ const map = new kakao.maps.Map(document.getElementById('map'), {
 });
 
 const markers = {};
+// 주소는 미리 저장하지 않고, 버튼을 누를 때만 불러옵니다
+const geocoder = new kakao.maps.services.Geocoder();
 
 /* ── 경과시간 계산 ────────────────────────────── */
 function elapsedText(iso) {
@@ -150,6 +156,23 @@ function render(data) {
       info.open(map, marker);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     };
+    const addrBtn = document.createElement('button');
+    addrBtn.className = 'addrbtn';
+    addrBtn.textContent = '주소 보기';
+    addrBtn.onclick = (e) => {
+      e.stopPropagation();
+      addrBtn.textContent = '불러오는 중...';
+      geocoder.coord2Address(f.lon, f.lat, (res, status) => {
+        if (status === kakao.maps.services.Status.OK && res[0]) {
+          const r = res[0].road_address, j = res[0].address;
+          addrBtn.textContent = (r ? r.address_name : j.address_name) + ' › 지도앱으로 열기';
+          addrBtn.classList.add('done');
+          addrBtn.onclick = (ev) => { ev.stopPropagation();
+            window.open('https://map.kakao.com/link/map/' + encodeURIComponent(f.region) + ',' + f.lat + ',' + f.lon); };
+        } else { addrBtn.textContent = '주소를 찾지 못했습니다'; }
+      });
+    };
+    card.appendChild(addrBtn);
     list.appendChild(card);
   });
 
