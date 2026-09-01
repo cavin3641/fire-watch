@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-09-02T00:07:11.911984+09:00",
+  "updated_at": "2026-09-02T03:28:07.904673+09:00",
   "fires": [
     {
       "source": "구글뉴스",
-      "title": "인천 청천동 다세대주택서 불…50대 주민 사망 - v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1RVUg4MGl2TXB2TjZKOVdJcXdLdTJZOUNFS3NFODI4MnBmWDZGeGt6ZGRDWm5UWEJzQ3N2czRsMjdJejNRb1ZMXzVqRGRSOVU?oc=5",
-      "published": "2026-09-01T22:36:00+09:00",
-      "raw_text": "인천 청천동 다세대주택서 불…50대 주민 사망 - v.daum.net",
-      "region": "인천광역시 청천동",
-      "id": "3cc8d99e66e2",
+      "title": "인천 부평 청천동 다세대주택서 불…1명 사망 - kyeonggi.com",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA2aG8tVmNZQ3dPT0s4MFFDUm13ZElPNGNvSm5ScGt4d0pjdVoyMHFDZE5oVF9naVJRYTNJMHluWFV5ZmVacXRlWkZET0RZbTVVTTg3SmNNTlV6eFU?oc=5",
+      "published": "2026-09-01T22:15:15+09:00",
+      "raw_text": "인천 부평 청천동 다세대주택서 불…1명 사망 - kyeonggi.com",
+      "region": "인천광역시 부평 청천동",
+      "id": "27794da919da",
       "lat": 37.5174754318652,
       "lon": 126.709948306142,
       "distance_km": 19.0,
       "score": 11,
       "grade": "",
-      "first_seen": "2026-09-02T00:07:11.911802+09:00"
+      "first_seen": "2026-09-02T03:28:07.904552+09:00"
     },
     {
       "source": "소방출동",
@@ -342,10 +342,24 @@
     },
     {
       "source": "구글뉴스",
-      "title": "양주시, 회암사지에 ‘태양광 스마트 소화기함’ 설치… 화재 초기 대응 강화 - nbnnews.co.kr",
+      "title": "인천 청천동 다세대주택서 불…50대 주민 사망 - news.sbs.co.kr",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9TcGxJNWlMREZPaVotQVpfeHVhb09xbWFFelFxZWxYbV9sSzdRR0c2Y3huZl9aWEkyX1ltcU1yVi1UckdPeFRZU2d5RmQyTWRjTjBaRDFYbHpqeEF5ci1aMi1Rd0ZzVVhIRTdV?oc=5",
+      "published": "2026-09-01T23:29:00+09:00",
+      "raw_text": "인천 청천동 다세대주택서 불…50대 주민 사망 - news.sbs.co.kr",
+      "region": "인천광역시 청천동",
+      "id": "3cc8d99e66e2",
+      "lat": 37.5174754318652,
+      "lon": 126.709948306142,
+      "distance_km": 19.0,
+      "score": 11,
+      "grade": ""
+    },
+    {
+      "source": "구글뉴스",
+      "title": "양주시, 회암사지에 ‘태양광 스마트 소화기함’ 설치… 화재 초기 대응 강화 - 내외뉴스통신",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE92YmpnVExRUDlUWEpFWEN5N0gwOXdFLUFDeVd5RlBnc292SF9pV1hvbDJDZU9fa2dpMTVmUjNfSHliSmlNaFZTZUlIeklmenUwckJ2SGpOaWZUQTZaeUU4Q3lOWnQyaW5NTGdCTtIBcEFVX3lxTE1RdUFWUFg4OG5ITVR1NEp4S1pmRDdjOG5aUzY4elZsR0FzOGd1bk80YTR2a3VxSDhRTzd6SUkybENzNWtLZ1RFVmxkR2gzYlhQaE9Kc2FycWtmdC1DRW83NEZUNFdPb2xFOUlpc2g5SEg?oc=5",
       "published": "2026-09-01T16:24:07+09:00",
-      "raw_text": "양주시, 회암사지에 ‘태양광 스마트 소화기함’ 설치… 화재 초기 대응 강화 - nbnnews.co.kr",
+      "raw_text": "양주시, 회암사지에 ‘태양광 스마트 소화기함’ 설치… 화재 초기 대응 강화 - 내외뉴스통신",
       "region": "경기도 양주",
       "id": "99add66415c1",
       "lat": 37.7853136973153,
