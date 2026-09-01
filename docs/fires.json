@@ -1,21 +1,6 @@
 {
-  "updated_at": "2026-09-02T03:28:07.904673+09:00",
+  "updated_at": "2026-09-02T06:18:38.339991+09:00",
   "fires": [
-    {
-      "source": "구글뉴스",
-      "title": "인천 부평 청천동 다세대주택서 불…1명 사망 - kyeonggi.com",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA2aG8tVmNZQ3dPT0s4MFFDUm13ZElPNGNvSm5ScGt4d0pjdVoyMHFDZE5oVF9naVJRYTNJMHluWFV5ZmVacXRlWkZET0RZbTVVTTg3SmNNTlV6eFU?oc=5",
-      "published": "2026-09-01T22:15:15+09:00",
-      "raw_text": "인천 부평 청천동 다세대주택서 불…1명 사망 - kyeonggi.com",
-      "region": "인천광역시 부평 청천동",
-      "id": "27794da919da",
-      "lat": 37.5174754318652,
-      "lon": 126.709948306142,
-      "distance_km": 19.0,
-      "score": 11,
-      "grade": "",
-      "first_seen": "2026-09-02T03:28:07.904552+09:00"
-    },
     {
       "source": "소방출동",
       "title": "일반화재(차량,주택) - 서울특별시 서대문구 북가좌동",
@@ -342,6 +327,20 @@
     },
     {
       "source": "구글뉴스",
+      "title": "인천 부평 청천동 다세대주택서 불…1명 사망 - 경기일보",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA2aG8tVmNZQ3dPT0s4MFFDUm13ZElPNGNvSm5ScGt4d0pjdVoyMHFDZE5oVF9naVJRYTNJMHluWFV5ZmVacXRlWkZET0RZbTVVTTg3SmNNTlV6eFU?oc=5",
+      "published": "2026-09-01T22:15:15+09:00",
+      "raw_text": "인천 부평 청천동 다세대주택서 불…1명 사망 - 경기일보",
+      "region": "인천광역시 부평 청천동",
+      "id": "27794da919da",
+      "lat": 37.5174754318652,
+      "lon": 126.709948306142,
+      "distance_km": 19.0,
+      "score": 11,
+      "grade": ""
+    },
+    {
+      "source": "구글뉴스",
       "title": "인천 청천동 다세대주택서 불…50대 주민 사망 - news.sbs.co.kr",
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9TcGxJNWlMREZPaVotQVpfeHVhb09xbWFFelFxZWxYbV9sSzdRR0c2Y3huZl9aWEkyX1ltcU1yVi1UckdPeFRZU2d5RmQyTWRjTjBaRDFYbHpqeEF5ci1aMi1Rd0ZzVVhIRTdV?oc=5",
       "published": "2026-09-01T23:29:00+09:00",
@@ -384,10 +383,10 @@
     },
     {
       "source": "구글뉴스",
-      "title": "포천 동교동 공장서 화재…2명 부상·7명 대피 - kyeonggi.com",
+      "title": "포천 동교동 공장서 화재…2명 부상·7명 대피 - 경기일보",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9sY1YzR0xfbnV3Vi1CN21PbnNabExEWjhZdmp4cDVTaS1yZ2FFWVU4NzVTbnlkNzc2VVJLbk1kWlNTQ2Z5cVFFcmR3QW9jVGRZZVQySzFyTnN1LVk?oc=5",
       "published": "2026-09-01T10:54:20+09:00",
-      "raw_text": "포천 동교동 공장서 화재…2명 부상·7명 대피 - kyeonggi.com",
+      "raw_text": "포천 동교동 공장서 화재…2명 부상·7명 대피 - 경기일보",
       "region": "경기도 포천 동교동",
       "id": "f8fc09e138ab",
       "lat": 37.8480479678122,
