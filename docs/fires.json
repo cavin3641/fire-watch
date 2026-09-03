@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-03T22:30:08.254191+09:00",
+  "updated_at": "2026-09-04T02:11:47.486526+09:00",
   "fires": [
     {
       "source": "소방출동",
@@ -269,21 +269,6 @@
       "first_seen": "2026-09-03T17:51:00.912048+09:00"
     },
     {
-      "source": "구글뉴스",
-      "title": "인천 남동구 다세대주택서 불...80대 남성 연기흡입 - kihoilbo.co.kr",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9WcWQ2cmtodW00X0xTNGNpTnQzVGpwRHdra2tFUVRLMllxcWRzR0xndlpnSm1hbUdkMEhhNXNkSTdtVkRUY1ZtUVIyaDdQQ3BtTHpFMW5DakFPNktrN3pSX216MkJiVGNqUm41TVdpYw?oc=5",
-      "published": "2026-09-03T10:32:23+09:00",
-      "raw_text": "인천 남동구 다세대주택서 불...80대 남성 연기흡입 - kihoilbo.co.kr",
-      "region": "인천광역시 남동",
-      "id": "b33c7abb16b9",
-      "lat": 37.4473487903569,
-      "lon": 126.73148773974,
-      "distance_km": 25.1,
-      "score": 11,
-      "grade": "",
-      "first_seen": "2026-09-03T17:51:00.912048+09:00"
-    },
-    {
       "source": "소방출동",
       "title": "고층건물(3층이상,아파트) - 서울특별시 은평구 진관동",
       "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
@@ -515,6 +500,20 @@
       "first_seen": "2026-09-02T10:17:39.998888+09:00"
     },
     {
+      "source": "구글뉴스",
+      "title": "인천 남동구 다세대주택서 불…80대 주민 연기 흡입 - 경기일보",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBodWFZLUZjS0pMenF6ZFgzN3VFenljeS1qazNfWmg2OWlpekZEQVhySWNtQlJmSGIwTFlPdkVtTDU4MXJCdUdfbFp5SGNFWmJ2UG1TS1ctakpNLXc?oc=5",
+      "published": "2026-09-03T10:03:16+09:00",
+      "raw_text": "인천 남동구 다세대주택서 불…80대 주민 연기 흡입 - 경기일보",
+      "region": "인천광역시 남동",
+      "id": "b33c7abb16b9",
+      "lat": 37.4473487903569,
+      "lon": 126.73148773974,
+      "distance_km": 25.1,
+      "score": 11,
+      "grade": ""
+    },
+    {
       "source": "소방출동",
       "title": "고층건물(3층이상,아파트) - 서울특별시 강서구 화곡동",
       "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
@@ -652,10 +651,10 @@
     },
     {
       "source": "구글뉴스",
-      "title": "쿠팡 물류센터 화재로 통제됐던 인천 봉수대로 전면 개통 - KBS 뉴스",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8tRkx3ZFFWMlpCOXdyOUhtSkZYd1MxN3hMajNPR2FOR1phUkdjU0VwWW1oa0NRSmJMUE9lV3FLWERvdWw3UHB0clFyazhEWUZJODZjNUFVTzhKbm8?oc=5",
-      "published": "2026-09-03T21:46:00+09:00",
-      "raw_text": "쿠팡 물류센터 화재로 통제됐던 인천 봉수대로 전면 개통 - KBS 뉴스",
+      "title": "인천 쿠팡 물류센터 화재로 통제된 봉수대로 전면 개통 - 네이트",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBkSV9KQnBMYXdpdnJ1Ulc1ZDFoTm4ycGpzaDYwd0dEVzhFSmNTeDJpUWJodFhUdWk2ekFoalpvcm1qckFOMDNmMk9UQXJYc1JjLXlZ?oc=5",
+      "published": "2026-09-03T15:43:00+09:00",
+      "raw_text": "인천 쿠팡 물류센터 화재로 통제된 봉수대로 전면 개통 - 네이트",
       "region": "인천광역시",
       "id": "2b4c98f3a38d",
       "lat": 37.4560044656442,
@@ -864,10 +863,10 @@
     },
     {
       "source": "구글뉴스",
-      "title": "한밤중 경기 용인 아파트에서 화재‥5명 경상 - MBC 뉴스",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9Fbmh3Mm9Pa0laeGtYN2dVYlZnZWNIM0NPaVROZ2haaVpWUU9tejd2T0g5c0V5cGZMN3AtaFJKbThJUWJnUEU2emFWbFpWM01wcm1zaktiMFdoU3lKSTExeENqU2hDOW9PV2daMmp1WF8tVllfUXhj0gF3QVVfeXFMTlFqZWEwODhJRFFTMndvZEZ0VEYybGJJbDRibWtxVGVRVU9BR2RZMUVDcDlTUER1OXVCVUY4WExmd1JIUV9peDJySngtRjFjLXRjQ3ptVVhOMExQcUJTSjgzdGs3RnVhREVXZTlsdGpsTk9ZU1FmZkE?oc=5",
-      "published": "2026-09-03T10:04:14+09:00",
-      "raw_text": "한밤중 경기 용인 아파트에서 화재‥5명 경상 - MBC 뉴스",
+      "title": "용인 수지구 20층짜리 아파트서 화재…21명 구조·51명 자력 대피 - 데일리안",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9EYjI5MzVTZGM3MkZxN2hKT1UxVzVvYXVtMGN3TVhHSHVOV0wzR3NLQkhjb21DM0ZQdGdKV0w1S3R5aDZIb0ExdV9Bb3RpdmxjVnZz?oc=5",
+      "published": "2026-09-03T10:50:00+09:00",
+      "raw_text": "용인 수지구 20층짜리 아파트서 화재…21명 구조·51명 자력 대피 - 데일리안",
       "region": "경기도 용인",
       "id": "2ed5adaa35b3",
       "lat": 37.2410299792267,
@@ -946,10 +945,10 @@
     },
     {
       "source": "구글뉴스",
-      "title": "경기 연천 아파트 8층서 화재…인명피해 없어 - 네이트",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBYc0RScTNPUkgtM3JNR196akJnSEUzeTcwUms4eHFuS18xdnpzdzEzcy12Wjg1eE1MVWJhdXRBWjBXLXpZYTc4NS1nQzFueFk4c1hZ?oc=5",
-      "published": "2026-09-03T05:46:00+09:00",
-      "raw_text": "경기 연천 아파트 8층서 화재…인명피해 없어 - 네이트",
+      "title": "경기 연천 아파트 8층서 화재…인명피해 없어 - 연합뉴스TV",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE4tRUFDM1h4aUhkWHU3elVJRm41NGdVR3MtQXprbGFKRjJFb1VtNHdRNXFRcTlTbGRHZXZPWUhtbDdja2FxOUVRdWtkX1R6d1BxazlobVQ5bXl5dW4yMWt0N2hEbV9GMEk?oc=5",
+      "published": "2026-09-03T05:44:00+09:00",
+      "raw_text": "경기 연천 아파트 8층서 화재…인명피해 없어 - 연합뉴스TV",
       "region": "경기도 연천",
       "id": "935af7a6fb02",
       "lat": 38.0965222523366,
