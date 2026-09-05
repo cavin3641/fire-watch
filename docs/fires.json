@@ -1,21 +1,6 @@
 {
-  "updated_at": "2026-09-06T02:31:17.940010+09:00",
+  "updated_at": "2026-09-06T04:24:15.598995+09:00",
   "fires": [
-    {
-      "source": "구글뉴스",
-      "title": "경기 의왕 낚시용품 창고에서 불...1명 경상 - YTN",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE16blRkZ1lUQ3dPOEdtOGJiUTdSZHgxRVRNYUh4NXg3b2NfaE80OGNSbFoyOVcxSWUyd0ZlR1c4Z09XT0laU2hFZ0Z3dHdxenpNeUR5RUQ2SmpaSTdqZ1E?oc=5",
-      "published": "2026-09-06T02:09:00+09:00",
-      "raw_text": "경기 의왕 낚시용품 창고에서 불...1명 경상 - YTN",
-      "region": "경기도 의왕",
-      "id": "289e3a1ff543",
-      "lat": 37.3447600461019,
-      "lon": 126.968273810339,
-      "distance_km": 36.9,
-      "score": 5,
-      "grade": "",
-      "first_seen": "2026-09-06T02:31:17.939667+09:00"
-    },
     {
       "source": "소방출동",
       "title": "고층건물(3층이상,아파트) - 서울특별시 중구 신당동",
@@ -300,6 +285,20 @@
       "score": 13,
       "grade": "",
       "first_seen": "2026-09-04T09:18:18.314261+09:00"
+    },
+    {
+      "source": "구글뉴스",
+      "title": "경기 의왕 낚시용품 창고에서 불...1명 경상 - YTN",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE16blRkZ1lUQ3dPOEdtOGJiUTdSZHgxRVRNYUh4NXg3b2NfaE80OGNSbFoyOVcxSWUyd0ZlR1c4Z09XT0laU2hFZ0Z3dHdxenpNeUR5RUQ2SmpaSTdqZ1E?oc=5",
+      "published": "2026-09-06T02:09:00+09:00",
+      "raw_text": "경기 의왕 낚시용품 창고에서 불...1명 경상 - YTN",
+      "region": "경기도 의왕",
+      "id": "289e3a1ff543",
+      "lat": 37.3447600461019,
+      "lon": 126.968273810339,
+      "distance_km": 36.9,
+      "score": 5,
+      "grade": ""
     },
     {
       "source": "구글뉴스",
