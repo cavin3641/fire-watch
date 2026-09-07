@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08T02:52:37.576813+09:00",
+  "updated_at": "2026-09-08T06:27:19.261485+09:00",
   "fires": [
     {
       "source": "소방출동",
@@ -142,36 +142,6 @@
       "id": "df3fd946d74b",
       "distance_km": 31.0,
       "score": 23,
-      "grade": "",
-      "first_seen": "2026-09-08T02:52:37.576360+09:00"
-    },
-    {
-      "source": "구글뉴스",
-      "title": "서울 중랑구 다세대주택서 불…주민 1명 대피 - news.sbs.co.kr",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBUMW1TZ24zdXl1Z0Q3N3BWbTFHcXFtS0RzNlE4aDNOZFZ5NVdpRXFMSUk4OTdHbjFWSkNpOWo2REU0OEdpdU9FZzhxX0hEdVpFa051M3hsTzd6LVdIU29fOFpZbVJfX0FqbHc?oc=5",
-      "published": "2026-09-08T01:28:38+09:00",
-      "raw_text": "서울 중랑구 다세대주택서 불…주민 1명 대피 - news.sbs.co.kr",
-      "region": "서울특별시 중랑",
-      "id": "10c4afb726a8",
-      "lat": 37.6065432383918,
-      "lon": 127.092820287004,
-      "distance_km": 23.7,
-      "score": 11,
-      "grade": "",
-      "first_seen": "2026-09-08T02:52:37.576360+09:00"
-    },
-    {
-      "source": "구글뉴스",
-      "title": "[이시각 경기 119] 양주 펜션·평택 아파트에서 불…인명 피해 없어 - news.nate.com",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBkMGtYcHRXRGdYYXNEeVVpQlh3M1ROeXBiVkxDd3QtMTJRQ2JxWFdZcDRndTVZaURqLU5WR1V6bHJ4cmRxY2E5c0lhWERncGtTX0lr?oc=5",
-      "published": "2026-09-07T22:29:06+09:00",
-      "raw_text": "[이시각 경기 119] 양주 펜션·평택 아파트에서 불…인명 피해 없어 - news.nate.com",
-      "region": "경기도 양주",
-      "id": "fb1c208a9ee6",
-      "lat": 37.7853136973153,
-      "lon": 127.045786084702,
-      "distance_km": 23.5,
-      "score": 11,
       "grade": "",
       "first_seen": "2026-09-08T02:52:37.576360+09:00"
     },
@@ -624,6 +594,34 @@
       "score": 13,
       "grade": "",
       "first_seen": "2026-09-06T15:26:44.628471+09:00"
+    },
+    {
+      "source": "구글뉴스",
+      "title": "서울 중랑구 면목동 연립주택서 화재‥1명 대피 - imnews.imbc.com",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5uVnJBRTFTQUJ2SnlTdzUtZzBLMTBteGZoOUI0UEJjc0Z1dV9WOWxQaTR1b1lybDBrVmZESkttYmNORnZiMVEzT1B3a1VTSTZZdVE3T0g4TnhGVlZ5dHpESVd5aTJsWi1VcGpndkJJZ3VuTkRmaTBR0gF3QVVfeXFMTkZSUXJmNE1LVFMwRFRBMFZWUHJGcHJuRzRpelBUQTUxcDlvNkViN1licjlfNDB6bGJaM05yQXVLX1NQWHZWNm5SVGNUT2Z5Zzgza2VqS2JUdVJRVGoxSFQxS0NTU05CREFmVWJZRkhfcS0tZmdtX1k?oc=5",
+      "published": "2026-09-08T03:26:47+09:00",
+      "raw_text": "서울 중랑구 면목동 연립주택서 화재‥1명 대피 - imnews.imbc.com",
+      "region": "서울특별시 중랑 면목동",
+      "id": "10c4afb726a8",
+      "lat": 37.5803715762429,
+      "lon": 127.087661590766,
+      "distance_km": 24.1,
+      "score": 11,
+      "grade": ""
+    },
+    {
+      "source": "구글뉴스",
+      "title": "[이시각 경기 119] 양주 펜션·평택 아파트에서 불…인명 피해 없어 - 네이트",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBkMGtYcHRXRGdYYXNEeVVpQlh3M1ROeXBiVkxDd3QtMTJRQ2JxWFdZcDRndTVZaURqLU5WR1V6bHJ4cmRxY2E5c0lhWERncGtTX0lr?oc=5",
+      "published": "2026-09-07T22:29:06+09:00",
+      "raw_text": "[이시각 경기 119] 양주 펜션·평택 아파트에서 불…인명 피해 없어 - 네이트",
+      "region": "경기도 양주",
+      "id": "fb1c208a9ee6",
+      "lat": 37.7853136973153,
+      "lon": 127.045786084702,
+      "distance_km": 23.5,
+      "score": 11,
+      "grade": ""
     },
     {
       "source": "구글뉴스",
