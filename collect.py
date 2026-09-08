@@ -91,6 +91,7 @@ def process(items):
     print(f"    -> 좌표 확보 {len(located)}건")
 
     # 우선순위 점수 (뉴스에 난 건은 경쟁이 몰리므로 감점)
+    priority.learn_scope_pattern(located)   # 지역별 표기 관행 먼저 파악
     priority.mark_news_overlap(located)
     for f in located:
         f["score"] = priority.score(f)
