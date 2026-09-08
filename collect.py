@@ -97,7 +97,7 @@ def process(items):
         f["score"] = priority.score(f)
         f["grade"] = priority.grade(f["score"])
     located.sort(key=lambda x: -x["score"])
-    top = len([f for f in located if f["score"] >= 50])
+    top = len([f for f in located if f["score"] >= 45])
     print(f"[8] 우선방문 대상(★★ 이상) {top}건")
     return located
 
@@ -115,17 +115,21 @@ def merge_and_trim(previous, current):
     cutoff = datetime.now(KST) - timedelta(hours=config.KEEP_HOURS)
     kept = []
     for f in merged.values():
-        seen = f.get("first_seen")
-        if not seen:
-            kept.append(f)
-            continue
+        # 화재가 '실제로 난 시각'을 기준으로 지웁니다.
+        # (우리가 처음 본 시각으로 하면 매번 다시 잡혀서 안 지워집니다)
+        when = f.get("published") or f.get("first_seen")
+        if not when:
+            continue                      # 시각을 모르면 남기지 않습니다
         try:
-            if datetime.fromisoformat(seen) >= cutoff:
+            t = datetime.fromisoformat(when)
+            if t.tzinfo is None:
+                t = t.replace(tzinfo=KST)
+            if t >= cutoff:
                 kept.append(f)
         except ValueError:
             kept.append(f)
 
-    kept.sort(key=lambda x: x.get("first_seen") or "", reverse=True)
+    kept.sort(key=lambda x: x.get("published") or "", reverse=True)
     return kept
 
 

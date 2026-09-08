@@ -39,6 +39,11 @@ def learn_scope_pattern(fires):
 STATUS_SCORE = {"상황종료": 15, "귀소완료보고": 15, "귀소보고": 12, "초진": 5,
                 "현장도착": 0, "현장도착보고": 0, "출동지령": -5, "추가출동지령": -5}
 NEWS_PENALTY = -25
+
+# 거리 가산점 사용 여부.
+# 지역별로 담당자를 두면 사무실 거리는 의미가 없으므로 False 로 둡니다.
+# (경기도는 넓어서 평균 39km, 서울은 20km라 서울만 유리해집니다)
+USE_DISTANCE_BONUS = False
 def score(fire):
     kind = fire.get("kind") or ""
     if "차량)" in kind:
@@ -81,7 +86,7 @@ def score(fire):
         except Exception:
             pass
 
-    dist = fire.get("distance_km")
+    dist = fire.get("distance_km") if USE_DISTANCE_BONUS else None
     if isinstance(dist, (int, float)):
         if dist <= 15:
             pts += 12
@@ -91,9 +96,9 @@ def score(fire):
             pts -= 10
     return max(0, min(100, pts))
 def grade(pts):
-    if pts >= 70:
+    if pts >= 58:
         return "★★★"
-    if pts >= 50:
+    if pts >= 45:
         return "★★"
     if pts >= 30:
         return "★"
