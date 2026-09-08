@@ -1,6 +1,21 @@
 {
-  "updated_at": "2026-09-08T08:42:47.656780+09:00",
+  "updated_at": "2026-09-08T13:09:21.740170+09:00",
   "fires": [
+    {
+      "source": "구글뉴스",
+      "title": "[속보] 경기 화성 효행구 덕우리 공장서 화재 발생 - 이투데이",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBjalcyVW12aHpFY3FXTlFyb0c5dTR4clZUMDdJX0tMcXIta1J2VWJBU19RdUZ1VUk3TDNhMjhVRFRELWNiMjNkeEZLY1UwN0tYcUt5clRyU2tYYzBXcThLUVRyYjRXXzh1YjEyNG1JOXJzbzU3?oc=5",
+      "published": "2026-09-08T10:47:00+09:00",
+      "raw_text": "[속보] 경기 화성 효행구 덕우리 공장서 화재 발생 - 이투데이",
+      "region": "경기도 화성",
+      "id": "12ca164fb0c8",
+      "lat": 37.1995372034717,
+      "lon": 126.831477350333,
+      "distance_km": 51.0,
+      "score": 5,
+      "grade": "",
+      "first_seen": "2026-09-08T13:09:21.739817+09:00"
+    },
     {
       "source": "소방출동",
       "title": "고층건물(3층이상,아파트) - 서울특별시 도봉구 도봉동",
@@ -106,21 +121,6 @@
       "id": "2c5302d2b285",
       "distance_km": 25.0,
       "score": 29,
-      "grade": "",
-      "first_seen": "2026-09-08T08:42:47.656414+09:00"
-    },
-    {
-      "source": "구글뉴스",
-      "title": "서울 면목동 다세대주택서 화재...1명 대피 - gukjenews.com",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9LRHpWdEdaVEVlMWw4cnVkeExMWlRJQmtURzltSUR2U1NCdTRFQUJETS00dWVuREhSOGJuei05UGk2cG14d1lDdEU2bk1zZDdqcUJhcnRNQi1UT3hyU0hkcHBJOFo4QlFBR1F5SjZB?oc=5",
-      "published": "2026-09-08T07:46:12+09:00",
-      "raw_text": "서울 면목동 다세대주택서 화재...1명 대피 - gukjenews.com",
-      "region": "서울특별시 면목동",
-      "id": "5c533f703837",
-      "lat": 37.5803715762429,
-      "lon": 127.087661590766,
-      "distance_km": 24.1,
-      "score": 11,
       "grade": "",
       "first_seen": "2026-09-08T08:42:47.656414+09:00"
     },
@@ -575,6 +575,20 @@
       "first_seen": "2026-09-06T15:26:44.628471+09:00"
     },
     {
+      "source": "구글뉴스",
+      "title": "서울 면목동 다세대주택서 화재...1명 대피 - gukjenews.com",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9LRHpWdEdaVEVlMWw4cnVkeExMWlRJQmtURzltSUR2U1NCdTRFQUJETS00dWVuREhSOGJuei05UGk2cG14d1lDdEU2bk1zZDdqcUJhcnRNQi1UT3hyU0hkcHBJOFo4QlFBR1F5SjZB?oc=5",
+      "published": "2026-09-08T07:46:12+09:00",
+      "raw_text": "서울 면목동 다세대주택서 화재...1명 대피 - gukjenews.com",
+      "region": "서울특별시 면목동",
+      "id": "5c533f703837",
+      "lat": 37.5803715762429,
+      "lon": 127.087661590766,
+      "distance_km": 24.1,
+      "score": 11,
+      "grade": ""
+    },
+    {
       "source": "소방출동",
       "title": "고층건물(3층이상,아파트) - 서울특별시 서초구 반포동",
       "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
@@ -796,10 +810,10 @@
     },
     {
       "source": "구글뉴스",
-      "title": "평택 아파트 11층서 화재…5명 대피 - news1.kr",
+      "title": "평택 아파트 11층서 화재…5명 대피 - 뉴스1",
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9yTzV4YUpROUw4bDBWaFVSb1gwUmF3Y0hOVm5lb21hbThZQmZrdE9NQ2ZWalJ1WkJRV0RyX3p6ZmZjdHhkdHhKbkZ6SGtqWXZpLWFuM1dB0gFbQVVfeXFMUFBRN09sVlBIbHlsQlBVcGtrY1ZuQnB6Zlk5bWV1NkRYSXRTTzNGaFNYUDlRUUFwaTRDakRTTUdGeElBVmJKdl9ldHRqTGl0SFRQQWNlblQ5d24zcw?oc=5",
       "published": "2026-09-07T16:10:13+09:00",
-      "raw_text": "평택 아파트 11층서 화재…5명 대피 - news1.kr",
+      "raw_text": "평택 아파트 11층서 화재…5명 대피 - 뉴스1",
       "region": "경기도 평택",
       "id": "2b47f3683a25",
       "lat": 36.9922606745326,
