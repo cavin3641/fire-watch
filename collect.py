@@ -71,6 +71,23 @@ def process(items):
                and any(f["region"].startswith(s) for s in config.TARGET_SIDO)]
     print(f"[6] 수도권({'/'.join(config.TARGET_SIDO)}) -> {len(in_area)}건")
 
+    # 뉴스 기사는 지역명이 시·군까지만 나오는 경우가 많습니다.
+    # 그러면 시청 좌표에 찍혀서 엉뚱한 곳을 가리킵니다.
+    # 읍·면·동까지 나온 것만 지도에 올립니다.
+    before = len(in_area)
+    def has_dong(f):
+        if f.get("source") == "소방출동":
+            return True                      # 소방청은 정확한 좌표를 함께 줍니다
+        parts = (f.get("region") or "").split()
+        if len(parts) < 3:
+            return False                     # '경기도 구리'처럼 시·군까지만이면 제외
+        return parts[-1].endswith(("동", "읍", "면", "리"))
+
+    in_area = [f for f in in_area if has_dong(f)]
+    dropped = before - len(in_area)
+    if dropped:
+        print(f"    -> 위치가 뭉뚱그려진 뉴스 {dropped}건 제외")
+
     print("[7] 좌표 변환 중...")
     located = []
     for f in in_area:
@@ -162,8 +179,13 @@ def main():
     save(merge_and_trim(previous, fires))
 
     print(f"[10] 새 소식 {len(new_ones)}건 알림 발송")
+    import collections
+    sent = collections.Counter()
     for f in new_ones:
-        notify.send(notify.format_alert(f))
+        z = notify.send_by_zone(f, notify.format_alert(f))
+        sent[z] += 1
+    if sent:
+        print("     권역별:", dict(sent))
 
 
 if __name__ == "__main__":

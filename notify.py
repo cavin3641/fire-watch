@@ -10,10 +10,11 @@
 """
 import requests
 
+import zones
 from config import TELEGRAM_TOKEN, TELEGRAM_CHAT_ID
 
 
-def send(text):
+def send(text, chat_id=None):
     if not TELEGRAM_TOKEN:
         print("  [건너뜀] 텔레그램: 토큰이 없습니다")
         print("  --- 보낼 내용 ---")
@@ -23,7 +24,7 @@ def send(text):
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
     try:
         requests.post(url, data={
-            "chat_id": TELEGRAM_CHAT_ID,
+            "chat_id": chat_id or TELEGRAM_CHAT_ID,
             "text": text,
             "disable_web_page_preview": True,
         }, timeout=10)
@@ -35,9 +36,12 @@ def send(text):
 
 def format_alert(fire):
     """알림 문구를 만듭니다. 여기 문구는 마음대로 바꾸세요."""
+    zone = zones.zone_of(fire.get("region"))
+    home = " ★사무실권역" if zone == zones.HOME_ZONE else ""
     grade = fire.get("grade") or ""
     head = f"{grade} " if grade else ""
-    lines = [f"🔥 {head}{fire.get('region') or '위치 미상'}"]
+    lines = [f"[{zone}]{home}",
+             f"🔥 {head}{fire.get('region') or '위치 미상'}"]
     if fire.get("kind"):
         detail = fire["kind"]
         if fire.get("scope"):
@@ -61,3 +65,22 @@ def format_alert(fire):
     elif fire.get("url"):
         lines.append(fire["url"])
     return "\n".join(lines)
+
+
+def send_by_zone(fire, text):
+    """그 화재가 속한 권역 방으로 보냅니다.
+
+    권역 방이 설정돼 있지 않으면 기본 방(사장님)으로 갑니다.
+    사무실 권역(경기 북부)은 권역 방과 기본 방 양쪽으로 보냅니다.
+    """
+    zone = zones.zone_of(fire.get("region"))
+    target = zones.chat_id_of(zone)
+
+    if target:
+        send(text, chat_id=target)
+        # 사무실 권역은 사장님도 같이 받습니다
+        if zone == zones.HOME_ZONE and TELEGRAM_CHAT_ID != target:
+            send(text)
+    else:
+        send(text)
+    return zone
