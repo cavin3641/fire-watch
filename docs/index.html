@@ -27,6 +27,11 @@
   .grade.g1{color:var(--cool)}
   .card.top{background:rgba(255,90,31,.06)}
   .tag.news{border-color:var(--cool); color:var(--cool)}
+  .sortbtn{
+    margin-right:10px; padding:4px 10px; font-size:13px; font-family:inherit;
+    background:var(--panel); color:var(--text); border:1px solid var(--line);
+    border-radius:5px; cursor:pointer;
+  }
     .addrbtn{grid-column:2; margin-top:8px; padding:7px 12px; font-size:14px; font-family:inherit;
     background:var(--panel); color:var(--text); border:1px solid var(--line);
     border-radius:6px; cursor:pointer; text-align:left; line-height:1.4}
@@ -76,7 +81,10 @@
 
 <header>
   <h1>수도권 화재</h1>
-  <span class="meta"><span class="count" id="count">–</span>건 · <span id="updated">불러오는 중</span></span>
+  <span class="meta">
+    <button id="sortbtn" class="sortbtn">최신순</button>
+    <span class="count" id="count">–</span>건 · <span id="updated">불러오는 중</span>
+  </span>
 </header>
 
 <div id="map"></div>
@@ -110,7 +118,8 @@ function elapsedText(iso) {
 
 /* ── 화면 그리기 ──────────────────────────────── */
 function render(data) {
-  const fires = data.fires || [];
+  _data = data;
+  const fires = (data.fires || []).slice();
     const topN = fires.filter(f => (f.score || 0) >= 50).length;
   document.getElementById('count').textContent = topN > 0 ? ('★' + topN + ' / ' + fires.length) : fires.length;
   document.getElementById('updated').textContent =
@@ -123,7 +132,16 @@ function render(data) {
     list.innerHTML = '<div class="empty">수도권에 잡힌 화재 소식이 없습니다.<br>10분마다 자동으로 확인합니다.</div>';
     return;
   }
-  fires.sort((a, b) => (b.score || 0) - (a.score || 0));
+  // 최신순. 시각이 같으면 점수 높은 것을 먼저.
+  if (_byScore) {
+    fires.sort((a, b) => (b.score || 0) - (a.score || 0));
+  } else {
+    fires.sort((a, b) => {
+      const ta = a.published || '', tb = b.published || '';
+      if (ta !== tb) return tb.localeCompare(ta);
+      return (b.score || 0) - (a.score || 0);
+    });
+  }
   const bounds = new kakao.maps.LatLngBounds();
 
   fires.forEach(f => {
@@ -178,6 +196,14 @@ function render(data) {
 
   map.setBounds(bounds);
 }
+
+let _data = null, _byScore = false;
+
+document.getElementById('sortbtn').onclick = () => {
+  _byScore = !_byScore;
+  document.getElementById('sortbtn').textContent = _byScore ? '우선순위순' : '최신순';
+  if (_data) render(_data);
+};
 
 /* ── 데이터 불러오기 ──────────────────────────── */
 fetch(DATA_URL)
