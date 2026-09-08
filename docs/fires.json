@@ -1,21 +1,6 @@
 {
-  "updated_at": "2026-09-08T13:09:21.740170+09:00",
+  "updated_at": "2026-09-08T14:49:45.524707+09:00",
   "fires": [
-    {
-      "source": "구글뉴스",
-      "title": "[속보] 경기 화성 효행구 덕우리 공장서 화재 발생 - 이투데이",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBjalcyVW12aHpFY3FXTlFyb0c5dTR4clZUMDdJX0tMcXIta1J2VWJBU19RdUZ1VUk3TDNhMjhVRFRELWNiMjNkeEZLY1UwN0tYcUt5clRyU2tYYzBXcThLUVRyYjRXXzh1YjEyNG1JOXJzbzU3?oc=5",
-      "published": "2026-09-08T10:47:00+09:00",
-      "raw_text": "[속보] 경기 화성 효행구 덕우리 공장서 화재 발생 - 이투데이",
-      "region": "경기도 화성",
-      "id": "12ca164fb0c8",
-      "lat": 37.1995372034717,
-      "lon": 126.831477350333,
-      "distance_km": 51.0,
-      "score": 5,
-      "grade": "",
-      "first_seen": "2026-09-08T13:09:21.739817+09:00"
-    },
     {
       "source": "소방출동",
       "title": "고층건물(3층이상,아파트) - 서울특별시 도봉구 도봉동",
@@ -576,6 +561,20 @@
     },
     {
       "source": "구글뉴스",
+      "title": "화성 효행구 인쇄 공장서 불…1시간 20분 만에 진화 - news.sbs.co.kr",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPN0pDdDRldDF2aVFRTVF2MGY3U0V4QTVMNGs3bGxwU0lmMXNvNml6QnVTbXFJUG5zeV84YzUtMjhubV85bjR1TW04X2ZwTWNVc2xwUDNzR3FaQzlhUEFvRlRJbGo0ODUyY1R3aEJHcXpUQmltQ2tFMEhZYy0zU3pKNS0zS0lxZw?oc=5",
+      "published": "2026-09-08T14:14:18+09:00",
+      "raw_text": "화성 효행구 인쇄 공장서 불…1시간 20분 만에 진화 - news.sbs.co.kr",
+      "region": "경기도 화성",
+      "id": "12ca164fb0c8",
+      "lat": 37.1995372034717,
+      "lon": 126.831477350333,
+      "distance_km": 51.0,
+      "score": 23,
+      "grade": ""
+    },
+    {
+      "source": "구글뉴스",
       "title": "서울 면목동 다세대주택서 화재...1명 대피 - gukjenews.com",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9LRHpWdEdaVEVlMWw4cnVkeExMWlRJQmtURzltSUR2U1NCdTRFQUJETS00dWVuREhSOGJuei05UGk2cG14d1lDdEU2bk1zZDdqcUJhcnRNQi1UT3hyU0hkcHBJOFo4QlFBR1F5SjZB?oc=5",
       "published": "2026-09-08T07:46:12+09:00",
@@ -585,7 +584,7 @@
       "lat": 37.5803715762429,
       "lon": 127.087661590766,
       "distance_km": 24.1,
-      "score": 11,
+      "score": 29,
       "grade": ""
     },
     {
@@ -735,7 +734,7 @@
       "lat": 37.5803715762429,
       "lon": 127.087661590766,
       "distance_km": 24.1,
-      "score": 11,
+      "score": 29,
       "grade": ""
     },
     {
@@ -749,7 +748,7 @@
       "lat": 37.7853136973153,
       "lon": 127.045786084702,
       "distance_km": 23.5,
-      "score": 11,
+      "score": 23,
       "grade": ""
     },
     {
@@ -819,7 +818,7 @@
       "lat": 36.9922606745326,
       "lon": 127.112688386546,
       "distance_km": 78.1,
-      "score": 0,
+      "score": 7,
       "grade": ""
     },
     {
