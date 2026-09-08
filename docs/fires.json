@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09T05:11:49.354983+09:00",
+  "updated_at": "2026-09-09T07:59:19.140033+09:00",
   "fires": [
     {
       "source": "재난문자",
@@ -1276,40 +1276,6 @@
       "id": "10cd348a65a3",
       "distance_km": 10.1,
       "score": 57,
-      "grade": "★★"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 용산구 이태원동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-07T07:34:41+09:00",
-      "region": "서울특별시 용산구 이태원동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "status": "현장도착",
-      "raw_text": "일반화재(차량,주택) 서울특별시 용산구 이태원동 화재 발생",
-      "lat": 37.5347859754107,
-      "lon": 126.98755436585064,
-      "id": "6e6e47655eec",
-      "distance_km": 19.4,
-      "score": 51,
-      "grade": "★★"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 강북구 미아동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-07T06:36:02+09:00",
-      "region": "서울특별시 강북구 미아동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "status": "현장도착",
-      "raw_text": "일반화재(차량,주택) 서울특별시 강북구 미아동 화재 발생",
-      "lat": 37.611105400865455,
-      "lon": 127.03264085329697,
-      "id": "0a92c6d62d03",
-      "distance_km": 18.4,
-      "score": 51,
       "grade": "★★"
     }
   ]
