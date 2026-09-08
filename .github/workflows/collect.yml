@@ -20,6 +20,13 @@ jobs:
           KAKAO_REST_KEY: ${{ secrets.KAKAO_REST_KEY }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_CHAT_SEOUL_NORTH: ${{ secrets.TELEGRAM_CHAT_SEOUL_NORTH }}
+          TELEGRAM_CHAT_SEOUL_SOUTH: ${{ secrets.TELEGRAM_CHAT_SEOUL_SOUTH }}
+          TELEGRAM_CHAT_INCHEON: ${{ secrets.TELEGRAM_CHAT_INCHEON }}
+          TELEGRAM_CHAT_GYEONGGI_NORTH: ${{ secrets.TELEGRAM_CHAT_GYEONGGI_NORTH }}
+          TELEGRAM_CHAT_GYEONGGI_WEST: ${{ secrets.TELEGRAM_CHAT_GYEONGGI_WEST }}
+          TELEGRAM_CHAT_GYEONGGI_EAST: ${{ secrets.TELEGRAM_CHAT_GYEONGGI_EAST }}
+          TELEGRAM_CHAT_GYEONGGI_SOUTH: ${{ secrets.TELEGRAM_CHAT_GYEONGGI_SOUTH }}
         run: python collect.py
       - name: save
         run: |
