@@ -1,6 +1,59 @@
 {
-  "updated_at": "2026-09-08T16:30:28.755219+09:00",
+  "updated_at": "2026-09-08T17:50:01.465187+09:00",
   "fires": [
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 서울특별시 마포구 상암동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-08T17:23:35+09:00",
+      "region": "서울특별시 마포구 상암동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "2차출동",
+      "status": "현장도착",
+      "raw_text": "일반화재(차량,주택) 서울특별시 마포구 상암동 화재 발생",
+      "lat": 37.576837836163236,
+      "lon": 126.89877145449088,
+      "id": "68d90b1f3357",
+      "distance_km": 10.8,
+      "score": 43,
+      "grade": "★"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 경기도 안산시 단원구 고잔동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-08T17:02:20+09:00",
+      "region": "경기도 안산시 단원구 고잔동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "1차출동",
+      "status": "귀소완료보고",
+      "raw_text": "일반화재(차량,주택) 경기도 안산시 단원구 고잔동 화재 발생",
+      "lat": 37.33007650265576,
+      "lon": 126.82778088020049,
+      "id": "e4163226a349",
+      "distance_km": 36.5,
+      "score": 58,
+      "grade": "★★★",
+      "first_seen": "2026-09-08T17:50:01.465065+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 경기도 고양시 덕양구 관산동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-08T16:29:09+09:00",
+      "region": "경기도 고양시 덕양구 관산동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "1차출동",
+      "status": "귀소완료보고",
+      "raw_text": "일반화재(차량,주택) 경기도 고양시 덕양구 관산동 화재 발생",
+      "lat": 37.6884963556989,
+      "lon": 126.8625552378711,
+      "id": "93bc153c91d6",
+      "distance_km": 4.3,
+      "score": 58,
+      "grade": "★★★",
+      "first_seen": "2026-09-08T17:50:01.465065+09:00"
+    },
     {
       "source": "소방출동",
       "title": "고층건물(3층이상,아파트) - 인천광역시 연수구 송도동",
@@ -16,8 +69,7 @@
       "id": "f7b988745802",
       "distance_km": 33.7,
       "score": 61,
-      "grade": "★★★",
-      "first_seen": "2026-09-08T16:30:28.754911+09:00"
+      "grade": "★★★"
     },
     {
       "source": "소방출동",
@@ -51,8 +103,7 @@
       "id": "22aa174e8d53",
       "distance_km": 18.5,
       "score": 43,
-      "grade": "★",
-      "first_seen": "2026-09-08T16:30:28.754911+09:00"
+      "grade": "★"
     },
     {
       "source": "소방출동",
@@ -86,8 +137,7 @@
       "id": "8b46748da1de",
       "distance_km": 17.3,
       "score": 43,
-      "grade": "★",
-      "first_seen": "2026-09-08T16:30:28.754911+09:00"
+      "grade": "★"
     },
     {
       "source": "소방출동",
@@ -104,8 +154,7 @@
       "id": "4af0265241cb",
       "distance_km": 35.7,
       "score": 43,
-      "grade": "★",
-      "first_seen": "2026-09-08T16:30:28.754911+09:00"
+      "grade": "★"
     },
     {
       "source": "구글뉴스",
@@ -120,23 +169,6 @@
       "distance_km": 51.0,
       "score": 23,
       "grade": ""
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 마포구 동교동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-08T14:06:09+09:00",
-      "region": "서울특별시 마포구 동교동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "status": "완전진화",
-      "raw_text": "일반화재(차량,주택) 서울특별시 마포구 동교동 화재 발생",
-      "lat": 37.55664607595001,
-      "lon": 126.92190913771502,
-      "id": "68d90b1f3357",
-      "distance_km": 13.8,
-      "score": 43,
-      "grade": "★"
     },
     {
       "source": "소방출동",
@@ -170,8 +202,7 @@
       "id": "2ef54012c40d",
       "distance_km": 27.5,
       "score": 43,
-      "grade": "★",
-      "first_seen": "2026-09-08T16:30:28.754911+09:00"
+      "grade": "★"
     },
     {
       "source": "소방출동",
@@ -188,8 +219,7 @@
       "id": "8870c1fc54ad",
       "distance_km": 17.9,
       "score": 43,
-      "grade": "★",
-      "first_seen": "2026-09-08T16:30:28.754911+09:00"
+      "grade": "★"
     },
     {
       "source": "소방출동",
@@ -206,8 +236,7 @@
       "id": "ebbaaa9016f9",
       "distance_km": 38.6,
       "score": 43,
-      "grade": "★",
-      "first_seen": "2026-09-08T16:30:28.754911+09:00"
+      "grade": "★"
     },
     {
       "source": "소방출동",
@@ -224,8 +253,7 @@
       "id": "5f48265a4a79",
       "distance_km": 20.7,
       "score": 43,
-      "grade": "★",
-      "first_seen": "2026-09-08T16:30:28.754911+09:00"
+      "grade": "★"
     },
     {
       "source": "소방출동",
@@ -242,8 +270,7 @@
       "id": "58ffef7bc22f",
       "distance_km": 21.7,
       "score": 43,
-      "grade": "★",
-      "first_seen": "2026-09-08T16:30:28.754911+09:00"
+      "grade": "★"
     },
     {
       "source": "소방출동",
@@ -277,8 +304,7 @@
       "id": "75cd7687fee4",
       "distance_km": 84.2,
       "score": 48,
-      "grade": "★★",
-      "first_seen": "2026-09-08T16:30:28.754911+09:00"
+      "grade": "★★"
     },
     {
       "source": "소방출동",
@@ -295,8 +321,7 @@
       "id": "c3c9c322d607",
       "distance_km": 19.4,
       "score": 43,
-      "grade": "★",
-      "first_seen": "2026-09-08T16:30:28.754911+09:00"
+      "grade": "★"
     },
     {
       "source": "소방출동",
@@ -313,8 +338,7 @@
       "id": "674072070bfc",
       "distance_km": 30.1,
       "score": 61,
-      "grade": "★★★",
-      "first_seen": "2026-09-08T16:30:28.754911+09:00"
+      "grade": "★★★"
     },
     {
       "source": "소방출동",
@@ -331,8 +355,7 @@
       "id": "efdbce068226",
       "distance_km": 54.6,
       "score": 38,
-      "grade": "★",
-      "first_seen": "2026-09-08T16:30:28.754911+09:00"
+      "grade": "★"
     },
     {
       "source": "소방출동",
@@ -349,8 +372,7 @@
       "id": "0b577c5dd2ac",
       "distance_km": 18.2,
       "score": 61,
-      "grade": "★★★",
-      "first_seen": "2026-09-08T16:30:28.754911+09:00"
+      "grade": "★★★"
     },
     {
       "source": "구글뉴스",
@@ -1238,20 +1260,6 @@
       "distance_km": 46.4,
       "score": 38,
       "grade": "★"
-    },
-    {
-      "source": "구글뉴스",
-      "title": "서울 광진구 중곡동 공동주택서 화재...7명 대피 - 디시인사이드",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE96M0l4N1RRWF90ODhEelY1SUhwM0pCU1pYdHJtNF96WGh1bEk4WEs0RGt4MjY2RTA2UV83ci1hRTVUVkYwdHpsQnVlZUlYempzem1RVkU5UQ?oc=5",
-      "published": "2026-09-06T17:25:12+09:00",
-      "raw_text": "서울 광진구 중곡동 공동주택서 화재...7명 대피 - 디시인사이드",
-      "region": "서울특별시 광진 중곡동",
-      "id": "21a6f25ea1e5",
-      "lat": 37.5617477458583,
-      "lon": 127.090401426965,
-      "distance_km": 25.2,
-      "score": 11,
-      "grade": ""
     }
   ]
 }
