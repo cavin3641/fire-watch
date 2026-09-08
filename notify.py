@@ -8,7 +8,12 @@
    https://api.telegram.org/bot<토큰>/getUpdates 를 브라우저에 입력 -> chat id 확인
 3. 둘 다 .env 에 넣기
 """
+from datetime import datetime, timezone, timedelta
+from urllib.parse import quote
+
 import requests
+
+KST = timezone(timedelta(hours=9))
 
 import zones
 from config import TELEGRAM_TOKEN, TELEGRAM_CHAT_ID
@@ -50,20 +55,34 @@ def format_alert(fire):
     if fire.get("source") != "소방출동":
         lines.append(fire.get("title", "")[:120])
 
-    tail = []
-    if fire.get("distance_km") is not None:
-        tail.append(f"사무실에서 약 {fire['distance_km']}km")
-    if fire.get("source"):
-        tail.append(fire["source"])
-    if tail:
-        lines.append(" · ".join(tail))
+    # 발생 시각 (몇 시간 전인지)
+    pub = fire.get("published")
+    if pub:
+        try:
+            t = datetime.fromisoformat(pub)
+            if t.tzinfo is None:
+                t = t.replace(tzinfo=KST)
+            mins = int((datetime.now(KST) - t).total_seconds() // 60)
+            if mins < 60:
+                lines.append(f"{mins}분 전 발생")
+            elif mins < 1440:
+                lines.append(f"{mins // 60}시간 전 발생")
+            else:
+                lines.append(f"{mins // 1440}일 전 발생")
+        except Exception:
+            pass
 
     if fire.get("in_news"):
-        lines.append("※ 뉴스 보도됨 - 경쟁 업체도 인지")
-    if fire.get("news_url"):
-        lines.append(fire["news_url"])
-    elif fire.get("url"):
-        lines.append(fire["url"])
+        lines.append("※ 언론 보도됨 - 경쟁 업체도 인지")
+
+    # 지도 링크만 보냅니다.
+    # 정보 출처(어느 사이트에서 얻는지)는 회사 자산이므로 노출하지 않습니다.
+    lat, lon = fire.get("lat"), fire.get("lon")
+    if lat and lon:
+        name = quote((fire.get("region") or "화재현장").split()[-1])
+        lines.append("")
+        lines.append(f"📍 지도 보기\nhttps://map.kakao.com/link/map/{name},{lat},{lon}")
+
     return "\n".join(lines)
 
 
