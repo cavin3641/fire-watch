@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09T20:49:20.745478+09:00",
+  "updated_at": "2026-09-10T01:26:14.374769+09:00",
   "fires": [
     {
       "source": "재난문자",
@@ -921,88 +921,6 @@
       "distance_km": 17.7,
       "score": 55,
       "grade": "★★"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 인천광역시 계양구 효성동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-08T01:12:31+09:00",
-      "region": "인천광역시 계양구 효성동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "1차출동",
-      "status": "현장도착보고",
-      "raw_text": "일반화재(차량,주택) 인천광역시 계양구 효성동 화재 발생",
-      "lat": 37.535958638722455,
-      "lon": 126.70853032508968,
-      "id": "3b3a940b2680",
-      "distance_km": 17.4,
-      "score": 37,
-      "grade": "★"
-    },
-    {
-      "source": "소방출동",
-      "title": "고층건물(3층이상,아파트) - 서울특별시 송파구 문정동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-08T01:06:31+09:00",
-      "region": "서울특별시 송파구 문정동",
-      "kind": "고층건물(3층이상,아파트)",
-      "scope": "2차출동",
-      "status": "현장도착",
-      "raw_text": "고층건물(3층이상,아파트) 서울특별시 송파구 문정동 화재 발생",
-      "lat": 37.487444260941764,
-      "lon": 127.11672285363848,
-      "id": "b3ae4bd968ff",
-      "distance_km": 31.5,
-      "score": 55,
-      "grade": "★★"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 인천광역시 검단구 왕길동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-08T00:56:49+09:00",
-      "region": "인천광역시 검단구 왕길동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "1차출동",
-      "status": "현장도착보고",
-      "raw_text": "일반화재(차량,주택) 인천광역시 검단구 왕길동 화재 발생",
-      "lat": 37.60103265922904,
-      "lon": 126.65654773057284,
-      "id": "58be89ae33ce",
-      "distance_km": 16.7,
-      "score": 37,
-      "grade": "★"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 인천광역시 부평구 부평동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-08T00:26:25+09:00",
-      "region": "인천광역시 부평구 부평동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "1차출동",
-      "status": "현장도착보고",
-      "raw_text": "일반화재(차량,주택) 인천광역시 부평구 부평동 화재 발생",
-      "lat": 37.491452180560316,
-      "lon": 126.73265293459527,
-      "id": "2d38ef68a117",
-      "distance_km": 20.5,
-      "score": 37,
-      "grade": "★"
-    },
-    {
-      "source": "구글뉴스",
-      "title": "[이시각 경기 119] 양주 펜션·평택 아파트에서 불…인명 피해 없어 - 네이트",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBkMGtYcHRXRGdYYXNEeVVpQlh3M1ROeXBiVkxDd3QtMTJRQ2JxWFdZcDRndTVZaURqLU5WR1V6bHJ4cmRxY2E5c0lhWERncGtTX0lr?oc=5",
-      "published": "2026-09-07T22:29:06+09:00",
-      "raw_text": "[이시각 경기 119] 양주 펜션·평택 아파트에서 불…인명 피해 없어 - 네이트",
-      "region": "경기도 양주",
-      "id": "fb1c208a9ee6",
-      "lat": 37.7853136973153,
-      "lon": 127.045786084702,
-      "distance_km": 23.5,
-      "score": 23,
-      "grade": ""
     }
   ]
 }
