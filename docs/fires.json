@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09T07:59:19.140033+09:00",
+  "updated_at": "2026-09-09T10:08:48.821638+09:00",
   "fires": [
     {
       "source": "재난문자",
@@ -18,6 +18,114 @@
     },
     {
       "source": "소방출동",
+      "title": "일반화재(차량,주택) - 경기도 화성시 동탄구 신동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-09T09:24:31+09:00",
+      "region": "경기도 화성시 동탄구 신동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "1차출동",
+      "status": "귀소보고",
+      "raw_text": "일반화재(차량,주택) 경기도 화성시 동탄구 신동 화재 발생",
+      "lat": 37.174784244075965,
+      "lon": 127.14328738144715,
+      "id": "ba7a4792c1a6",
+      "distance_km": 60.4,
+      "score": 55,
+      "grade": "★★",
+      "first_seen": "2026-09-09T10:08:48.821465+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "고층건물(3층이상,아파트) - 서울특별시 강남구 역삼동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-09T08:26:39+09:00",
+      "region": "서울특별시 강남구 역삼동",
+      "kind": "고층건물(3층이상,아파트)",
+      "scope": "2차출동",
+      "status": "현장도착",
+      "raw_text": "고층건물(3층이상,아파트) 서울특별시 강남구 역삼동 화재 발생",
+      "lat": 37.50432106140844,
+      "lon": 127.0250394849371,
+      "id": "a6dfecbfcb4f",
+      "distance_km": 24.1,
+      "score": 61,
+      "grade": "★★★",
+      "first_seen": "2026-09-09T10:08:48.821465+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 서울특별시 강서구 방화동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-09T07:42:38+09:00",
+      "region": "서울특별시 강서구 방화동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "2차출동",
+      "status": "현장도착",
+      "raw_text": "일반화재(차량,주택) 서울특별시 강서구 방화동 화재 발생",
+      "lat": 37.5722116075044,
+      "lon": 126.80829805696784,
+      "id": "56c499d4714c",
+      "distance_km": 9.8,
+      "score": 43,
+      "grade": "★",
+      "first_seen": "2026-09-09T10:08:48.821465+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 서울특별시 구로구 구로동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-09T07:37:25+09:00",
+      "region": "서울특별시 구로구 구로동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "2차출동",
+      "status": "현장도착",
+      "raw_text": "일반화재(차량,주택) 서울특별시 구로구 구로동 화재 발생",
+      "lat": 37.48743808336999,
+      "lon": 126.89595237327315,
+      "id": "c7203a5aaa7c",
+      "distance_km": 19.8,
+      "score": 43,
+      "grade": "★",
+      "first_seen": "2026-09-09T10:08:48.821465+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 경기도 군포시 산본동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-09T07:36:10+09:00",
+      "region": "경기도 군포시 산본동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "1차출동",
+      "status": "출동보고",
+      "raw_text": "일반화재(차량,주택) 경기도 군포시 산본동 화재 발생",
+      "lat": 37.37452999517573,
+      "lon": 126.93040783913986,
+      "id": "9002f3e36f5f",
+      "distance_km": 32.7,
+      "score": 43,
+      "grade": "★",
+      "first_seen": "2026-09-09T10:08:48.821465+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 서울특별시 성동구 용답동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-09T06:26:35+09:00",
+      "region": "서울특별시 성동구 용답동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "2차출동",
+      "status": "현장도착",
+      "raw_text": "일반화재(차량,주택) 서울특별시 성동구 용답동 화재 발생",
+      "lat": 37.561061186012516,
+      "lon": 127.0625895597668,
+      "id": "9cc609213c31",
+      "distance_km": 23.0,
+      "score": 43,
+      "grade": "★",
+      "first_seen": "2026-09-09T10:08:48.821465+09:00"
+    },
+    {
+      "source": "소방출동",
       "title": "일반화재(차량,주택) - 서울특별시 광진구 화양동",
       "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
       "published": "2026-09-09T04:28:39+09:00",
@@ -30,9 +138,8 @@
       "lon": 127.06999542426331,
       "id": "9948c12b6512",
       "distance_km": 24.7,
-      "score": 65,
-      "grade": "★★★",
-      "first_seen": "2026-09-09T05:11:49.354834+09:00"
+      "score": 43,
+      "grade": "★"
     },
     {
       "source": "소방출동",
@@ -48,8 +155,8 @@
       "lon": 127.02790314761843,
       "id": "948ac6029193",
       "distance_km": 23.8,
-      "score": 65,
-      "grade": "★★★"
+      "score": 43,
+      "grade": "★"
     },
     {
       "source": "소방출동",
@@ -65,9 +172,8 @@
       "lon": 126.90941081026547,
       "id": "411ed5916cd9",
       "distance_km": 15.6,
-      "score": 65,
-      "grade": "★★★",
-      "first_seen": "2026-09-09T05:11:49.354834+09:00"
+      "score": 43,
+      "grade": "★"
     },
     {
       "source": "소방출동",
@@ -117,7 +223,7 @@
       "lon": 127.06104282467977,
       "id": "75e134f2ee56",
       "distance_km": 20.2,
-      "score": 83,
+      "score": 61,
       "grade": "★★★"
     },
     {
@@ -1243,40 +1349,6 @@
       "distance_km": 20.0,
       "score": 44,
       "grade": "★"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 경기도 평택시 고덕면 궁리",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-07T08:21:54+09:00",
-      "region": "경기도 평택시 고덕면 궁리",
-      "kind": "일반화재(차량,주택)",
-      "scope": "1차출동",
-      "status": "현장도착보고",
-      "raw_text": "일반화재(차량,주택) 경기도 평택시 고덕면 궁리 화재 발생",
-      "lat": 37.0172782018616,
-      "lon": 127.0342167401012,
-      "id": "a98e212877b3",
-      "distance_km": 73.5,
-      "score": 13,
-      "grade": ""
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 은평구 응암동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-07T08:21:26+09:00",
-      "region": "서울특별시 은평구 응암동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "status": "현장도착",
-      "raw_text": "일반화재(차량,주택) 서울특별시 은평구 응암동 화재 발생",
-      "lat": 37.59670951213229,
-      "lon": 126.91639799925163,
-      "id": "10cd348a65a3",
-      "distance_km": 10.1,
-      "score": 57,
-      "grade": "★★"
     }
   ]
 }
