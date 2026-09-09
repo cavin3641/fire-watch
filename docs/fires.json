@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-10T01:26:14.374769+09:00",
+  "updated_at": "2026-09-10T04:28:06.376270+09:00",
   "fires": [
     {
       "source": "재난문자",
@@ -870,57 +870,6 @@
       "distance_km": 19.0,
       "score": 61,
       "grade": "★★★"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 인천광역시 제물포구 항동7가",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-08T02:12:07+09:00",
-      "region": "인천광역시 제물포구 항동7가",
-      "kind": "일반화재(차량,주택)",
-      "scope": "1차출동",
-      "status": "현장도착보고",
-      "raw_text": "일반화재(차량,주택) 인천광역시 제물포구 항동7가 화재 발생",
-      "lat": 37.44990427626705,
-      "lon": 126.59813380251953,
-      "id": "df3fd946d74b",
-      "distance_km": 31.0,
-      "score": 37,
-      "grade": "★"
-    },
-    {
-      "source": "소방출동",
-      "title": "고층건물(3층이상,아파트) - 서울특별시 서초구 반포동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-08T01:53:14+09:00",
-      "region": "서울특별시 서초구 반포동",
-      "kind": "고층건물(3층이상,아파트)",
-      "scope": "2차출동",
-      "status": "현장도착",
-      "raw_text": "고층건물(3층이상,아파트) 서울특별시 서초구 반포동 화재 발생",
-      "lat": 37.49516948299912,
-      "lon": 126.99849600491581,
-      "id": "9be77baf8793",
-      "distance_km": 23.3,
-      "score": 55,
-      "grade": "★★"
-    },
-    {
-      "source": "소방출동",
-      "title": "고층건물(3층이상,아파트) - 서울특별시 구로구 고척동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-08T01:46:21+09:00",
-      "region": "서울특별시 구로구 고척동",
-      "kind": "고층건물(3층이상,아파트)",
-      "scope": "2차출동",
-      "status": "현장도착",
-      "raw_text": "고층건물(3층이상,아파트) 서울특별시 구로구 고척동 화재 발생",
-      "lat": 37.50115605268408,
-      "lon": 126.86493501556107,
-      "id": "4026e4af3999",
-      "distance_km": 17.7,
-      "score": 55,
-      "grade": "★★"
     }
   ]
 }
