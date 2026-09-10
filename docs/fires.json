@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11T04:35:21.791264+09:00",
+  "updated_at": "2026-09-11T06:49:21.522883+09:00",
   "fires": [
     {
       "source": "재난문자",
@@ -18,6 +18,59 @@
     },
     {
       "source": "소방출동",
+      "title": "일반화재(차량,주택) - 경기도 시흥시 정왕동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-11T05:30:43+09:00",
+      "region": "경기도 시흥시 정왕동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "1차출동",
+      "status": "현장도착보고",
+      "raw_text": "일반화재(차량,주택) 경기도 시흥시 정왕동 화재 발생",
+      "lat": 37.316745918131936,
+      "lon": 126.71763689416882,
+      "id": "3c86baee27e8",
+      "distance_km": 39.3,
+      "score": 43,
+      "grade": "★",
+      "first_seen": "2026-09-11T06:49:21.522603+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 서울특별시 강남구 도곡동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-11T05:12:39+09:00",
+      "region": "서울특별시 강남구 도곡동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "2차출동",
+      "status": "현장도착",
+      "raw_text": "일반화재(차량,주택) 서울특별시 강남구 도곡동 화재 발생",
+      "lat": 37.48965076470534,
+      "lon": 127.0328366941482,
+      "id": "958927b9d419",
+      "distance_km": 25.8,
+      "score": 65,
+      "grade": "★★★"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 경기도 부천시 오정구 대장동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-11T04:59:13+09:00",
+      "region": "경기도 부천시 오정구 대장동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "1차출동",
+      "status": "현장도착보고",
+      "raw_text": "일반화재(차량,주택) 경기도 부천시 오정구 대장동 화재 발생",
+      "lat": 37.551613531217356,
+      "lon": 126.76744082670281,
+      "id": "32ade01d6d6d",
+      "distance_km": 13.2,
+      "score": 43,
+      "grade": "★",
+      "first_seen": "2026-09-11T06:49:21.522603+09:00"
+    },
+    {
+      "source": "소방출동",
       "title": "고층건물(3층이상,아파트) - 인천광역시 연수구 송도동",
       "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
       "published": "2026-09-11T04:15:42+09:00",
@@ -31,8 +84,7 @@
       "id": "9858a814eade",
       "distance_km": 35.1,
       "score": 76,
-      "grade": "★★★",
-      "first_seen": "2026-09-11T04:35:21.790960+09:00"
+      "grade": "★★★"
     },
     {
       "source": "소방출동",
@@ -49,8 +101,7 @@
       "id": "a2461221a08a",
       "distance_km": 35.5,
       "score": 43,
-      "grade": "★",
-      "first_seen": "2026-09-11T04:35:21.790960+09:00"
+      "grade": "★"
     },
     {
       "source": "소방출동",
@@ -67,26 +118,7 @@
       "id": "0c9fbf21e602",
       "distance_km": 19.4,
       "score": 70,
-      "grade": "★★★",
-      "first_seen": "2026-09-11T04:35:21.790960+09:00"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 강남구 역삼동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-11T03:11:46+09:00",
-      "region": "서울특별시 강남구 역삼동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "status": "현장도착",
-      "raw_text": "일반화재(차량,주택) 서울특별시 강남구 역삼동 화재 발생",
-      "lat": 37.50375950290631,
-      "lon": 127.03633751661496,
-      "id": "958927b9d419",
-      "distance_km": 24.9,
-      "score": 65,
-      "grade": "★★★",
-      "first_seen": "2026-09-11T04:35:21.790960+09:00"
+      "grade": "★★★"
     },
     {
       "source": "소방출동",
@@ -103,8 +135,7 @@
       "id": "bcf0794c6d9b",
       "distance_km": 10.1,
       "score": 43,
-      "grade": "★",
-      "first_seen": "2026-09-11T04:35:21.790960+09:00"
+      "grade": "★"
     },
     {
       "source": "소방출동",
@@ -121,8 +152,7 @@
       "id": "5291c8507241",
       "distance_km": 16.7,
       "score": 83,
-      "grade": "★★★",
-      "first_seen": "2026-09-11T04:35:21.790960+09:00"
+      "grade": "★★★"
     },
     {
       "source": "소방출동",
@@ -139,8 +169,7 @@
       "id": "577444d5263c",
       "distance_km": 0.7,
       "score": 38,
-      "grade": "★",
-      "first_seen": "2026-09-11T04:35:21.790960+09:00"
+      "grade": "★"
     },
     {
       "source": "소방출동",
@@ -157,8 +186,7 @@
       "id": "e589eb983b2f",
       "distance_km": 20.8,
       "score": 65,
-      "grade": "★★★",
-      "first_seen": "2026-09-11T04:35:21.790960+09:00"
+      "grade": "★★★"
     },
     {
       "source": "소방출동",
@@ -175,8 +203,7 @@
       "id": "8f0a9077c5cc",
       "distance_km": 30.4,
       "score": 43,
-      "grade": "★",
-      "first_seen": "2026-09-11T04:35:21.790960+09:00"
+      "grade": "★"
     },
     {
       "source": "인천일보",
@@ -225,15 +252,14 @@
       "id": "d2d74989e937",
       "distance_km": 21.3,
       "score": 38,
-      "grade": "★",
-      "first_seen": "2026-09-11T04:35:21.790960+09:00"
+      "grade": "★"
     },
     {
       "source": "구글뉴스",
-      "title": "광명 노온사동서 비닐하우스 1동 전소…일대서 유사 화재 반복 양상 - 중부일보",
+      "title": "광명 노온사동서 비닐하우스 1동 전소…일대서 유사 화재 반복 양상 - joongboo.com",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBVU1l0cmx6NmttSFNQZXZuV2NhNFlfQzhlN2JoOHhBbzAwRkxIZHdueUNNeDdIeDZMUXNfODRtZ1hmVHU5RTJ2R0p0THBYZ2R5T3BXb3NOUGUzSkc3blRHcWN6RkI3QWo4SGowVW13?oc=5",
       "published": "2026-09-10T16:11:00+09:00",
-      "raw_text": "광명 노온사동서 비닐하우스 1동 전소…일대서 유사 화재 반복 양상 - 중부일보",
+      "raw_text": "광명 노온사동서 비닐하우스 1동 전소…일대서 유사 화재 반복 양상 - joongboo.com",
       "region": "경기도 광명 노온사동",
       "id": "2f076d77921d",
       "lat": 37.4406866721116,
@@ -837,23 +863,6 @@
       "score": 43,
       "grade": "★",
       "first_seen": "2026-09-09T10:08:48.821465+09:00"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 성동구 용답동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-09T06:26:35+09:00",
-      "region": "서울특별시 성동구 용답동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "status": "현장도착",
-      "raw_text": "일반화재(차량,주택) 서울특별시 성동구 용답동 화재 발생",
-      "lat": 37.561061186012516,
-      "lon": 127.0625895597668,
-      "id": "9cc609213c31",
-      "distance_km": 23.0,
-      "score": 43,
-      "grade": "★"
     }
   ]
 }
