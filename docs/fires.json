@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-10T22:34:28.863391+09:00",
+  "updated_at": "2026-09-11T02:10:30.390762+09:00",
   "fires": [
     {
       "source": "재난문자",
@@ -724,74 +724,6 @@
       "id": "c3450e63a226",
       "distance_km": 24.7,
       "score": 43,
-      "grade": "★"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 경기도 수원시 장안구 조원동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-09T01:19:37+09:00",
-      "region": "경기도 수원시 장안구 조원동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "1차출동",
-      "status": "귀소완료보고",
-      "raw_text": "일반화재(차량,주택) 경기도 수원시 장안구 조원동 화재 발생",
-      "lat": 37.302115701494756,
-      "lon": 127.01459536795055,
-      "id": "d4f753bbec48",
-      "distance_km": 42.8,
-      "score": 58,
-      "grade": "★★★"
-    },
-    {
-      "source": "소방출동",
-      "title": "고층건물(3층이상,아파트) - 서울특별시 노원구 상계동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-09T00:50:15+09:00",
-      "region": "서울특별시 노원구 상계동",
-      "kind": "고층건물(3층이상,아파트)",
-      "scope": "2차출동",
-      "status": "",
-      "raw_text": "고층건물(3층이상,아파트) 서울특별시 노원구 상계동 화재 발생",
-      "lat": 37.64893554376858,
-      "lon": 127.06104282467977,
-      "id": "75e134f2ee56",
-      "distance_km": 20.2,
-      "score": 55,
-      "grade": "★★"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 경기도 김포시 구래동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-09T00:32:10+09:00",
-      "region": "경기도 김포시 구래동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "1차출동",
-      "status": "현장도착보고",
-      "raw_text": "일반화재(차량,주택) 경기도 김포시 구래동 화재 발생",
-      "lat": 37.64196116089166,
-      "lon": 126.62023810675072,
-      "id": "8bef3c858fda",
-      "distance_km": 18.7,
-      "score": 43,
-      "grade": "★"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 경기도 평택시 신장동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-08T23:41:44+09:00",
-      "region": "경기도 평택시 신장동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "1차출동",
-      "status": "추가출동지령",
-      "raw_text": "일반화재(차량,주택) 경기도 평택시 신장동 화재 발생",
-      "lat": 37.0786336879948,
-      "lon": 127.05480211215273,
-      "id": "cc6bef1d671c",
-      "distance_km": 67.4,
-      "score": 38,
       "grade": "★"
     }
   ]
