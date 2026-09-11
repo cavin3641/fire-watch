@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11T22:30:09.957332+09:00",
+  "updated_at": "2026-09-12T02:10:48.258645+09:00",
   "fires": [
     {
       "source": "재난문자",
@@ -1140,75 +1140,6 @@
       "distance_km": 20.7,
       "score": 58,
       "grade": "★★★"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 강북구 수유동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-10T01:46:34+09:00",
-      "region": "서울특별시 강북구 수유동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "status": "",
-      "raw_text": "일반화재(차량,주택) 서울특별시 강북구 수유동 화재 발생",
-      "lat": 37.645895405574194,
-      "lon": 127.01941008004796,
-      "id": "080653447afc",
-      "distance_km": 16.6,
-      "score": 43,
-      "grade": "★"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 경기도 안양시 만안구 안양동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-10T01:37:43+09:00",
-      "region": "경기도 안양시 만안구 안양동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "1차출동",
-      "status": "귀소완료보고",
-      "raw_text": "일반화재(차량,주택) 경기도 안양시 만안구 안양동 화재 발생",
-      "lat": 37.393376796385546,
-      "lon": 126.92609910897171,
-      "id": "3ef81a82c3b1",
-      "distance_km": 30.6,
-      "score": 58,
-      "grade": "★★★",
-      "first_seen": "2026-09-10T06:53:17.228035+09:00"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 영등포구 영등포동7가",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-10T00:25:46+09:00",
-      "region": "서울특별시 영등포구 영등포동7가",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "status": "완전진화",
-      "raw_text": "일반화재(차량,주택) 서울특별시 영등포구 영등포동7가 화재 발생",
-      "lat": 37.525823720603526,
-      "lon": 126.9104021645093,
-      "id": "7f05f5670716",
-      "distance_km": 16.3,
-      "score": 37,
-      "grade": "★"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 인천광역시 계양구 계산동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-10T00:04:30+09:00",
-      "region": "인천광역시 계양구 계산동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "1차출동",
-      "status": "완전진화",
-      "raw_text": "일반화재(차량,주택) 인천광역시 계양구 계산동 화재 발생",
-      "lat": 37.54326657393925,
-      "lon": 126.72387958457325,
-      "id": "a8e9ebca8307",
-      "distance_km": 16.0,
-      "score": 37,
-      "grade": "★"
     }
   ]
 }
