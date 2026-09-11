@@ -27,6 +27,21 @@
   .grade.g1{color:var(--cool)}
   .card.top{background:rgba(255,90,31,.06)}
   .tag.news{border-color:var(--cool); color:var(--cool)}
+  .visit{
+    display:inline-block; font-size:12px; font-weight:700;
+    padding:3px 9px; border-radius:5px; margin-bottom:5px;
+  }
+  .visit.ok{background:rgba(45,180,120,.16); color:#4ede9f}
+  .visit.soon{background:rgba(255,167,38,.16); color:#ffc078}
+  .visit.no{background:rgba(140,150,165,.14); color:#9aa5b5}
+  .card.busy{opacity:.5}
+  .filterbar{display:flex; gap:6px; padding:8px 18px 0}
+  .fbtn{
+    flex:1; padding:7px 0; font-size:13px; font-family:inherit;
+    background:var(--panel); color:var(--dim); border:1px solid var(--line);
+    border-radius:6px; cursor:pointer;
+  }
+  .fbtn.on{color:var(--text); border-color:var(--hot)}
   .sortbtn{
     margin-right:10px; padding:4px 10px; font-size:13px; font-family:inherit;
     background:var(--panel); color:var(--text); border:1px solid var(--line);
@@ -88,6 +103,11 @@
 </header>
 
 <div id="map"></div>
+<div class="filterbar">
+  <button class="fbtn on" data-f="all">전체</button>
+  <button class="fbtn" data-f="ok">방문 가능</button>
+  <button class="fbtn" data-f="star">★★ 이상</button>
+</div>
 <div id="list"></div>
 
 <script>
@@ -119,7 +139,9 @@ function elapsedText(iso) {
 /* ── 화면 그리기 ──────────────────────────────── */
 function render(data) {
   _data = data;
-  const fires = (data.fires || []).slice();
+  let fires = (data.fires || []).slice();
+  if (_filter === 'ok') fires = fires.filter(f => f.visit === '방문가능' || f.visit === '곧가능');
+  if (_filter === 'star') fires = fires.filter(f => (f.score || 0) >= 45);
     const topN = fires.filter(f => (f.score || 0) >= 50).length;
   document.getElementById('count').textContent = topN > 0 ? ('★' + topN + ' / ' + fires.length) : fires.length;
   document.getElementById('updated').textContent =
@@ -161,9 +183,10 @@ function render(data) {
     /* 목록 카드 */
     const isOld = f.published && (Date.now() - new Date(f.published)) > 6 * 3600 * 1000;
     const card = document.createElement('div');
-        card.className = 'card' + ((f.score || 0) >= 50 ? ' top' : '');
+        card.className = 'card' + ((f.score || 0) >= 45 ? ' top' : '') + (f.visit === '진화중' ? ' busy' : '');
     card.innerHTML = `
       <div class="elapsed ${isOld ? 'old' : ''}">${elapsedText(f.published)}</div>
+      ${f.visit ? `<div class="visit ${f.visit === '방문가능' ? 'ok' : f.visit === '곧가능' ? 'soon' : 'no'}">${f.visit === '방문가능' ? '방문 가능' : f.visit === '곧가능' ? '곧 가능' : '진화 중'}</div>` : ''}
       <div class="region">${f.grade ? `<span class="grade ${f.grade.length < 2 ? 'g1' : ''}">${f.grade}</span>` : ''}${f.region || '위치 미상'}</div>
       <div class="title">${f.kind ? (f.kind + (f.scope ? ' · ' + f.scope : '')) : (f.title || '')}</div>
       <div class="tags">
@@ -197,7 +220,16 @@ function render(data) {
   map.setBounds(bounds);
 }
 
-let _data = null, _byScore = false;
+let _data = null, _byScore = false, _filter = 'all';
+
+document.querySelectorAll('.fbtn').forEach(b => {
+  b.onclick = () => {
+    document.querySelectorAll('.fbtn').forEach(x => x.classList.remove('on'));
+    b.classList.add('on');
+    _filter = b.dataset.f;
+    if (_data) render(_data);
+  };
+});
 
 document.getElementById('sortbtn').onclick = () => {
   _byScore = !_byScore;
