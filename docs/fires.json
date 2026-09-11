@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12T04:36:48.259941+09:00",
+  "updated_at": "2026-09-12T06:53:19.234426+09:00",
   "fires": [
     {
       "source": "재난문자",
@@ -18,6 +18,44 @@
     },
     {
       "source": "소방출동",
+      "title": "일반화재(차량,주택) - 인천광역시 검단구 왕길동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-12T06:44:37+09:00",
+      "region": "인천광역시 검단구 왕길동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "1차출동",
+      "status": "출동보고",
+      "raw_text": "일반화재(차량,주택) 인천광역시 검단구 왕길동 화재 발생",
+      "lat": 37.60175754957302,
+      "lon": 126.65795993503293,
+      "id": "22570a84d850",
+      "distance_km": 16.6,
+      "score": 38,
+      "grade": "★",
+      "visit": "진화중",
+      "first_seen": "2026-09-12T06:53:19.234172+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "고층건물(3층이상,아파트) - 서울특별시 서초구 서초동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-12T04:38:10+09:00",
+      "region": "서울특별시 서초구 서초동",
+      "kind": "고층건물(3층이상,아파트)",
+      "scope": "2차출동",
+      "status": "현장도착",
+      "raw_text": "고층건물(3층이상,아파트) 서울특별시 서초구 서초동 화재 발생",
+      "lat": 37.48550074258135,
+      "lon": 127.01489102425289,
+      "id": "3fb9f0345a0b",
+      "distance_km": 25.1,
+      "score": 61,
+      "grade": "★★★",
+      "visit": "진화중",
+      "first_seen": "2026-09-12T06:53:19.234172+09:00"
+    },
+    {
+      "source": "소방출동",
       "title": "일반화재(차량,주택) - 서울특별시 강북구 수유동",
       "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
       "published": "2026-09-12T03:56:47+09:00",
@@ -32,8 +70,7 @@
       "distance_km": 17.0,
       "score": 58,
       "grade": "★★★",
-      "visit": "방문가능",
-      "first_seen": "2026-09-12T04:36:48.259637+09:00"
+      "visit": "방문가능"
     },
     {
       "source": "소방출동",
@@ -51,8 +88,7 @@
       "distance_km": 49.1,
       "score": 58,
       "grade": "★★★",
-      "visit": "방문가능",
-      "first_seen": "2026-09-12T04:36:48.259637+09:00"
+      "visit": "방문가능"
     },
     {
       "source": "소방출동",
@@ -70,8 +106,7 @@
       "distance_km": 21.2,
       "score": 43,
       "grade": "★",
-      "visit": "진화중",
-      "first_seen": "2026-09-12T04:36:48.259637+09:00"
+      "visit": "진화중"
     },
     {
       "source": "소방출동",
@@ -89,8 +124,7 @@
       "distance_km": 16.5,
       "score": 61,
       "grade": "★★★",
-      "visit": "진화중",
-      "first_seen": "2026-09-12T04:36:48.259637+09:00"
+      "visit": "진화중"
     },
     {
       "source": "소방출동",
@@ -108,8 +142,7 @@
       "distance_km": 25.9,
       "score": 55,
       "grade": "★★",
-      "visit": "방문가능",
-      "first_seen": "2026-09-12T04:36:48.259637+09:00"
+      "visit": "방문가능"
     },
     {
       "source": "소방출동",
@@ -127,8 +160,7 @@
       "distance_km": 17.8,
       "score": 43,
       "grade": "★",
-      "visit": "확인필요",
-      "first_seen": "2026-09-12T04:36:48.259637+09:00"
+      "visit": "확인필요"
     },
     {
       "source": "소방출동",
@@ -146,8 +178,7 @@
       "distance_km": 26.3,
       "score": 58,
       "grade": "★★★",
-      "visit": "방문가능",
-      "first_seen": "2026-09-12T04:36:48.259637+09:00"
+      "visit": "방문가능"
     },
     {
       "source": "소방출동",
@@ -165,8 +196,7 @@
       "distance_km": 15.6,
       "score": 61,
       "grade": "★★★",
-      "visit": "진화중",
-      "first_seen": "2026-09-12T04:36:48.259637+09:00"
+      "visit": "진화중"
     },
     {
       "source": "소방출동",
@@ -184,8 +214,7 @@
       "distance_km": 17.4,
       "score": 76,
       "grade": "★★★",
-      "visit": "방문가능",
-      "first_seen": "2026-09-12T04:36:48.259637+09:00"
+      "visit": "방문가능"
     },
     {
       "source": "소방출동",
@@ -203,8 +232,7 @@
       "distance_km": 73.8,
       "score": 43,
       "grade": "★",
-      "visit": "진화중",
-      "first_seen": "2026-09-12T04:36:48.259637+09:00"
+      "visit": "진화중"
     },
     {
       "source": "소방출동",
@@ -258,8 +286,7 @@
       "distance_km": 18.0,
       "score": 61,
       "grade": "★★★",
-      "visit": "진화중",
-      "first_seen": "2026-09-12T04:36:48.259637+09:00"
+      "visit": "진화중"
     },
     {
       "source": "소방출동",
@@ -940,10 +967,10 @@
     },
     {
       "source": "구글뉴스",
-      "title": "인천 미추홀구 용현동 빌라서 화재, 2명 부상 - 인천투데이",
+      "title": "인천 미추홀구 용현동 빌라서 화재, 2명 부상 - incheontoday.com",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA2OGczeDFaNjg0a3RkQWhJanRWUUd4cHhTbWV5MmN5UTBPMmhyWDRqTGxqZFlTNHhRYzVfTlpVd2VsYkh3aVdyZGx5eGhnSU1qazZWRC1LZ3pxX0xrS0lQRHlSeWx6ZE80RXdCc25yelM?oc=5",
       "published": "2026-09-11T08:56:31+09:00",
-      "raw_text": "인천 미추홀구 용현동 빌라서 화재, 2명 부상 - 인천투데이",
+      "raw_text": "인천 미추홀구 용현동 빌라서 화재, 2명 부상 - incheontoday.com",
       "region": "인천광역시 미추홀 용현동",
       "id": "692afc795a85",
       "lat": 37.4514021746598,
