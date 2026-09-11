@@ -45,8 +45,15 @@ def format_alert(fire):
     home = " ★사무실권역" if zone == zones.HOME_ZONE else ""
     grade = fire.get("grade") or ""
     head = f"{grade} " if grade else ""
+    visit = fire.get("visit") or ""
+    mark = {"방문가능": "✅ 방문 가능",
+            "곧가능": "🕐 곧 가능 (진화 마무리 중)",
+            "진화중": "⛔ 아직 진화 중"}.get(visit, "")
+
     lines = [f"[{zone}]{home}",
              f"🔥 {head}{fire.get('region') or '위치 미상'}"]
+    if mark:
+        lines.append(mark)
     if fire.get("kind"):
         detail = fire["kind"]
         if fire.get("scope"):
