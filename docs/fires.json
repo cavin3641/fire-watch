@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13T03:38:44.872031+09:00",
+  "updated_at": "2026-09-13T06:23:59.313925+09:00",
   "fires": [
     {
       "source": "재난문자",
@@ -1541,42 +1541,6 @@
       "score": 17,
       "grade": "",
       "visit": "확인필요"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 경기도 시흥시 정왕동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-11T05:30:43+09:00",
-      "region": "경기도 시흥시 정왕동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "1차출동",
-      "status": "현장도착보고",
-      "raw_text": "일반화재(차량,주택) 경기도 시흥시 정왕동 화재 발생",
-      "lat": 37.316745918131936,
-      "lon": 126.71763689416882,
-      "id": "3c86baee27e8",
-      "distance_km": 39.3,
-      "score": 43,
-      "grade": "★",
-      "visit": "진화중"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 경기도 군포시 당동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-11T03:51:47+09:00",
-      "region": "경기도 군포시 당동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "1차출동",
-      "status": "현장도착보고",
-      "raw_text": "일반화재(차량,주택) 경기도 군포시 당동 화재 발생",
-      "lat": 37.352120825312014,
-      "lon": 126.94651213449079,
-      "id": "a2461221a08a",
-      "distance_km": 35.5,
-      "score": 37,
-      "grade": "★",
-      "visit": "진화중"
     }
   ]
 }
