@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12T13:17:20.790035+09:00",
+  "updated_at": "2026-09-12T17:50:21.450962+09:00",
   "fires": [
     {
       "source": "재난문자",
@@ -1212,20 +1212,6 @@
       "distance_km": 21.3,
       "score": 32,
       "grade": "★"
-    },
-    {
-      "source": "구글뉴스",
-      "title": "광명 노온사동서 비닐하우스 1동 전소…일대서 유사 화재 반복 양상 - 중부일보",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBVU1l0cmx6NmttSFNQZXZuV2NhNFlfQzhlN2JoOHhBbzAwRkxIZHdueUNNeDdIeDZMUXNfODRtZ1hmVHU5RTJ2R0p0THBYZ2R5T3BXb3NOUGUzSkc3blRHcWN6RkI3QWo4SGowVW13?oc=5",
-      "published": "2026-09-10T16:11:00+09:00",
-      "raw_text": "광명 노온사동서 비닐하우스 1동 전소…일대서 유사 화재 반복 양상 - 중부일보",
-      "region": "경기도 광명 노온사동",
-      "id": "2f076d77921d",
-      "lat": 37.4406866721116,
-      "lon": 126.850780888447,
-      "distance_km": 24.3,
-      "score": 17,
-      "grade": ""
     }
   ]
 }
