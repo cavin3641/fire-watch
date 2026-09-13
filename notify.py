@@ -54,6 +54,12 @@ def format_alert(fire):
              f"🔥 {head}{fire.get('region') or '위치 미상'}"]
     if mark:
         lines.append(mark)
+    if fire.get("building"):
+        b = fire["building"]
+        if fire.get("bkind"):
+            b += f" ({fire['bkind']})"
+        lines.append(f"🏢 {b}")
+
     if fire.get("kind"):
         detail = fire["kind"]
         if fire.get("scope"):

@@ -72,7 +72,19 @@ def score(fire):
     if "차량)" in kind:
         return 0
     pts = 5
+    # 건물 이름으로 종류를 알아냈으면 그걸 우선합니다
+    bkind = fire.get("bkind")
+    BK = {"아파트": 32, "공장·창고": 45, "상가·빌딩": 34,
+          "숙박": 26, "의료·복지": 26, "주택·빌라": 20}
+    if bkind in BK:
+        pts += BK[bkind]
+        matched = True
+    else:
+        matched = False
+
     for key, val in BUILDING_SCORE.items():
+        if matched:
+            break
         if key in kind:
             pts += val
             break

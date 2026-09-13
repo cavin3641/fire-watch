@@ -76,7 +76,11 @@ def is_fire_news(item):
         kind = item.get("kind", "")
         if "차량)" in kind:            # '일반화재(차량)' = 차만 탄 것
             return False
-        return any(k in kind for k in DISPATCH_BUILDING)
+        if any(k in kind for k in DISPATCH_BUILDING):
+            return True
+        # 분류가 '기타화재'여도 건물 이름으로 종류를 알면 통과시킵니다
+        # (소방청이 '기타'로 뭉뚱그린 건물 화재를 살려냅니다)
+        return bool(item.get("bkind"))
 
     # 재난문자는 그 자체가 사건이므로 통과
     if item.get("source") == "재난문자":
