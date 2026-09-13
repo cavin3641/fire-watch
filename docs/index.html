@@ -27,6 +27,11 @@
   .grade.g1{color:var(--cool)}
   .card.top{background:rgba(255,90,31,.06)}
   .tag.news{border-color:var(--cool); color:var(--cool)}
+  .msgbadge{
+    display:inline-block; font-size:12px; font-weight:700;
+    padding:3px 9px; border-radius:5px; margin-bottom:5px; margin-right:5px;
+    background:rgba(255,90,31,.2); color:var(--warm);
+  }
   .visit{
     display:inline-block; font-size:12px; font-weight:700;
     padding:3px 9px; border-radius:5px; margin-bottom:5px;
@@ -186,9 +191,10 @@ function render(data) {
         card.className = 'card' + ((f.score || 0) >= 45 ? ' top' : '') + (f.visit === '진화중' ? ' busy' : '');
     card.innerHTML = `
       <div class="elapsed ${isOld ? 'old' : ''}">${elapsedText(f.published)}</div>
+      ${f.source === '재난문자' ? '<div class="msgbadge">📢 긴급재난문자</div>' : ''}
       ${f.visit ? `<div class="visit ${f.visit === '방문가능' ? 'ok' : f.visit === '곧가능' ? 'soon' : 'no'}">${f.visit === '방문가능' ? '방문 가능' : f.visit === '곧가능' ? '곧 가능' : '진화 중'}</div>` : ''}
       <div class="region">${f.grade ? `<span class="grade ${f.grade.length < 2 ? 'g1' : ''}">${f.grade}</span>` : ''}${f.region || '위치 미상'}</div>
-      <div class="title">${f.kind ? (f.kind + (f.scope ? ' · ' + f.scope : '')) : (f.title || '')}</div>
+      <div class="title">${f.source === '재난문자' ? (f.title || '') : (f.kind || f.title || '')}${f.building ? `<br><b style="color:var(--text)">🏢 ${f.building}${f.bkind ? ' (' + f.bkind + ')' : ''}</b>` : ''}</div>
       <div class="tags">
       </div>`;
     card.onclick = () => {
