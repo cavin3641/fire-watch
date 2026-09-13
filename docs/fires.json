@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-14T04:19:34.999856+09:00",
+  "updated_at": "2026-09-14T06:36:30.595247+09:00",
   "fires": [
     {
       "source": "재난문자",
@@ -15,6 +15,89 @@
       "score": 5,
       "grade": "",
       "first_seen": "2026-09-09T05:11:49.354834+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "기타화재 - 경기도 이천시 마장면 회억리",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-14T03:28:42+09:00",
+      "region": "경기도 이천시 마장면 회억리",
+      "kind": "기타화재",
+      "scope": "1차출동",
+      "building": "리틀베레 어린이집",
+      "bkind": "의료·복지",
+      "status": "현장도착보고",
+      "raw_text": "기타화재 경기도 이천시 마장면 회억리 화재 발생",
+      "lat": 37.26914772789231,
+      "lon": 127.37234580585236,
+      "id": "b1792f2bfec3",
+      "distance_km": 64.4,
+      "score": 57,
+      "grade": "★★",
+      "visit": "진화중",
+      "first_seen": "2026-09-14T06:36:30.595121+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 서울특별시 강서구 화곡동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-14T03:25:00+09:00",
+      "region": "서울특별시 강서구 화곡동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "2차출동",
+      "building": null,
+      "bkind": null,
+      "status": "현장도착",
+      "raw_text": "일반화재(차량,주택) 서울특별시 강서구 화곡동 화재 발생",
+      "lat": 37.543145525089486,
+      "lon": 126.83844900390126,
+      "id": "b0db8582d7ed",
+      "distance_km": 12.8,
+      "score": 65,
+      "grade": "★★★",
+      "visit": "진화중",
+      "first_seen": "2026-09-14T06:36:30.595121+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 인천광역시 계양구 작전동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-14T02:46:02+09:00",
+      "region": "인천광역시 계양구 작전동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "1차출동",
+      "building": null,
+      "bkind": null,
+      "status": "귀소보고",
+      "raw_text": "일반화재(차량,주택) 인천광역시 계양구 작전동 화재 발생",
+      "lat": 37.52640124850256,
+      "lon": 126.74036811096977,
+      "id": "5be8d7f130ff",
+      "distance_km": 16.8,
+      "score": 55,
+      "grade": "★★",
+      "visit": "방문가능",
+      "first_seen": "2026-09-14T06:36:30.595121+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 서울특별시 강남구 삼성동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-14T02:03:40+09:00",
+      "region": "서울특별시 강남구 삼성동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "2차출동",
+      "building": "삼성동 힐스테이트",
+      "bkind": "아파트",
+      "status": "현장도착",
+      "raw_text": "일반화재(차량,주택) 서울특별시 강남구 삼성동 화재 발생",
+      "lat": 37.51660317732563,
+      "lon": 127.04918225766012,
+      "id": "53ce36c1f77a",
+      "distance_km": 24.8,
+      "score": 77,
+      "grade": "★★★",
+      "visit": "진화중"
     },
     {
       "source": "소방출동",
@@ -34,8 +117,7 @@
       "distance_km": 22.7,
       "score": 80,
       "grade": "★★★",
-      "visit": "방문가능",
-      "first_seen": "2026-09-14T01:55:39.273572+09:00"
+      "visit": "방문가능"
     },
     {
       "source": "소방출동",
@@ -55,29 +137,7 @@
       "distance_km": 19.0,
       "score": 55,
       "grade": "★★",
-      "visit": "방문가능",
-      "first_seen": "2026-09-14T01:55:39.273572+09:00"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 강남구 일원동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-14T00:50:17+09:00",
-      "region": "서울특별시 강남구 일원동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "building": "수서1단지 에스에이치빌",
-      "bkind": "아파트",
-      "status": "현장도착",
-      "raw_text": "일반화재(차량,주택) 서울특별시 강남구 일원동 화재 발생",
-      "lat": 37.493233332979685,
-      "lon": 127.09098368972504,
-      "id": "53ce36c1f77a",
-      "distance_km": 29.3,
-      "score": 77,
-      "grade": "★★★",
-      "visit": "진화중",
-      "first_seen": "2026-09-14T01:55:39.273572+09:00"
+      "visit": "방문가능"
     },
     {
       "source": "소방출동",
@@ -97,8 +157,7 @@
       "distance_km": 57.2,
       "score": 51,
       "grade": "★★",
-      "visit": "진화중",
-      "first_seen": "2026-09-14T01:55:39.273572+09:00"
+      "visit": "진화중"
     },
     {
       "source": "소방출동",
@@ -118,8 +177,7 @@
       "distance_km": 12.9,
       "score": 65,
       "grade": "★★★",
-      "visit": "진화중",
-      "first_seen": "2026-09-14T01:55:39.273572+09:00"
+      "visit": "진화중"
     },
     {
       "source": "소방출동",
@@ -1493,24 +1551,6 @@
       "distance_km": 21.2,
       "score": 37,
       "grade": "★",
-      "visit": "진화중"
-    },
-    {
-      "source": "소방출동",
-      "title": "고층건물(3층이상,아파트) - 서울특별시 서초구 서초동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-12T04:38:10+09:00",
-      "region": "서울특별시 서초구 서초동",
-      "kind": "고층건물(3층이상,아파트)",
-      "scope": "2차출동",
-      "status": "현장도착",
-      "raw_text": "고층건물(3층이상,아파트) 서울특별시 서초구 서초동 화재 발생",
-      "lat": 37.48550074258135,
-      "lon": 127.01489102425289,
-      "id": "3fb9f0345a0b",
-      "distance_km": 25.1,
-      "score": 55,
-      "grade": "★★",
       "visit": "진화중"
     }
   ]
