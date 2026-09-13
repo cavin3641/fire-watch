@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13T08:16:54.810113+09:00",
+  "updated_at": "2026-09-13T10:25:01.202728+09:00",
   "fires": [
     {
       "source": "재난문자",
@@ -1490,57 +1490,6 @@
       "score": 58,
       "grade": "★★★",
       "visit": "방문가능"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 인천광역시 검단구 마전동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-11T10:17:59+09:00",
-      "region": "인천광역시 검단구 마전동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "1차출동",
-      "status": "완전진화",
-      "raw_text": "일반화재(차량,주택) 인천광역시 검단구 마전동 화재 발생",
-      "lat": 37.598098197642834,
-      "lon": 126.67338830131477,
-      "id": "a0917ca049b6",
-      "distance_km": 15.5,
-      "score": 52,
-      "grade": "★★",
-      "visit": "방문가능"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 경기도 안양시 동안구 호계동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-11T10:03:27+09:00",
-      "region": "경기도 안양시 동안구 호계동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "1차출동",
-      "status": "현장도착보고",
-      "raw_text": "일반화재(차량,주택) 경기도 안양시 동안구 호계동 화재 발생",
-      "lat": 37.37009832555657,
-      "lon": 126.95115062032893,
-      "id": "316cf77474e6",
-      "distance_km": 33.7,
-      "score": 43,
-      "grade": "★",
-      "visit": "진화중"
-    },
-    {
-      "source": "구글뉴스",
-      "title": "인천 미추홀구 용현동 빌라서 화재, 2명 부상 - incheontoday.com",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA2OGczeDFaNjg0a3RkQWhJanRWUUd4cHhTbWV5MmN5UTBPMmhyWDRqTGxqZFlTNHhRYzVfTlpVd2VsYkh3aVdyZGx5eGhnSU1qazZWRC1LZ3pxX0xrS0lQRHlSeWx6ZE80RXdCc25yelM?oc=5",
-      "published": "2026-09-11T08:56:31+09:00",
-      "raw_text": "인천 미추홀구 용현동 빌라서 화재, 2명 부상 - incheontoday.com",
-      "region": "인천광역시 미추홀 용현동",
-      "id": "692afc795a85",
-      "lat": 37.4514021746598,
-      "lon": 126.648591852703,
-      "distance_km": 28.1,
-      "score": 17,
-      "grade": "",
-      "visit": "확인필요"
     }
   ]
 }
