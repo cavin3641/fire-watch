@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13T20:24:52.068605+09:00",
+  "updated_at": "2026-09-13T20:54:47.964175+09:00",
   "fires": [
     {
       "source": "재난문자",
@@ -15,6 +15,88 @@
       "score": 5,
       "grade": "",
       "first_seen": "2026-09-09T05:11:49.354834+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 서울특별시 동작구 대방동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-13T20:34:20+09:00",
+      "region": "서울특별시 동작구 대방동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "2차출동",
+      "building": null,
+      "bkind": null,
+      "status": "현장도착",
+      "raw_text": "일반화재(차량,주택) 서울특별시 동작구 대방동 화재 발생",
+      "lat": 37.50668290983078,
+      "lon": 126.93219673287975,
+      "id": "1f5f86936fbb",
+      "distance_km": 19.0,
+      "score": 43,
+      "grade": "★",
+      "visit": "진화중"
+    },
+    {
+      "source": "소방출동",
+      "title": "기타화재 - 경기도 용인시 수지구 성복동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-13T20:33:55+09:00",
+      "region": "경기도 용인시 수지구 성복동",
+      "kind": "기타화재",
+      "scope": "1차출동",
+      "building": "성복역롯데캐슬 골드타운@ 111동",
+      "bkind": "아파트",
+      "status": "귀소보고",
+      "raw_text": "기타화재 경기도 용인시 수지구 성복동 화재 발생",
+      "lat": 37.312620786817476,
+      "lon": 127.08273362555653,
+      "id": "c56ccaf97fd4",
+      "distance_km": 44.4,
+      "score": 75,
+      "grade": "★★★",
+      "visit": "방문가능"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 인천광역시 강화군 하점면 신봉리",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-13T20:29:08+09:00",
+      "region": "인천광역시 강화군 하점면 신봉리",
+      "kind": "일반화재(차량,주택)",
+      "scope": "1차출동",
+      "building": "인화만남의광장",
+      "bkind": null,
+      "status": "귀소완료보고",
+      "raw_text": "일반화재(차량,주택) 인천광역시 강화군 하점면 신봉리 화재 발생",
+      "lat": 37.78169786610015,
+      "lon": 126.39865547496686,
+      "id": "2b56528818cb",
+      "distance_km": 40.5,
+      "score": 58,
+      "grade": "★★★",
+      "visit": "방문가능",
+      "first_seen": "2026-09-13T20:54:47.964035+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "기타화재 - 경기도 안산시 단원구 원곡동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-13T20:20:16+09:00",
+      "region": "경기도 안산시 단원구 원곡동",
+      "kind": "기타화재",
+      "scope": "1차출동",
+      "building": "안산역과 합성빌라 사이 / 8차선 도로",
+      "bkind": "주택·빌라",
+      "status": "현장도착보고",
+      "raw_text": "기타화재 경기도 안산시 단원구 원곡동 화재 발생",
+      "lat": 37.32582276086496,
+      "lon": 126.79345705775013,
+      "id": "77c036f84650",
+      "distance_km": 37.1,
+      "score": 51,
+      "grade": "★★",
+      "visit": "진화중",
+      "first_seen": "2026-09-13T20:54:47.964035+09:00"
     },
     {
       "source": "소방출동",
@@ -34,8 +116,7 @@
       "distance_km": 18.0,
       "score": 58,
       "grade": "★★★",
-      "visit": "방문가능",
-      "first_seen": "2026-09-13T20:24:52.068465+09:00"
+      "visit": "방문가능"
     },
     {
       "source": "소방출동",
@@ -75,8 +156,7 @@
       "distance_km": 21.1,
       "score": 43,
       "grade": "★",
-      "visit": "확인필요",
-      "first_seen": "2026-09-13T20:24:52.068465+09:00"
+      "visit": "확인필요"
     },
     {
       "source": "소방출동",
@@ -96,8 +176,7 @@
       "distance_km": 19.5,
       "score": 41,
       "grade": "★",
-      "visit": "진화중",
-      "first_seen": "2026-09-13T20:24:52.068465+09:00"
+      "visit": "진화중"
     },
     {
       "source": "소방출동",
@@ -141,27 +220,6 @@
     },
     {
       "source": "소방출동",
-      "title": "기타화재 - 경기도 용인시 기흥구 상하동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-13T18:40:16+09:00",
-      "region": "경기도 용인시 기흥구 상하동",
-      "kind": "기타화재",
-      "scope": "1차출동",
-      "building": "삼보지식산업타운건물",
-      "bkind": "공장·창고",
-      "status": "출동보고",
-      "raw_text": "기타화재 경기도 용인시 기흥구 상하동 화재 발생",
-      "lat": 37.26042345135151,
-      "lon": 127.14031554477945,
-      "id": "c56ccaf97fd4",
-      "distance_km": 52.0,
-      "score": 71,
-      "grade": "★★★",
-      "visit": "진화중",
-      "first_seen": "2026-09-13T20:24:52.068465+09:00"
-    },
-    {
-      "source": "소방출동",
       "title": "일반화재(차량,주택) - 서울특별시 중구 남창동",
       "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
       "published": "2026-09-13T18:37:27+09:00",
@@ -198,8 +256,7 @@
       "distance_km": 31.8,
       "score": 63,
       "grade": "★★★",
-      "visit": "진화중",
-      "first_seen": "2026-09-13T20:24:52.068465+09:00"
+      "visit": "진화중"
     },
     {
       "source": "소방출동",
@@ -239,8 +296,7 @@
       "distance_km": 22.9,
       "score": 35,
       "grade": "★",
-      "visit": "진화중",
-      "first_seen": "2026-09-13T20:24:52.068465+09:00"
+      "visit": "진화중"
     },
     {
       "source": "소방출동",
@@ -264,6 +320,27 @@
     },
     {
       "source": "소방출동",
+      "title": "일반화재(차량,주택) - 경기도 평택시 이충동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-13T17:54:55+09:00",
+      "region": "경기도 평택시 이충동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "1차출동",
+      "building": null,
+      "bkind": null,
+      "status": "귀소보고",
+      "raw_text": "일반화재(차량,주택) 경기도 평택시 이충동 화재 발생",
+      "lat": 37.05252204233884,
+      "lon": 127.06929703334143,
+      "id": "9ce097c374b1",
+      "distance_km": 70.6,
+      "score": 55,
+      "grade": "★★",
+      "visit": "방문가능",
+      "first_seen": "2026-09-13T20:54:47.964035+09:00"
+    },
+    {
+      "source": "소방출동",
       "title": "일반화재(차량,주택) - 서울특별시 서대문구 연희동",
       "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
       "published": "2026-09-13T17:54:07+09:00",
@@ -280,8 +357,28 @@
       "distance_km": 12.7,
       "score": 55,
       "grade": "★★",
+      "visit": "진화중"
+    },
+    {
+      "source": "소방출동",
+      "title": "기타화재 - 경기도 의정부시 용현동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-13T17:53:23+09:00",
+      "region": "경기도 의정부시 용현동",
+      "kind": "기타화재",
+      "scope": "1차출동",
+      "building": "반석교회 뒷편",
+      "bkind": "의료·복지",
+      "status": "현장도착보고",
+      "raw_text": "기타화재 경기도 의정부시 용현동 화재 발생",
+      "lat": 37.73007298082591,
+      "lon": 127.08320719940271,
+      "id": "26a9194b1e87",
+      "distance_km": 23.5,
+      "score": 57,
+      "grade": "★★",
       "visit": "진화중",
-      "first_seen": "2026-09-13T20:24:52.068465+09:00"
+      "first_seen": "2026-09-13T20:54:47.964035+09:00"
     },
     {
       "source": "소방출동",
@@ -305,6 +402,26 @@
     },
     {
       "source": "소방출동",
+      "title": "일반화재(차량,주택) - 경기도 연천군 청산면 백의리",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-13T17:33:54+09:00",
+      "region": "경기도 연천군 청산면 백의리",
+      "kind": "일반화재(차량,주택)",
+      "scope": "1차출동",
+      "building": "단독주택",
+      "bkind": "주택·빌라",
+      "status": "현장도착보고",
+      "raw_text": "일반화재(차량,주택) 경기도 연천군 청산면 백의리 화재 발생",
+      "lat": 38.02818344923419,
+      "lon": 127.11939791696526,
+      "id": "69732c284310",
+      "distance_km": 48.2,
+      "score": 43,
+      "grade": "★",
+      "visit": "진화중"
+    },
+    {
+      "source": "소방출동",
       "title": "일반화재(차량,주택) - 인천광역시 계양구 병방동",
       "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
       "published": "2026-09-13T17:03:56+09:00",
@@ -321,8 +438,7 @@
       "distance_km": 14.4,
       "score": 55,
       "grade": "★★",
-      "visit": "방문가능",
-      "first_seen": "2026-09-13T20:24:52.068465+09:00"
+      "visit": "방문가능"
     },
     {
       "source": "소방출동",
@@ -342,8 +458,7 @@
       "distance_km": 16.7,
       "score": 43,
       "grade": "★",
-      "visit": "진화중",
-      "first_seen": "2026-09-13T20:24:52.068465+09:00"
+      "visit": "진화중"
     },
     {
       "source": "소방출동",
@@ -383,8 +498,70 @@
       "distance_km": 20.8,
       "score": 76,
       "grade": "★★★",
+      "visit": "방문가능"
+    },
+    {
+      "source": "소방출동",
+      "title": "기타화재 - 경기도 남양주시 호평동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-13T16:21:49+09:00",
+      "region": "경기도 남양주시 호평동",
+      "kind": "기타화재",
+      "scope": "1차출동",
+      "building": "자현요양원",
+      "bkind": "의료·복지",
+      "status": "상황종료",
+      "raw_text": "기타화재 경기도 남양주시 호평동 화재 발생",
+      "lat": 37.65584832705903,
+      "lon": 127.25877872168226,
+      "id": "14669f0fe0da",
+      "distance_km": 37.6,
+      "score": 72,
+      "grade": "★★★",
       "visit": "방문가능",
-      "first_seen": "2026-09-13T20:24:52.068465+09:00"
+      "first_seen": "2026-09-13T20:54:47.964035+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "기타화재 - 경기도 군포시 금정동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-13T16:08:46+09:00",
+      "region": "경기도 군포시 금정동",
+      "kind": "기타화재",
+      "scope": "1차출동",
+      "building": "영진맨션 가동",
+      "bkind": "주택·빌라",
+      "status": "현장도착보고",
+      "raw_text": "기타화재 경기도 군포시 금정동 화재 발생",
+      "lat": 37.36190158584286,
+      "lon": 126.93753107087024,
+      "id": "9c2cd75d167e",
+      "distance_km": 34.3,
+      "score": 51,
+      "grade": "★★",
+      "visit": "진화중",
+      "first_seen": "2026-09-13T20:54:47.964035+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "기타화재 - 경기도 안성시 삼죽면 진촌리",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-13T15:57:31+09:00",
+      "region": "경기도 안성시 삼죽면 진촌리",
+      "kind": "기타화재",
+      "scope": "1차출동",
+      "building": "화이트하우스",
+      "bkind": "주택·빌라",
+      "status": "현장도착보고",
+      "raw_text": "기타화재 경기도 안성시 삼죽면 진촌리 화재 발생",
+      "lat": 37.056685494001286,
+      "lon": 127.3646381291993,
+      "id": "266dd4760b8d",
+      "distance_km": 81.8,
+      "score": 51,
+      "grade": "★★",
+      "visit": "진화중",
+      "first_seen": "2026-09-13T20:54:47.964035+09:00"
     },
     {
       "source": "소방출동",
@@ -405,25 +582,6 @@
       "score": 58,
       "grade": "★★★",
       "visit": "방문가능"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 경기도 연천군 전곡읍 전곡리",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-13T14:51:00+09:00",
-      "region": "경기도 연천군 전곡읍 전곡리",
-      "kind": "일반화재(차량,주택)",
-      "scope": "1차출동",
-      "status": "현장도착보고",
-      "raw_text": "일반화재(차량,주택) 경기도 연천군 전곡읍 전곡리 화재 발생",
-      "lat": 38.01270858312816,
-      "lon": 127.07117048127938,
-      "id": "69732c284310",
-      "distance_km": 44.6,
-      "score": 43,
-      "grade": "★",
-      "visit": "진화중",
-      "first_seen": "2026-09-13T15:42:16.843693+09:00"
     },
     {
       "source": "소방출동",
@@ -453,6 +611,8 @@
       "region": "경기도 광주시 역동",
       "kind": "일반화재(차량,주택)",
       "scope": "1차출동",
+      "building": null,
+      "bkind": null,
       "status": "귀소보고",
       "raw_text": "일반화재(차량,주택) 경기도 광주시 역동 화재 발생",
       "lat": 37.40658207829397,
@@ -461,8 +621,7 @@
       "distance_km": 47.1,
       "score": 55,
       "grade": "★★",
-      "visit": "방문가능",
-      "first_seen": "2026-09-13T15:42:16.843693+09:00"
+      "visit": "방문가능"
     },
     {
       "source": "소방출동",
@@ -472,6 +631,8 @@
       "region": "경기도 남양주시 진접읍 내곡리",
       "kind": "일반화재(차량,주택)",
       "scope": "1차출동",
+      "building": null,
+      "bkind": null,
       "status": "초진",
       "raw_text": "일반화재(차량,주택) 경기도 남양주시 진접읍 내곡리 화재 발생",
       "lat": 37.67993648823455,
@@ -481,6 +642,27 @@
       "score": 48,
       "grade": "★★",
       "visit": "곧가능"
+    },
+    {
+      "source": "소방출동",
+      "title": "기타화재 - 경기도 파주시 광탄면 창만리",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-13T12:47:03+09:00",
+      "region": "경기도 파주시 광탄면 창만리",
+      "kind": "기타화재",
+      "scope": "1차출동",
+      "building": "광탄평화요양원",
+      "bkind": "의료·복지",
+      "status": "출동보고",
+      "raw_text": "기타화재 경기도 파주시 광탄면 창만리 화재 발생",
+      "lat": 37.79371451075729,
+      "lon": 126.85753528115622,
+      "id": "3745476dae22",
+      "distance_km": 15.2,
+      "score": 52,
+      "grade": "★★",
+      "visit": "진화중",
+      "first_seen": "2026-09-13T20:54:47.964035+09:00"
     },
     {
       "source": "소방출동",
@@ -638,8 +820,7 @@
       "distance_km": 29.4,
       "score": 57,
       "grade": "★★",
-      "visit": "진화중",
-      "first_seen": "2026-09-13T20:24:52.068465+09:00"
+      "visit": "진화중"
     },
     {
       "source": "소방출동",
@@ -659,8 +840,7 @@
       "distance_km": 19.9,
       "score": 57,
       "grade": "★★",
-      "visit": "진화중",
-      "first_seen": "2026-09-13T20:24:52.068465+09:00"
+      "visit": "진화중"
     },
     {
       "source": "소방출동",
@@ -684,26 +864,6 @@
     },
     {
       "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 동작구 상도동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-13T01:43:37+09:00",
-      "region": "서울특별시 동작구 상도동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "building": null,
-      "bkind": null,
-      "status": "동일긴급구조처리",
-      "raw_text": "일반화재(차량,주택) 서울특별시 동작구 상도동 화재 발생",
-      "lat": 37.499114596995,
-      "lon": 126.93242975314469,
-      "id": "1f5f86936fbb",
-      "distance_km": 19.8,
-      "score": 37,
-      "grade": "★",
-      "visit": "확인필요"
-    },
-    {
-      "source": "소방출동",
       "title": "기타화재 - 서울특별시 관악구 봉천동",
       "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
       "published": "2026-09-13T00:20:01+09:00",
@@ -720,8 +880,7 @@
       "distance_km": 20.8,
       "score": 72,
       "grade": "★★★",
-      "visit": "방문가능",
-      "first_seen": "2026-09-13T20:24:52.068465+09:00"
+      "visit": "방문가능"
     },
     {
       "source": "소방출동",
@@ -731,6 +890,8 @@
       "region": "인천광역시 서해구 석남동",
       "kind": "일반화재(차량,주택)",
       "scope": "1차출동",
+      "building": null,
+      "bkind": null,
       "status": "귀소보고",
       "raw_text": "일반화재(차량,주택) 인천광역시 서해구 석남동 화재 발생",
       "lat": 37.51242734365826,
@@ -749,6 +910,8 @@
       "region": "인천광역시 계양구 효성동",
       "kind": "일반화재(차량,주택)",
       "scope": "1차출동",
+      "building": null,
+      "bkind": null,
       "status": "현장도착보고",
       "raw_text": "일반화재(차량,주택) 인천광역시 계양구 효성동 화재 발생",
       "lat": 37.5320091999194,
@@ -1555,80 +1718,6 @@
       "score": 55,
       "grade": "★★",
       "visit": "방문가능"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 경기도 안산시 단원구 대부남동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-11T20:47:02+09:00",
-      "region": "경기도 안산시 단원구 대부남동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "1차출동",
-      "status": "추가출동지령",
-      "raw_text": "일반화재(차량,주택) 경기도 안산시 단원구 대부남동 화재 발생",
-      "lat": 37.23104511272593,
-      "lon": 126.54570489175138,
-      "id": "ff837f7b1559",
-      "distance_km": 53.8,
-      "score": 35,
-      "grade": "★",
-      "visit": "진화중",
-      "first_seen": "2026-09-11T22:30:09.957189+09:00"
-    },
-    {
-      "source": "소방출동",
-      "title": "고층건물(3층이상,아파트) - 인천광역시 연수구 동춘동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-11T20:33:44+09:00",
-      "region": "인천광역시 연수구 동춘동",
-      "kind": "고층건물(3층이상,아파트)",
-      "scope": "1차출동",
-      "status": "귀소완료보고",
-      "raw_text": "고층건물(3층이상,아파트) 인천광역시 연수구 동춘동 화재 발생",
-      "lat": 37.410332776473346,
-      "lon": 126.6713362133875,
-      "id": "9858a814eade",
-      "distance_km": 31.0,
-      "score": 76,
-      "grade": "★★★",
-      "visit": "방문가능"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 중구 을지로3가",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-11T20:32:21+09:00",
-      "region": "서울특별시 중구 을지로3가",
-      "kind": "일반화재(차량,주택)",
-      "scope": "1차출동",
-      "status": "현장도착",
-      "raw_text": "일반화재(차량,주택) 서울특별시 중구 을지로3가 화재 발생",
-      "lat": 37.566789913490545,
-      "lon": 126.99349154527208,
-      "id": "0c9fbf21e602",
-      "distance_km": 17.5,
-      "score": 43,
-      "grade": "★",
-      "visit": "진화중"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 관악구 신림동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-11T20:30:24+09:00",
-      "region": "서울특별시 관악구 신림동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "status": "현장도착",
-      "raw_text": "일반화재(차량,주택) 서울특별시 관악구 신림동 화재 발생",
-      "lat": 37.481569972827494,
-      "lon": 126.9035695694555,
-      "id": "3c31fad7a6e0",
-      "distance_km": 20.6,
-      "score": 43,
-      "grade": "★",
-      "visit": "진화중",
-      "first_seen": "2026-09-11T22:30:09.957189+09:00"
     }
   ]
 }
