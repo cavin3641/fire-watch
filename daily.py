@@ -90,11 +90,10 @@ def build_report(fires, zone=None):
                 b += f" ({f['bkind']})"
             lines.append(f"   🏢 {b}")
 
-        detail = f.get("kind") or ""
-        if f.get("scope"):
-            detail += f" · {f['scope']}"
-        if detail:
-            lines.append(f"   {detail}")
+        if f.get("source") == "재난문자":
+            lines.append("   📢 긴급재난문자")
+        elif f.get("kind"):
+            lines.append(f"   {f['kind']}")
 
         t = f.get("published")
         if t:

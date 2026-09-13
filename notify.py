@@ -45,13 +45,16 @@ def format_alert(fire):
     home = " ★사무실권역" if zone == zones.HOME_ZONE else ""
     grade = fire.get("grade") or ""
     head = f"{grade} " if grade else ""
+    is_msg = fire.get("source") == "재난문자"
     visit = fire.get("visit") or ""
     mark = {"방문가능": "✅ 방문 가능",
             "곧가능": "🕐 곧 가능 (진화 마무리 중)",
             "진화중": "⛔ 아직 진화 중"}.get(visit, "")
 
-    lines = [f"[{zone}]{home}",
-             f"🔥 {head}{fire.get('region') or '위치 미상'}"]
+    lines = [f"[{zone}]{home}"]
+    if is_msg:
+        lines.append("📢 긴급재난문자")
+    lines.append(f"🔥 {head}{fire.get('region') or '위치 미상'}")
     if mark:
         lines.append(mark)
     if fire.get("building"):
@@ -60,12 +63,14 @@ def format_alert(fire):
             b += f" ({fire['bkind']})"
         lines.append(f"🏢 {b}")
 
+    # 화재 종류만 보여줍니다.
+    # 출동 차수(1차·2차)는 소방 내부 용어라 표시하지 않습니다.
+    # 다만 점수 계산에는 계속 씁니다.
     if fire.get("kind"):
-        detail = fire["kind"]
-        if fire.get("scope"):
-            detail += f" · {fire['scope']}"
-        lines.append(detail)
-    if fire.get("source") != "소방출동":
+        lines.append(fire["kind"])
+    if is_msg:
+        lines.append(fire.get("title", "")[:200])
+    elif fire.get("source") != "소방출동":
         lines.append(fire.get("title", "")[:120])
 
     # 발생 시각 (몇 시간 전인지)
