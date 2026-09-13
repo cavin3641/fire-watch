@@ -13,6 +13,7 @@ import time
 from urllib.parse import urlencode
 from datetime import datetime, timezone, timedelta
 
+import building
 import requests
 from pyproj import Transformer
 
@@ -131,6 +132,9 @@ def fetch():
                     "region": region,
                     "kind": kind,
                     "scope": (row.get("dstrScopNm") or "").strip(),
+                    "building": building.building_name(row.get("dstrAreaDtl")),
+                    "bkind": building.building_kind(
+                        building.building_name(row.get("dstrAreaDtl"))),
                     "status": (row.get("dstrStatNm") or "").strip(),
                     "raw_text": f"{kind} {region} 화재 발생",
                 }
