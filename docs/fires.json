@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-15T04:11:54.149231+09:00",
+  "updated_at": "2026-09-15T07:44:37.267515+09:00",
   "fires": [
     {
       "source": "재난문자",
@@ -1988,46 +1988,6 @@
       "grade": "★",
       "visit": "진화중",
       "first_seen": "2026-09-13T15:42:16.843693+09:00"
-    },
-    {
-      "source": "소방출동",
-      "title": "대형화재(시장,공장) - 인천광역시 강화군 강화읍 옥림리",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-13T07:19:03+09:00",
-      "region": "인천광역시 강화군 강화읍 옥림리",
-      "kind": "대형화재(시장,공장)",
-      "scope": "1차출동",
-      "building": null,
-      "bkind": null,
-      "status": "귀소보고",
-      "raw_text": "대형화재(시장,공장) 인천광역시 강화군 강화읍 옥림리 화재 발생",
-      "lat": 37.7628945821444,
-      "lon": 126.4987106783724,
-      "id": "a49e3d106c29",
-      "distance_km": 31.5,
-      "score": 74,
-      "grade": "★★★",
-      "visit": "방문가능"
-    },
-    {
-      "source": "소방출동",
-      "title": "고층건물(3층이상,아파트) - 서울특별시 노원구 공릉동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-13T05:38:15+09:00",
-      "region": "서울특별시 노원구 공릉동",
-      "kind": "고층건물(3층이상,아파트)",
-      "scope": "2차출동",
-      "building": "공릉아파트",
-      "bkind": "아파트",
-      "status": "현장도착",
-      "raw_text": "고층건물(3층이상,아파트) 서울특별시 노원구 공릉동 화재 발생",
-      "lat": 37.62993767883936,
-      "lon": 127.07022612241101,
-      "id": "409415e7a210",
-      "distance_km": 21.2,
-      "score": 49,
-      "grade": "★★",
-      "visit": "진화중"
     }
   ]
 }
