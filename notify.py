@@ -100,9 +100,14 @@ def format_alert(fire):
     # 정보 출처(어느 사이트에서 얻는지)는 회사 자산이므로 노출하지 않습니다.
     lat, lon = fire.get("lat"), fire.get("lon")
     if lat and lon:
-        name = quote((fire.get("region") or "화재현장").split()[-1])
+        # 건물 이름이 있으면 그걸 도착지 이름으로 씁니다
+        spot = fire.get("building") or (fire.get("region") or "화재현장").split()[-1]
+        name = quote(spot)
         lines.append("")
-        lines.append(f"📍 지도 보기\nhttps://map.kakao.com/link/map/{name},{lat},{lon}")
+        # /link/to/ 는 길찾기 화면을 엽니다.
+        # 카카오가 좌표를 주소로 바꿔서 도착지에 표시해 줍니다.
+        # (/link/map/ 은 이름표만 찍혀서 주소가 안 나옵니다)
+        lines.append(f"📍 위치 · 길찾기\nhttps://map.kakao.com/link/to/{name},{lat},{lon}")
 
     return "\n".join(lines)
 

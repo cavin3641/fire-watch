@@ -10,6 +10,8 @@
 """
 from datetime import datetime, timezone, timedelta
 
+from urllib.parse import quote
+
 import zones
 
 KST = timezone(timedelta(hours=9))
@@ -110,7 +112,8 @@ def build_report(fires, zone=None, partner_only=False):
                 pass
 
         if f.get("lat") and f.get("lon"):
-            lines.append(f"   https://map.kakao.com/link/map/화재현장,{f['lat']},{f['lon']}")
+            spot = (f.get("building") or (f.get("region") or "화재현장").split()[-1])
+            lines.append(f"   https://map.kakao.com/link/to/{quote(spot)},{f['lat']},{f['lon']}")
 
     if len(items) > 10:
         lines.append("")
