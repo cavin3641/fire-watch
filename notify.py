@@ -45,7 +45,9 @@ def format_alert(fire):
     home = " ★사무실권역" if zone == zones.HOME_ZONE else ""
     grade = fire.get("grade") or ""
     head = f"{grade} " if grade else ""
-    is_msg = fire.get("source") == "재난문자"
+    src = fire.get("source") or ""
+    is_msg = src == "재난문자"
+    is_news = src not in ("재난문자", "소방출동")   # 구글뉴스·인천일보 등
     owner_only = not fire.get("forpartner", True)
     visit = fire.get("visit") or ""
     mark = {"방문가능": "✅ 방문 가능",
@@ -57,6 +59,8 @@ def format_alert(fire):
         lines.append("👤 사장님 확인 건")
     if is_msg:
         lines.append("📢 긴급재난문자")
+    elif is_news:
+        lines.append(f"📰 뉴스 · {src}")
     lines.append(f"🔥 {head}{fire.get('region') or '위치 미상'}")
     if mark:
         lines.append(mark)
@@ -73,8 +77,8 @@ def format_alert(fire):
         lines.append(fire["kind"])
     if is_msg:
         lines.append(fire.get("title", "")[:200])
-    elif fire.get("source") != "소방출동":
-        lines.append(fire.get("title", "")[:120])
+    elif is_news:
+        lines.append(fire.get("title", "")[:150])
 
     # 발생 시각 (몇 시간 전인지)
     pub = fire.get("published")

@@ -98,8 +98,11 @@ def build_report(fires, zone=None, partner_only=False):
                 b += f" ({f['bkind']})"
             lines.append(f"   🏢 {b}")
 
-        if f.get("source") == "재난문자":
+        src = f.get("source") or ""
+        if src == "재난문자":
             lines.append("   📢 긴급재난문자")
+        elif src not in ("소방출동", ""):
+            lines.append(f"   📰 뉴스 · {src}")
         elif f.get("kind"):
             lines.append(f"   {f['kind']}")
 
