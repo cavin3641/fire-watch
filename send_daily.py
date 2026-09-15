@@ -34,17 +34,15 @@ def main():
 
     sent = 0
     for zone in active:
-        text = daily.build_report(fires, zone=zone)
         chat = zones.chat_id_of(zone)
         if chat:
-            notify.send(text, chat_id=chat)
+            # 파트너 방에는 아파트·상가·주택만
+            notify.send(daily.build_report(fires, zone=zone, partner_only=True),
+                        chat_id=chat)
             sent += 1
-            # 사무실 권역은 사장님도 함께
-            if zone == zones.HOME_ZONE:
-                notify.send(text)
         else:
-            # 권역 방이 없으면 사장님 방으로
-            notify.send(text)
+            # 권역 방이 없으면 사장님 방으로 전부
+            notify.send(daily.build_report(fires, zone=zone))
             sent += 1
         print(f"  {zone} 발송 완료")
 

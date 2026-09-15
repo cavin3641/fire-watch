@@ -40,13 +40,19 @@ def _pick(fires, start, end):
     return out
 
 
-def build_report(fires, zone=None):
-    """어제 화재 요약문을 만듭니다. zone 을 주면 그 권역만."""
+def build_report(fires, zone=None, partner_only=False):
+    """어제 화재 요약문을 만듭니다.
+
+    zone         : 그 권역만
+    partner_only : True 면 영업 파트너가 갈 건물만 (아파트·상가·주택)
+    """
     start, end = _yesterday_range()
     items = _pick(fires, start, end)
 
     if zone:
         items = [f for f in items if zones.zone_of(f.get("region")) == zone]
+    if partner_only:
+        items = [f for f in items if f.get("forpartner", True)]
 
     date_str = start.strftime("%m월 %d일")
     head = f"📋 {date_str} 화재 정리"

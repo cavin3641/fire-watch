@@ -113,7 +113,8 @@ def process(items):
     for f in located:
         f["score"] = priority.score(f)
         f["grade"] = priority.grade(f["score"])
-        f["visit"] = priority.status_label(f)     # 방문가능 / 곧가능 / 진화중
+        f["visit"] = priority.status_label(f)
+        f["forpartner"] = priority.is_partner_case(f)   # 영업사원용인지     # 방문가능 / 곧가능 / 진화중
     located.sort(key=lambda x: -x["score"])
     top = len([f for f in located if f["score"] >= 45])
     print(f"[8] 우선방문 대상(★★ 이상) {top}건")

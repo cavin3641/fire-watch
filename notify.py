@@ -46,12 +46,15 @@ def format_alert(fire):
     grade = fire.get("grade") or ""
     head = f"{grade} " if grade else ""
     is_msg = fire.get("source") == "재난문자"
+    owner_only = not fire.get("forpartner", True)
     visit = fire.get("visit") or ""
     mark = {"방문가능": "✅ 방문 가능",
             "곧가능": "🕐 곧 가능 (진화 마무리 중)",
             "진화중": "⛔ 아직 진화 중"}.get(visit, "")
 
     lines = [f"[{zone}]{home}"]
+    if owner_only:
+        lines.append("👤 사장님 확인 건")
     if is_msg:
         lines.append("📢 긴급재난문자")
     lines.append(f"🔥 {head}{fire.get('region') or '위치 미상'}")
@@ -105,19 +108,28 @@ def format_alert(fire):
 
 
 def send_by_zone(fire, text):
-    """그 화재가 속한 권역 방으로 보냅니다.
+    """건물 종류에 따라 보낼 곳을 정합니다.
 
-    권역 방이 설정돼 있지 않으면 기본 방(사장님)으로 갑니다.
-    사무실 권역(경기 북부)은 권역 방과 기본 방 양쪽으로 보냅니다.
+    아파트·상가·주택  -> 권역 담당 파트너 방 (사장님도 함께)
+    공장·숙박·요양병원·학교 -> 사장님 방만
+
+    파트너에게는 자기가 감당할 수 있는 건만 보내야
+    헤매지 않고 사고도 줄어듭니다.
     """
     zone = zones.zone_of(fire.get("region"))
-    target = zones.chat_id_of(zone)
 
+    # 사장님이 직접 볼 건 (공장·숙박·요양병원·교육종교)
+    if not fire.get("forpartner", True):
+        send(text)
+        return zone + " (사장님)"
+
+    target = zones.chat_id_of(zone)
     if target:
+        # 파트너 방에만 보냅니다.
+        # 사장님 방에는 '사장님 전용 건'만 오도록 해서
+        # 하루 40건에 묻히지 않게 합니다.
         send(text, chat_id=target)
-        # 사무실 권역은 사장님도 같이 받습니다
-        if zone == zones.HOME_ZONE and TELEGRAM_CHAT_ID != target:
-            send(text)
     else:
+        # 그 권역에 담당자 방이 아직 없으면 사장님이 받습니다
         send(text)
     return zone
