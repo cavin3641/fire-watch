@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-17T07:49:09.689623+09:00",
+  "updated_at": "2026-09-17T10:14:52.648708+09:00",
   "fires": [
     {
       "source": "재난문자",
@@ -15,6 +15,137 @@
       "score": 5,
       "grade": "",
       "first_seen": "2026-09-09T05:11:49.354834+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 인천광역시 미추홀구 학익동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-17T09:18:25+09:00",
+      "region": "인천광역시 미추홀구 학익동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "1차출동",
+      "building": null,
+      "bkind": null,
+      "status": "출동지령",
+      "raw_text": "일반화재(차량,주택) 인천광역시 미추홀구 학익동 화재 발생",
+      "lat": 37.43190248779825,
+      "lon": 126.64617021011661,
+      "id": "7c047a39f474",
+      "distance_km": 30.0,
+      "score": 50,
+      "grade": "",
+      "visit": "진화중",
+      "forpartner": true
+    },
+    {
+      "source": "소방출동",
+      "title": "기타화재 - 경기도 오산시 원동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-17T08:55:33+09:00",
+      "region": "경기도 오산시 원동",
+      "kind": "기타화재",
+      "scope": "1차출동",
+      "building": "에프앤에스 식품공장",
+      "bkind": "공장·창고",
+      "status": "출동보고",
+      "raw_text": "기타화재 경기도 오산시 원동 화재 발생",
+      "lat": 37.13712642669047,
+      "lon": 127.0787155392497,
+      "id": "d8e837fb9614",
+      "distance_km": 61.9,
+      "score": 51,
+      "grade": "",
+      "visit": "진화중",
+      "forpartner": false,
+      "first_seen": "2026-09-17T10:14:52.648581+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 경기도 고양시 덕양구 대자동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-17T08:35:24+09:00",
+      "region": "경기도 고양시 덕양구 대자동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "1차출동",
+      "building": null,
+      "bkind": null,
+      "status": "귀소보고",
+      "raw_text": "일반화재(차량,주택) 경기도 고양시 덕양구 대자동 화재 발생",
+      "lat": 37.68603766039874,
+      "lon": 126.87995095060828,
+      "id": "fd070916e9c3",
+      "distance_km": 5.2,
+      "score": 70,
+      "grade": "★★",
+      "visit": "방문가능",
+      "forpartner": true,
+      "first_seen": "2026-09-17T10:14:52.648581+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 경기도 부천시 원미구 상동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-17T08:20:50+09:00",
+      "region": "경기도 부천시 원미구 상동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "1차출동",
+      "building": "반달마을극동 1836동",
+      "bkind": null,
+      "status": "귀소보고",
+      "raw_text": "일반화재(차량,주택) 경기도 부천시 원미구 상동 화재 발생",
+      "lat": 37.489003378523584,
+      "lon": 126.74999571309365,
+      "id": "f5f29fa81085",
+      "distance_km": 20.2,
+      "score": 70,
+      "grade": "★★",
+      "visit": "방문가능",
+      "forpartner": true,
+      "first_seen": "2026-09-17T10:14:52.648581+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 인천광역시 남동구 논현동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-17T08:06:28+09:00",
+      "region": "인천광역시 남동구 논현동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "1차출동",
+      "building": null,
+      "bkind": null,
+      "status": "귀소완료보고",
+      "raw_text": "일반화재(차량,주택) 인천광역시 남동구 논현동 화재 발생",
+      "lat": 37.400674514880365,
+      "lon": 126.73634136657569,
+      "id": "8008645a4432",
+      "distance_km": 29.9,
+      "score": 73,
+      "grade": "★★",
+      "visit": "방문가능",
+      "forpartner": true,
+      "first_seen": "2026-09-17T10:14:52.648581+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 서울특별시 강남구 대치동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-17T07:44:06+09:00",
+      "region": "서울특별시 강남구 대치동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "2차출동",
+      "building": null,
+      "bkind": null,
+      "status": "현장도착",
+      "raw_text": "일반화재(차량,주택) 서울특별시 강남구 대치동 화재 발생",
+      "lat": 37.49744637134392,
+      "lon": 127.0525283384281,
+      "id": "a06e828ea314",
+      "distance_km": 26.4,
+      "score": 58,
+      "grade": "★",
+      "visit": "진화중",
+      "forpartner": true,
+      "first_seen": "2026-09-17T10:14:52.648581+09:00"
     },
     {
       "source": "소방출동",
@@ -35,8 +166,7 @@
       "score": 48,
       "grade": "",
       "visit": "진화중",
-      "forpartner": false,
-      "first_seen": "2026-09-17T07:49:09.689449+09:00"
+      "forpartner": false
     },
     {
       "source": "소방출동",
@@ -57,8 +187,7 @@
       "score": 69,
       "grade": "★★",
       "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-17T07:49:09.689449+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -79,30 +208,7 @@
       "score": 69,
       "grade": "★★",
       "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-17T07:49:09.689449+09:00"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 인천광역시 미추홀구 도화동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-17T05:00:40+09:00",
-      "region": "인천광역시 미추홀구 도화동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "1차출동",
-      "building": "다인주택",
-      "bkind": "주택·빌라",
-      "status": "완전진화",
-      "raw_text": "일반화재(차량,주택) 인천광역시 미추홀구 도화동 화재 발생",
-      "lat": 37.45937940524022,
-      "lon": 126.66973143336702,
-      "id": "7c047a39f474",
-      "distance_km": 26.4,
-      "score": 73,
-      "grade": "★★",
-      "visit": "방문가능",
-      "forpartner": true,
-      "first_seen": "2026-09-17T07:49:09.689449+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -123,8 +229,7 @@
       "score": 50,
       "grade": "",
       "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-17T07:49:09.689449+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -145,8 +250,7 @@
       "score": 50,
       "grade": "",
       "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-17T07:49:09.689449+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -167,8 +271,7 @@
       "score": 61,
       "grade": "★",
       "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-17T07:49:09.689449+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -189,8 +292,7 @@
       "score": 53,
       "grade": "",
       "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-17T07:49:09.689449+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -211,8 +313,7 @@
       "score": 58,
       "grade": "★",
       "visit": "확인필요",
-      "forpartner": true,
-      "first_seen": "2026-09-17T07:49:09.689449+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -233,8 +334,7 @@
       "score": 58,
       "grade": "★",
       "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-17T07:49:09.689449+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -255,8 +355,7 @@
       "score": 73,
       "grade": "★★",
       "visit": "방문가능",
-      "forpartner": true,
-      "first_seen": "2026-09-17T07:49:09.689449+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -277,8 +376,7 @@
       "score": 73,
       "grade": "★★",
       "visit": "방문가능",
-      "forpartner": true,
-      "first_seen": "2026-09-17T07:49:09.689449+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -299,8 +397,7 @@
       "score": 58,
       "grade": "★",
       "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-17T07:49:09.689449+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -343,8 +440,7 @@
       "score": 68,
       "grade": "★★",
       "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-17T07:49:09.689449+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -409,8 +505,7 @@
       "score": 58,
       "grade": "★",
       "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-17T07:49:09.689449+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -431,8 +526,7 @@
       "score": 58,
       "grade": "★",
       "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-17T07:49:09.689449+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -2597,69 +2691,6 @@
       "distance_km": 14.0,
       "score": 58,
       "grade": "★",
-      "visit": "진화중",
-      "forpartner": true
-    },
-    {
-      "source": "소방출동",
-      "title": "기타화재 - 경기도 양주시 장흥면 석현리",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-15T09:24:01+09:00",
-      "region": "경기도 양주시 장흥면 석현리",
-      "kind": "기타화재",
-      "scope": "1차출동",
-      "building": "사랑터요양센터",
-      "bkind": "요양·병원",
-      "status": "귀소완료보고",
-      "raw_text": "기타화재 경기도 양주시 장흥면 석현리 화재 발생",
-      "lat": 37.75930695644698,
-      "lon": 126.96638627106526,
-      "id": "514e570f635a",
-      "distance_km": 16.3,
-      "score": 61,
-      "grade": "★",
-      "visit": "방문가능",
-      "forpartner": false
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 경기도 의왕시 청계동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-15T09:08:04+09:00",
-      "region": "경기도 의왕시 청계동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "1차출동",
-      "building": null,
-      "bkind": null,
-      "status": "추가출동지령",
-      "raw_text": "일반화재(차량,주택) 경기도 의왕시 청계동 화재 발생",
-      "lat": 37.393127437978286,
-      "lon": 127.02251801625998,
-      "id": "2eee8fdcc1bf",
-      "distance_km": 33.9,
-      "score": 50,
-      "grade": "",
-      "visit": "진화중",
-      "forpartner": true
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 종로구 창신동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-15T08:37:32+09:00",
-      "region": "서울특별시 종로구 창신동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "building": null,
-      "bkind": null,
-      "status": "현장도착",
-      "raw_text": "일반화재(차량,주택) 서울특별시 종로구 창신동 화재 발생",
-      "lat": 37.57961033330179,
-      "lon": 127.01471728987038,
-      "id": "d182336e458a",
-      "distance_km": 18.3,
-      "score": 52,
-      "grade": "",
       "visit": "진화중",
       "forpartner": true
     }
