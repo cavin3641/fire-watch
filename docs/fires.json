@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-19T06:48:06.137680+09:00",
+  "updated_at": "2026-09-19T09:07:55.936178+09:00",
   "fires": [
     {
       "source": "재난문자",
@@ -2452,69 +2452,6 @@
       "grade": "★",
       "visit": "확인필요",
       "forpartner": true
-    },
-    {
-      "source": "소방출동",
-      "title": "기타화재 - 경기도 오산시 원동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-17T08:55:33+09:00",
-      "region": "경기도 오산시 원동",
-      "kind": "기타화재",
-      "scope": "1차출동",
-      "building": "에프앤에스 식품공장",
-      "bkind": "공장·창고",
-      "status": "출동보고",
-      "raw_text": "기타화재 경기도 오산시 원동 화재 발생",
-      "lat": 37.13712642669047,
-      "lon": 127.0787155392497,
-      "id": "d8e837fb9614",
-      "distance_km": 61.9,
-      "score": 51,
-      "grade": "",
-      "visit": "진화중",
-      "forpartner": false
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 강남구 대치동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-17T07:44:06+09:00",
-      "region": "서울특별시 강남구 대치동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "building": null,
-      "bkind": null,
-      "status": "현장도착",
-      "raw_text": "일반화재(차량,주택) 서울특별시 강남구 대치동 화재 발생",
-      "lat": 37.49744637134392,
-      "lon": 127.0525283384281,
-      "id": "a06e828ea314",
-      "distance_km": 26.4,
-      "score": 52,
-      "grade": "",
-      "visit": "진화중",
-      "forpartner": true
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 경기도 오산시 누읍동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-17T07:23:03+09:00",
-      "region": "경기도 오산시 누읍동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "1차출동",
-      "building": "장연고분자(접착제 제조",
-      "bkind": "공장·창고",
-      "status": "현장도착보고",
-      "raw_text": "일반화재(차량,주택) 경기도 오산시 누읍동 화재 발생",
-      "lat": 37.14131925249078,
-      "lon": 127.0580888382031,
-      "id": "1a810dfc111e",
-      "distance_km": 60.9,
-      "score": 48,
-      "grade": "",
-      "visit": "진화중",
-      "forpartner": false
     }
   ]
 }
