@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-20T03:47:10.553469+09:00",
+  "updated_at": "2026-09-20T06:23:17.731830+09:00",
   "fires": [
     {
       "source": "재난문자",
@@ -15,6 +15,93 @@
       "score": 5,
       "grade": "",
       "first_seen": "2026-09-09T05:11:49.354834+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "기타화재 - 경기도 고양시 덕양구 관산동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-20T05:23:41+09:00",
+      "region": "경기도 고양시 덕양구 관산동",
+      "kind": "기타화재",
+      "scope": "1차출동",
+      "building": "자성리치빌(연립주택)",
+      "bkind": "주택·빌라",
+      "status": "현장도착보고",
+      "raw_text": "기타화재 경기도 고양시 덕양구 관산동 화재 발생",
+      "lat": 37.705646003593216,
+      "lon": 126.85839576867046,
+      "id": "4a5b6f062304",
+      "distance_km": 5.7,
+      "score": 66,
+      "grade": "★",
+      "visit": "진화중",
+      "forpartner": true,
+      "first_seen": "2026-09-20T06:23:17.731686+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "기타화재 - 경기도 성남시 중원구 상대원동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-20T04:30:50+09:00",
+      "region": "경기도 성남시 중원구 상대원동",
+      "kind": "기타화재",
+      "scope": "1차출동",
+      "building": "더헤리움빌라 2층",
+      "bkind": "주택·빌라",
+      "status": "현장도착보고",
+      "raw_text": "기타화재 경기도 성남시 중원구 상대원동 화재 발생",
+      "lat": 37.435760008403655,
+      "lon": 127.16411081789839,
+      "id": "5d172baa72ca",
+      "distance_km": 38.3,
+      "score": 66,
+      "grade": "★",
+      "visit": "진화중",
+      "forpartner": true
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 서울특별시 서초구 서초동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-20T04:15:32+09:00",
+      "region": "서울특별시 서초구 서초동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "2차출동",
+      "building": null,
+      "bkind": null,
+      "status": "현장도착",
+      "raw_text": "일반화재(차량,주택) 서울특별시 서초구 서초동 화재 발생",
+      "lat": 37.50093337286949,
+      "lon": 127.02459729862886,
+      "id": "e1efb64186e6",
+      "distance_km": 24.4,
+      "score": 80,
+      "grade": "★★★",
+      "visit": "진화중",
+      "forpartner": true,
+      "first_seen": "2026-09-20T06:23:17.731686+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 인천광역시 남동구 서창동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-20T03:43:47+09:00",
+      "region": "인천광역시 남동구 서창동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "1차출동",
+      "building": null,
+      "bkind": null,
+      "status": "귀소완료보고",
+      "raw_text": "일반화재(차량,주택) 인천광역시 남동구 서창동 화재 발생",
+      "lat": 37.423200046345606,
+      "lon": 126.74880248703943,
+      "id": "7a4d6ec9dede",
+      "distance_km": 27.2,
+      "score": 73,
+      "grade": "★★",
+      "visit": "방문가능",
+      "forpartner": true,
+      "first_seen": "2026-09-20T06:23:17.731686+09:00"
     },
     {
       "source": "소방출동",
@@ -35,8 +122,7 @@
       "score": 70,
       "grade": "★★",
       "visit": "방문가능",
-      "forpartner": true,
-      "first_seen": "2026-09-20T03:47:10.553330+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -57,8 +143,7 @@
       "score": 73,
       "grade": "★★",
       "visit": "방문가능",
-      "forpartner": true,
-      "first_seen": "2026-09-20T03:47:10.553330+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -79,8 +164,7 @@
       "score": 69,
       "grade": "★★",
       "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-20T03:47:10.553330+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -101,8 +185,7 @@
       "score": 70,
       "grade": "★★",
       "visit": "방문가능",
-      "forpartner": true,
-      "first_seen": "2026-09-20T03:47:10.553330+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -123,30 +206,7 @@
       "score": 91,
       "grade": "★★★",
       "visit": "방문가능",
-      "forpartner": true,
-      "first_seen": "2026-09-20T03:47:10.553330+09:00"
-    },
-    {
-      "source": "소방출동",
-      "title": "기타화재 - 경기도 성남시 수정구 수진동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-20T01:25:39+09:00",
-      "region": "경기도 성남시 수정구 수진동",
-      "kind": "기타화재",
-      "scope": "1차출동",
-      "building": "주택",
-      "bkind": "주택·빌라",
-      "status": "현장도착보고",
-      "raw_text": "기타화재 경기도 성남시 수정구 수진동 화재 발생",
-      "lat": 37.439471725749534,
-      "lon": 127.13609532716204,
-      "id": "5d172baa72ca",
-      "distance_km": 36.2,
-      "score": 66,
-      "grade": "★",
-      "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-20T03:47:10.553330+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -167,8 +227,7 @@
       "score": 100,
       "grade": "★★★",
       "visit": "방문가능",
-      "forpartner": true,
-      "first_seen": "2026-09-20T03:47:10.553330+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -2366,27 +2425,6 @@
       "score": 73,
       "grade": "★★",
       "visit": "곧가능",
-      "forpartner": true
-    },
-    {
-      "source": "소방출동",
-      "title": "기타화재 - 인천광역시 남동구 만수동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-18T05:03:13+09:00",
-      "region": "인천광역시 남동구 만수동",
-      "kind": "기타화재",
-      "scope": "1차출동",
-      "building": "만수주공아파트",
-      "bkind": "아파트",
-      "status": "현장도착보고",
-      "raw_text": "기타화재 인천광역시 남동구 만수동 화재 발생",
-      "lat": 37.44946819625839,
-      "lon": 126.73801232684754,
-      "id": "8de0baaffb3d",
-      "distance_km": 24.7,
-      "score": 70,
-      "grade": "★★",
-      "visit": "진화중",
       "forpartner": true
     }
   ]
