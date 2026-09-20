@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-20T08:26:07.370577+09:00",
+  "updated_at": "2026-09-20T10:33:32.386999+09:00",
   "fires": [
     {
       "source": "재난문자",
@@ -2297,70 +2297,6 @@
       "visit": "방문가능",
       "forpartner": true,
       "first_seen": "2026-09-18T20:42:17.503878+09:00"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 경기도 안양시 동안구 호계동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-18T10:30:33+09:00",
-      "region": "경기도 안양시 동안구 호계동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "1차출동",
-      "building": "안양sk v1센터",
-      "bkind": "상가·빌딩",
-      "status": "현장도착보고",
-      "raw_text": "일반화재(차량,주택) 경기도 안양시 동안구 호계동 화재 발생",
-      "lat": 37.37405282376334,
-      "lon": 126.94877715067767,
-      "id": "1f6207b80859",
-      "distance_km": 33.3,
-      "score": 61,
-      "grade": "★",
-      "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-18T20:42:17.503878+09:00"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 서초구 방배동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-18T09:39:46+09:00",
-      "region": "서울특별시 서초구 방배동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "building": "방배 서리풀 e-편한세상",
-      "bkind": null,
-      "status": "현장도착",
-      "raw_text": "일반화재(차량,주택) 서울특별시 서초구 방배동 화재 발생",
-      "lat": 37.483438359510316,
-      "lon": 126.99831533665038,
-      "id": "434c38a39417",
-      "distance_km": 24.4,
-      "score": 58,
-      "grade": "★",
-      "visit": "진화중",
-      "forpartner": true
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 노원구 상계동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-18T09:33:56+09:00",
-      "region": "서울특별시 노원구 상계동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "building": null,
-      "bkind": null,
-      "status": "현장도착",
-      "raw_text": "일반화재(차량,주택) 서울특별시 노원구 상계동 화재 발생",
-      "lat": 37.655337982501024,
-      "lon": 127.06755290799936,
-      "id": "71d628151aa5",
-      "distance_km": 20.7,
-      "score": 58,
-      "grade": "★",
-      "visit": "진화중",
-      "forpartner": true
     }
   ]
 }
