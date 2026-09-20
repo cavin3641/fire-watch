@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T04:00:07.797954+09:00",
+  "updated_at": "2026-09-21T06:22:57.367113+09:00",
   "fires": [
     {
       "source": "재난문자",
@@ -15,6 +15,93 @@
       "score": 5,
       "grade": "",
       "first_seen": "2026-09-09T05:11:49.354834+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 경기도 오산시 원동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-21T06:02:34+09:00",
+      "region": "경기도 오산시 원동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "1차출동",
+      "building": null,
+      "bkind": null,
+      "status": "현장도착보고",
+      "raw_text": "일반화재(차량,주택) 경기도 오산시 원동 화재 발생",
+      "lat": 37.14444599583565,
+      "lon": 127.07413075457109,
+      "id": "eb900e55b112",
+      "distance_km": 61.0,
+      "score": 58,
+      "grade": "★",
+      "visit": "진화중",
+      "forpartner": true,
+      "first_seen": "2026-09-21T06:22:57.366976+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "기타화재 - 경기도 화성시 효행구 봉담읍 동화리",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-21T05:57:05+09:00",
+      "region": "경기도 화성시 효행구 봉담읍 동화리",
+      "kind": "기타화재",
+      "scope": "1차출동",
+      "building": "삼동카센터 인근",
+      "bkind": "상가·빌딩",
+      "status": "현장도착보고",
+      "raw_text": "기타화재 경기도 화성시 효행구 봉담읍 동화리 화재 발생",
+      "lat": 37.21870887392104,
+      "lon": 126.95866198755532,
+      "id": "15ea35b5eea2",
+      "distance_km": 50.2,
+      "score": 69,
+      "grade": "★★",
+      "visit": "진화중",
+      "forpartner": true,
+      "first_seen": "2026-09-21T06:22:57.366976+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "기타화재 - 경기도 광명시 광명동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-21T05:31:39+09:00",
+      "region": "경기도 광명시 광명동",
+      "kind": "기타화재",
+      "scope": "1차출동",
+      "building": "자바모텔",
+      "bkind": "숙박",
+      "status": "현장도착보고",
+      "raw_text": "기타화재 경기도 광명시 광명동 화재 발생",
+      "lat": 37.47870015659613,
+      "lon": 126.85496986015765,
+      "id": "24890cc69fb8",
+      "distance_km": 20.1,
+      "score": 53,
+      "grade": "",
+      "visit": "진화중",
+      "forpartner": false
+    },
+    {
+      "source": "소방출동",
+      "title": "기타화재 - 경기도 용인시 기흥구 언남동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-21T05:26:28+09:00",
+      "region": "경기도 용인시 기흥구 언남동",
+      "kind": "기타화재",
+      "scope": "1차출동",
+      "building": "글로하임2 오피스텔",
+      "bkind": "상가·빌딩",
+      "status": "귀소보고",
+      "raw_text": "기타화재 경기도 용인시 기흥구 언남동 화재 발생",
+      "lat": 37.29389615857367,
+      "lon": 127.11620887204651,
+      "id": "af45c71f723c",
+      "distance_km": 47.7,
+      "score": 81,
+      "grade": "★★★",
+      "visit": "방문가능",
+      "forpartner": true,
+      "first_seen": "2026-09-21T06:22:57.366976+09:00"
     },
     {
       "source": "소방출동",
@@ -35,8 +122,7 @@
       "score": 61,
       "grade": "★",
       "visit": "방문가능",
-      "forpartner": false,
-      "first_seen": "2026-09-21T04:00:07.797818+09:00"
+      "forpartner": false
     },
     {
       "source": "소방출동",
@@ -57,8 +143,7 @@
       "score": 68,
       "grade": "★★",
       "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-21T04:00:07.797818+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -79,8 +164,7 @@
       "score": 69,
       "grade": "★★",
       "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-21T04:00:07.797818+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -101,30 +185,7 @@
       "score": 58,
       "grade": "★",
       "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-21T04:00:07.797818+09:00"
-    },
-    {
-      "source": "소방출동",
-      "title": "기타화재 - 경기도 광명시 소하동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-21T02:42:10+09:00",
-      "region": "경기도 광명시 소하동",
-      "kind": "기타화재",
-      "scope": "1차출동",
-      "building": "정우팰리스",
-      "bkind": "아파트",
-      "status": "현장도착보고",
-      "raw_text": "기타화재 경기도 광명시 소하동 화재 발생",
-      "lat": 37.446126083805794,
-      "lon": 126.88549982782673,
-      "id": "24890cc69fb8",
-      "distance_km": 24.1,
-      "score": 76,
-      "grade": "★★",
-      "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-21T04:00:07.797818+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -145,8 +206,7 @@
       "score": 58,
       "grade": "★",
       "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-21T04:00:07.797818+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -167,8 +227,7 @@
       "score": 76,
       "grade": "★★",
       "visit": "방문가능",
-      "forpartner": true,
-      "first_seen": "2026-09-21T04:00:07.797818+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -189,8 +248,7 @@
       "score": 70,
       "grade": "★★",
       "visit": "방문가능",
-      "forpartner": true,
-      "first_seen": "2026-09-21T04:00:07.797818+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -211,8 +269,7 @@
       "score": 58,
       "grade": "★",
       "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-21T04:00:07.797818+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -233,8 +290,7 @@
       "score": 33,
       "grade": "",
       "visit": "진화중",
-      "forpartner": false,
-      "first_seen": "2026-09-21T04:00:07.797818+09:00"
+      "forpartner": false
     },
     {
       "source": "소방출동",
@@ -255,8 +311,7 @@
       "score": 70,
       "grade": "★★",
       "visit": "방문가능",
-      "forpartner": true,
-      "first_seen": "2026-09-21T04:00:07.797818+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -277,8 +332,7 @@
       "score": 41,
       "grade": "",
       "visit": "진화중",
-      "forpartner": false,
-      "first_seen": "2026-09-21T04:00:07.797818+09:00"
+      "forpartner": false
     },
     {
       "source": "소방출동",
@@ -299,8 +353,7 @@
       "score": 73,
       "grade": "★★",
       "visit": "방문가능",
-      "forpartner": true,
-      "first_seen": "2026-09-21T04:00:07.797818+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -1790,91 +1843,6 @@
       "distance_km": 25.9,
       "score": 58,
       "grade": "★",
-      "visit": "진화중",
-      "forpartner": true
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 경기도 시흥시 하상동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-19T05:48:47+09:00",
-      "region": "경기도 시흥시 하상동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "1차출동",
-      "building": null,
-      "bkind": null,
-      "status": "귀소보고",
-      "raw_text": "일반화재(차량,주택) 경기도 시흥시 하상동 화재 발생",
-      "lat": 37.394029925125864,
-      "lon": 126.81491874351774,
-      "id": "51d2d614e469",
-      "distance_km": 29.4,
-      "score": 70,
-      "grade": "★★",
-      "visit": "방문가능",
-      "forpartner": true,
-      "first_seen": "2026-09-19T06:48:06.137483+09:00"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 마포구 연남동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-19T05:41:21+09:00",
-      "region": "서울특별시 마포구 연남동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "building": null,
-      "bkind": null,
-      "status": "현장도착",
-      "raw_text": "일반화재(차량,주택) 서울특별시 마포구 연남동 화재 발생",
-      "lat": 37.56148707905703,
-      "lon": 126.92602392714568,
-      "id": "007b86c1b92c",
-      "distance_km": 13.6,
-      "score": 52,
-      "grade": "",
-      "visit": "진화중",
-      "forpartner": true
-    },
-    {
-      "source": "소방출동",
-      "title": "기타화재 - 서울특별시 송파구 잠실동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-19T05:00:41+09:00",
-      "region": "서울특별시 송파구 잠실동",
-      "kind": "기타화재",
-      "scope": "1차출동",
-      "building": "상가",
-      "bkind": "상가·빌딩",
-      "status": "현장도착",
-      "raw_text": "기타화재 서울특별시 송파구 잠실동 화재 발생",
-      "lat": 37.51603616486242,
-      "lon": 127.09304741422801,
-      "id": "281885cb8072",
-      "distance_km": 27.9,
-      "score": 63,
-      "grade": "★",
-      "visit": "진화중",
-      "forpartner": true
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 강서구 화곡동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-19T04:20:20+09:00",
-      "region": "서울특별시 강서구 화곡동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "building": "청송평화헬스하우스",
-      "bkind": "주택·빌라",
-      "status": "현장도착",
-      "raw_text": "일반화재(차량,주택) 서울특별시 강서구 화곡동 화재 발생",
-      "lat": 37.54373243819826,
-      "lon": 126.83937561280442,
-      "id": "0378cd5af48e",
-      "distance_km": 12.8,
-      "score": 52,
-      "grade": "",
       "visit": "진화중",
       "forpartner": true
     }
