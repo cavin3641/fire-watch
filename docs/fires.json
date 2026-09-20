@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T06:22:57.367113+09:00",
+  "updated_at": "2026-09-21T08:25:17.312629+09:00",
   "fires": [
     {
       "source": "재난문자",
@@ -15,6 +15,72 @@
       "score": 5,
       "grade": "",
       "first_seen": "2026-09-09T05:11:49.354834+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 경기도 남양주시 오남읍 오남리",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-21T08:16:16+09:00",
+      "region": "경기도 남양주시 오남읍 오남리",
+      "kind": "일반화재(차량,주택)",
+      "scope": "1차출동",
+      "building": null,
+      "bkind": null,
+      "status": "추가출동지령",
+      "raw_text": "일반화재(차량,주택) 경기도 남양주시 오남읍 오남리 화재 발생",
+      "lat": 37.69696648999112,
+      "lon": 127.1943925159359,
+      "id": "d07d4382cc47",
+      "distance_km": 32.2,
+      "score": 50,
+      "grade": "",
+      "visit": "진화중",
+      "forpartner": true,
+      "first_seen": "2026-09-21T08:25:17.312521+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 서울특별시 송파구 방이동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-21T07:27:21+09:00",
+      "region": "서울특별시 송파구 방이동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "2차출동",
+      "building": null,
+      "bkind": null,
+      "status": "완전진화",
+      "raw_text": "일반화재(차량,주택) 서울특별시 송파구 방이동 화재 발생",
+      "lat": 37.51267660409598,
+      "lon": 127.11240745247837,
+      "id": "6005b876da2a",
+      "distance_km": 29.5,
+      "score": 73,
+      "grade": "★★",
+      "visit": "방문가능",
+      "forpartner": true,
+      "first_seen": "2026-09-21T08:25:17.312521+09:00"
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 경기도 화성시 만세구 양감면 요당리",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-21T06:31:47+09:00",
+      "region": "경기도 화성시 만세구 양감면 요당리",
+      "kind": "일반화재(차량,주택)",
+      "scope": "1차출동",
+      "building": null,
+      "bkind": null,
+      "status": "귀소보고",
+      "raw_text": "일반화재(차량,주택) 경기도 화성시 만세구 양감면 요당리 화재 발생",
+      "lat": 37.066470375468484,
+      "lon": 126.91629760875288,
+      "id": "2dddc775fead",
+      "distance_km": 66.2,
+      "score": 70,
+      "grade": "★★",
+      "visit": "방문가능",
+      "forpartner": true,
+      "first_seen": "2026-09-21T08:25:17.312521+09:00"
     },
     {
       "source": "소방출동",
@@ -35,8 +101,7 @@
       "score": 58,
       "grade": "★",
       "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-21T06:22:57.366976+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -57,8 +122,7 @@
       "score": 69,
       "grade": "★★",
       "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-21T06:22:57.366976+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -100,8 +164,7 @@
       "score": 81,
       "grade": "★★★",
       "visit": "방문가능",
-      "forpartner": true,
-      "first_seen": "2026-09-21T06:22:57.366976+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -1802,49 +1865,6 @@
       "visit": "진화중",
       "forpartner": true,
       "first_seen": "2026-09-19T17:57:01.253948+09:00"
-    },
-    {
-      "source": "소방출동",
-      "title": "대형화재(시장,공장) - 인천광역시 남동구 논현동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-19T07:26:37+09:00",
-      "region": "인천광역시 남동구 논현동",
-      "kind": "대형화재(시장,공장)",
-      "scope": "1차출동",
-      "building": "세일전자(주",
-      "bkind": null,
-      "status": "귀소보고",
-      "raw_text": "대형화재(시장,공장) 인천광역시 남동구 논현동 화재 발생",
-      "lat": 37.40845158155455,
-      "lon": 126.70630289765371,
-      "id": "08d0a73f017f",
-      "distance_km": 29.9,
-      "score": 60,
-      "grade": "★",
-      "visit": "방문가능",
-      "forpartner": true,
-      "first_seen": "2026-09-19T17:57:01.253948+09:00"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 강남구 역삼동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-19T06:28:48+09:00",
-      "region": "서울특별시 강남구 역삼동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "building": null,
-      "bkind": null,
-      "status": "현장도착",
-      "raw_text": "일반화재(차량,주택) 서울특별시 강남구 역삼동 화재 발생",
-      "lat": 37.494945741287545,
-      "lon": 127.04212304393647,
-      "id": "e1ca158c5196",
-      "distance_km": 25.9,
-      "score": 58,
-      "grade": "★",
-      "visit": "진화중",
-      "forpartner": true
     }
   ]
 }
