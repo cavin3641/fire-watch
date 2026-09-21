@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T08:25:17.312629+09:00",
+  "updated_at": "2026-09-21T10:29:04.776334+09:00",
   "fires": [
     {
       "source": "재난문자",
@@ -18,6 +18,28 @@
     },
     {
       "source": "소방출동",
+      "title": "일반화재(차량,주택) - 서울특별시 서초구 방배동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-21T09:45:07+09:00",
+      "region": "서울특별시 서초구 방배동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "2차출동",
+      "building": null,
+      "bkind": null,
+      "status": "현장도착",
+      "raw_text": "일반화재(차량,주택) 서울특별시 서초구 방배동 화재 발생",
+      "lat": 37.482429195927686,
+      "lon": 126.99670986281077,
+      "id": "b28929dc0fdb",
+      "distance_km": 24.4,
+      "score": 58,
+      "grade": "★",
+      "visit": "진화중",
+      "forpartner": true,
+      "first_seen": "2026-09-21T10:29:04.776163+09:00"
+    },
+    {
+      "source": "소방출동",
       "title": "일반화재(차량,주택) - 경기도 남양주시 오남읍 오남리",
       "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
       "published": "2026-09-21T08:16:16+09:00",
@@ -26,17 +48,16 @@
       "scope": "1차출동",
       "building": null,
       "bkind": null,
-      "status": "추가출동지령",
+      "status": "귀소보고",
       "raw_text": "일반화재(차량,주택) 경기도 남양주시 오남읍 오남리 화재 발생",
       "lat": 37.69696648999112,
       "lon": 127.1943925159359,
       "id": "d07d4382cc47",
       "distance_km": 32.2,
-      "score": 50,
-      "grade": "",
-      "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-21T08:25:17.312521+09:00"
+      "score": 70,
+      "grade": "★★",
+      "visit": "방문가능",
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -57,8 +78,7 @@
       "score": 73,
       "grade": "★★",
       "visit": "방문가능",
-      "forpartner": true,
-      "first_seen": "2026-09-21T08:25:17.312521+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -79,8 +99,7 @@
       "score": 70,
       "grade": "★★",
       "visit": "방문가능",
-      "forpartner": true,
-      "first_seen": "2026-09-21T08:25:17.312521+09:00"
+      "forpartner": true
     },
     {
       "source": "소방출동",
@@ -1843,28 +1862,6 @@
       "grade": "★★",
       "visit": "방문가능",
       "forpartner": true
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 노원구 공릉동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-19T09:41:37+09:00",
-      "region": "서울특별시 노원구 공릉동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "building": null,
-      "bkind": null,
-      "status": "현장도착",
-      "raw_text": "일반화재(차량,주택) 서울특별시 노원구 공릉동 화재 발생",
-      "lat": 37.624234732994445,
-      "lon": 127.06972233584513,
-      "id": "8d77df582c2f",
-      "distance_km": 21.3,
-      "score": 58,
-      "grade": "★",
-      "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-19T17:57:01.253948+09:00"
     }
   ]
 }
