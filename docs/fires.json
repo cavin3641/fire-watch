@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T07:49:41.576005+09:00",
+  "updated_at": "2026-09-22T10:35:52.140257+09:00",
   "fires": [
     {
       "source": "재난문자",
@@ -1405,50 +1405,6 @@
       "score": 68,
       "grade": "★★",
       "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-20T15:50:51.906820+09:00"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 동작구 대방동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-20T10:31:27+09:00",
-      "region": "서울특별시 동작구 대방동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "building": null,
-      "bkind": null,
-      "status": "현장도착",
-      "raw_text": "일반화재(차량,주택) 서울특별시 동작구 대방동 화재 발생",
-      "lat": 37.50557891834379,
-      "lon": 126.92434872922205,
-      "id": "357a4f935b7d",
-      "distance_km": 18.8,
-      "score": 58,
-      "grade": "★",
-      "visit": "진화중",
-      "forpartner": true,
-      "first_seen": "2026-09-20T15:50:51.906820+09:00"
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 강북구 미아동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-20T10:06:43+09:00",
-      "region": "서울특별시 강북구 미아동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "building": null,
-      "bkind": null,
-      "status": "초진",
-      "raw_text": "일반화재(차량,주택) 서울특별시 강북구 미아동 화재 발생",
-      "lat": 37.62615243241359,
-      "lon": 127.03065369577358,
-      "id": "d3e33b2813d8",
-      "distance_km": 17.9,
-      "score": 63,
-      "grade": "★",
-      "visit": "곧가능",
       "forpartner": true,
       "first_seen": "2026-09-20T15:50:51.906820+09:00"
     }
