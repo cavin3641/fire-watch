@@ -1,16 +1,20 @@
 # -*- coding: utf-8 -*-
 """
-화재 규모 추적 (후속 확인)
+화재 규모·신빙성 추적 (후속 확인)
 
-소방청에서 주소를 받은 뒤 6시간 동안, 매 회차(30분)마다
-구글 뉴스에서 그 동네·건물 기사를 찾아 제목의 단어로 규모를 판정합니다.
+알림을 보낸 뒤 6시간 동안, 매 회차(30분)마다
+구글 뉴스에서 그 동네·건물 기사를 찾아
 
-  🟢 대형 / 🔴 소형 / 🟡 불명
+  규모   : 🔴 대형 / 🟢 소형 / 🟡 정보없음   (제목의 단어로 판정)
+  신빙성 : 공식 기록(소방청·재난문자)인지, 언론 몇 곳이 보도했는지
 
-등급이 바뀌면 처음 보낸 알림에 '답장' 형태로 다시 알립니다.
+를 정합니다. 규모가 올라가거나 새 기사가 나오면
+처음 보낸 알림에 '답장' 형태로 다시 알립니다.
+결과는 db.py 가 월별 기록 파일(db/)에 계속 쌓습니다.
 
-※ 판정은 구글 뉴스 제목으로만 합니다.
-※ 네이버 기사는 판정에 쓰지 않고, 링크만 붙여서 보여줍니다 (약관).
+※ 판정·기록은 구글 뉴스로만 합니다.
+※ 네이버 검색 결과는 약관(2026.9.7 개정: 가공·AI 입력 금지,
+  원문 그대로 노출)에 따라 판정·기록에 쓰지 않고 링크만 보여줍니다.
 """
 import re
 from concurrent.futures import ThreadPoolExecutor
@@ -26,13 +30,18 @@ KST = timezone(timedelta(hours=9))
 RSS_URL = "https://news.google.com/rss/search?q={q}&hl=ko&gl=KR&ceid=KR:ko"
 
 FOLLOW_HOURS = 6                          # 발생 후 몇 시간 동안 추적할지
-TRACK_SOURCES = ("소방출동", "재난문자")    # 주소가 확실한 출처만 추적
+OFFICIAL = ("소방출동", "재난문자")         # 공식 기록으로 보는 출처
+MAX_NEWS = 8                              # 한 건당 기억해 둘 관련 기사 수
 
 # 다음 회차로 넘겨야 하는 값들 (collect.py 가 덮어써도 살려둡니다)
-KEEP_KEYS = ("size", "size_why", "size_news", "tg")
+KEEP_KEYS = ("size", "size_why", "size_news", "tg", "news", "trust")
 
-LABEL = {"대형": "🟢 대형", "소형": "🔴 소형", "불명": "🟡 불명"}
+LABEL = {"대형": "🔴 대형", "소형": "🟢 소형", "불명": "🟡 정보없음"}
 RANK = {"불명": 0, "소형": 1, "대형": 2}
+TRUST_LABEL = {"공식+보도": "✅ 공식 기록 + 언론 보도",
+               "공식": "✅ 공식 기록 (보도 없음)",
+               "보도": "📰 언론 여러 곳 보도",
+               "미확인": "⚠️ 기사 1곳뿐 · 확인 필요"}
 
 # ── 판정 단어 ─────────────────────────────────────────────
 # 여기 단어만 고치면 판정 기준이 바뀝니다.
@@ -108,7 +117,8 @@ def _queries(fire):
 
 
 # ── 뉴스 찾기 (구글) ──────────────────────────────────────
-def _google_titles(query, since):
+def _google_news(query, since):
+    """[{title, press, url}, ...]  구글 제목은 '기사 제목 - 언론사' 형식입니다."""
     url = RSS_URL.format(q=urllib.parse.quote(f"{query} when:1d"))
     try:
         feed = feedparser.parse(url)
@@ -121,7 +131,10 @@ def _google_titles(query, since):
             t = datetime(*e.published_parsed[:6], tzinfo=timezone.utc).astimezone(KST)
             if t < since:
                 continue                           # 화재 이전 기사(옛날 사건) 제외
-        out.append(e.title)
+        title, _, press = e.title.rpartition(" - ")
+        if not title:
+            title, press = e.title, ""
+        out.append({"title": title, "press": press, "url": e.link})
     return out
 
 
@@ -174,51 +187,93 @@ def carry_over(previous, current):
                     f[k] = p[k]
 
 
+# ── 신빙성 ───────────────────────────────────────────────
+def trust(fire):
+    """공식 기록인지, 언론 몇 곳이 보도했는지로 신빙성을 정합니다."""
+    presses = {n.get("press") for n in fire.get("news", []) if n.get("press")}
+    if fire.get("source") in OFFICIAL:
+        return "공식+보도" if presses else "공식"
+    return "보도" if len(presses) >= 2 else "미확인"
+
+
+def _seed_own_article(fire):
+    """뉴스로 잡힌 건은 처음 알림의 기사를 '이미 본 기사'로 넣어 둡니다.
+    (같은 기사를 '새 기사'로 다시 보내지 않으려고)"""
+    if "news" in fire or fire.get("source") in OFFICIAL or not fire.get("title"):
+        return
+    title, _, press = fire["title"].rpartition(" - ")
+    if not title:
+        title, press = fire["title"], ""
+    if fire.get("source") != "구글뉴스":
+        press = press or fire["source"]          # 인천일보 등 지역 언론
+    fire["news"] = [{"title": title, "press": press, "url": fire.get("url") or ""}]
+
+
 # ── 메인 ─────────────────────────────────────────────────
 def run(fires):
-    """fires: 저장 직전의 전체 목록. 규모를 갱신하고, 바뀐 건은 재발송."""
+    """fires: 저장 직전의 전체 목록. 규모·신빙성을 갱신하고, 바뀐 건은 재발송."""
     now = datetime.now(KST)
-    targets = [f for f in fires
-               if f.get("source") in TRACK_SOURCES and _in_window(f, now)]
-    print(f"[F] 규모 추적 대상 {len(targets)}건 (발생 {FOLLOW_HOURS}시간 이내)")
+    targets = [f for f in fires if _in_window(f, now)]
+    print(f"[F] 추적 대상 {len(targets)}건 (발생 {FOLLOW_HOURS}시간 이내)")
 
     # 대상별 기사 검색을 동시에 진행 (실행 시간 단축)
     def gather(f):
         since = _parse_time(f.get("published")) - timedelta(minutes=30)
-        titles = []
+        found = []
         for q in _queries(f):
-            titles += [t for t in _google_titles(q, since) if _related(t, f)]
-        # 언론사만 다른 같은 기사 합침
-        return list(dict.fromkeys(t.rsplit(" - ", 1)[0] for t in titles))
+            found += [n for n in _google_news(q, since) if _related(n["title"], f)]
+        return found
 
     with ThreadPoolExecutor(max_workers=6) as pool:
-        all_titles = list(pool.map(gather, targets))
+        all_found = list(pool.map(gather, targets))
 
     changed = 0
-    for f, titles in zip(targets, all_titles):
+    for f, found in zip(targets, all_found):
+        _seed_own_article(f)
+        # 이미 본 기사와 합칩니다 (같은 제목은 한 번만)
+        known = {n["title"] for n in f.get("news", [])}
+        fresh = [n for n in found if n["title"] not in known]
+        fresh = list({n["title"]: n for n in fresh}.values())
+        f["news"] = (f.get("news", []) + fresh)[:MAX_NEWS]
+        f["trust"] = trust(f)
+
+        titles = [n["title"] for n in f["news"]]
         new_size, why = judge(titles)
         old_size = f.get("size", "불명")
+        f.setdefault("size", old_size)
 
         # 한 번 올라간 등급은 내리지 않습니다 (기사마다 표현이 달라 오락가락 방지)
-        if RANK[new_size] <= RANK[old_size]:
-            f.setdefault("size", old_size)
-            continue
+        size_up = RANK[new_size] > RANK[old_size]
+        if size_up:
+            f["size"], f["size_why"] = new_size, why
+        f["size_news"] = len(titles)
 
-        f["size"], f["size_why"], f["size_news"] = new_size, why, len(titles)
-        changed += 1
-        print(f"    -> {f.get('region')} : {old_size} → {new_size} {why}")
-        notify.send_update(f, _update_text(f, old_size))
+        if size_up or fresh:
+            changed += 1
+            print(f"    -> {f.get('region')} : {old_size} → {f['size']} "
+                  f"{why} / 새 기사 {len(fresh)}건")
+            notify.send_update(f, _update_text(f, old_size, fresh))
 
-    print(f"    -> 등급 변경 {changed}건 재발송")
+    print(f"    -> 업데이트 {changed}건 재발송")
 
 
-def _update_text(f, old_size):
+def _update_text(f, old_size, fresh):
+    size = f["size"]
+    head = (f"🔄 규모 업데이트: {LABEL[old_size]} → {LABEL[size]}"
+            if size != old_size else f"🔄 새 기사 · 규모 {LABEL[size]}")
     lines = [
-        f"🔄 규모 업데이트: {LABEL[old_size]} → {LABEL[f['size']]}",
+        head,
         f"📍 {f.get('region') or ''} {f.get('building') or ''}".strip(),
+        f"신빙성: {TRUST_LABEL[f['trust']]}",
     ]
     if f.get("size_why"):
         lines.append(f"근거: {', '.join(f['size_why'])} (기사 {f.get('size_news', 0)}건)")
+    if fresh:
+        lines.append("")
+        lines.append("🆕 새 기사")
+    for n in fresh[:3]:
+        press = f" - {n['press']}" if n.get("press") else ""
+        lines.append(f"· {n['title']}{press}\n  {n['url']}")
 
     # 네이버 기사: 판정에 쓰지 않고 제목·링크만 그대로 보여줍니다.
     city, dong, bld = _names(f)
@@ -226,7 +281,7 @@ def _update_text(f, old_size):
     links = naver_links.search(q.strip(), n=3)
     if links:
         lines.append("")
-        lines.append("📰 관련 기사")
+        lines.append("📰 네이버 뉴스")
         for title, url in links:
             lines.append(f"· {title}\n  {url}")
     return "\n".join(lines)

@@ -124,15 +124,15 @@ def format_alert(fire):
 def send_by_zone(fire, text):
     """건물 종류에 따라 보낼 곳을 정합니다.
 
-    아파트·상가·주택  -> 권역 담당 파트너 방 (사장님도 함께)
-    공장·숙박·요양병원·학교 -> 사장님 방만
+    아파트·주택·상가·빌딩 -> 권역 담당 영업사원 방
+    그 밖의 건 (종류 미상 포함) -> 사장님 방 (SM화재알림)
 
     파트너에게는 자기가 감당할 수 있는 건만 보내야
     헤매지 않고 사고도 줄어듭니다.
     """
     zone = zones.zone_of(fire.get("region"))
 
-    # 사장님이 직접 볼 건 (공장·숙박·요양병원·교육종교)
+    # 사장님이 직접 볼 건 (아파트·주택·상가·빌딩이 아닌 것 전부)
     if not fire.get("forpartner", True):
         _remember(fire, TELEGRAM_CHAT_ID, send(text))
         return zone + " (사장님)"

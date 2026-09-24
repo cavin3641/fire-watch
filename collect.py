@@ -9,6 +9,7 @@ import os
 from datetime import datetime, timezone, timedelta
 
 import config
+import db
 import followup
 import filters
 import geocode
@@ -142,13 +143,9 @@ def merge_and_trim(previous, current):
         when = f.get("published") or f.get("first_seen")
         if not when:
             continue                      # 시각을 모르면 남기지 않습니다
-        try:
-            t = datetime.fromisoformat(when)
-            if t.tzinfo is None:
-                t = t.replace(tzinfo=KST)
-            if t >= cutoff:
-                kept.append(f)
-        except ValueError:
+        # '2026/09/08 10:34:33' 형식도 읽습니다 (못 읽으면 남겨 둠)
+        t = followup._parse_time(when)
+        if t is None or t >= cutoff:
             kept.append(f)
 
     kept.sort(key=lambda x: x.get("published") or "", reverse=True)
@@ -193,8 +190,9 @@ def main():
         print("     권역별:", dict(sent))
 
     merged = merge_and_trim(previous, fires)
-    followup.run(merged)                   # 6시간 동안 규모 추적 → 바뀌면 재발송
+    followup.run(merged)                   # 6시간 동안 규모·신빙성 추적 → 바뀌면 재발송
     save(merged)
+    db.save(merged)                        # 지우지 않는 월별 기록
 
 
 if __name__ == "__main__":
