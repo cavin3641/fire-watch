@@ -15,10 +15,10 @@
 처음 보낸 알림에 '답장' 형태로 다시 알립니다.
 결과는 db.py 가 월별 기록 파일(db/)에 계속 쌓습니다.
 
-※ 규모 판정과 기사 기록은 구글 뉴스로만 합니다.
-※ 네이버 검색 결과는 약관(2026.9.7 개정: 가공·AI 입력 금지,
-  원문 그대로 노출)에 따라 판정에 쓰지 않고, 제목·링크를 그대로
-  알림에만 보여줍니다. 기록에는 찾은 건수만 남깁니다.
+※ 규모 판정은 구글 뉴스 + 네이버 '뉴스' 제목으로 합니다.
+  (AI 없이 정해 둔 단어가 있는지만 봅니다. 블로그·카페는 판정에 안 씀)
+※ 네이버 글은 제목·링크를 고치지 않고 그대로 알림에 보여주고,
+  기록(DB)에는 내용 없이 찾은 건수만 남깁니다.
 """
 import hashlib
 import re
@@ -278,8 +278,12 @@ def run(fires):
         naver_new = _naver_fresh(f, naver)
         naver_total += sum(len(v) for v in naver_new.values())
 
-        # 규모 판정은 구글 뉴스 제목으로만 합니다 (네이버는 약관상 판정에 안 씀)
+        # 규모 판정: 구글 뉴스 + 네이버 뉴스 제목 (블로그·카페는 표현이 부정확해 제외)
+        # 네이버 제목은 저장하지 않고 이번 회차 검색 결과로만 봅니다.
+        # (등급은 내려가지 않으니 매 회차 다시 찾아도 충분합니다)
         titles = [n["title"] for n in f["news"]]
+        titles += [it["title"] for it in naver.get("뉴스", [])
+                   if it["title"] not in titles]
         new_size, why = judge(titles)
         old_size = f.get("size", "불명")
         f.setdefault("size", old_size)
