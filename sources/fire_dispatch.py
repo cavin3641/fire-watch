@@ -100,9 +100,18 @@ def _fetch_page(gubun, page):
 
 
 def fetch():
+    """서울·인천·경기를 동시에 가져옵니다 (각 지역 안에서는 천천히)."""
+    from concurrent.futures import ThreadPoolExecutor
     results = []
+    with ThreadPoolExecutor(max_workers=len(SIDO)) as pool:
+        for got in pool.map(lambda kv: _fetch_sido(*kv), SIDO.items()):
+            results += got
+    return results
 
-    for gubun, sido_name in SIDO.items():
+
+def _fetch_sido(gubun, sido_name):
+    results = []
+    if True:
         got = 0
         for page in range(1, MAX_PAGES + 1):
             try:

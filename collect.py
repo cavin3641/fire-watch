@@ -9,11 +9,12 @@ import os
 from datetime import datetime, timezone, timedelta
 
 import config
+import followup
 import filters
 import geocode
 import notify
 import priority
-from sources import google_news, naver_news, disaster_msg, local_news, fire_dispatch
+from sources import google_news, disaster_msg, local_news, fire_dispatch
 
 KST = timezone(timedelta(hours=9))
 
@@ -40,15 +41,17 @@ def collect_all():
     items += disaster_msg.fetch()
 
     print("[2] 구글 뉴스 확인 중...")
-    for kw in config.SEARCH_KEYWORDS:
-        items += google_news.fetch(kw)
+    # 8개씩 동시에 검색 → 실행 시간 단축 (GitHub 무료 사용시간 절약)
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        for got in pool.map(google_news.fetch, config.SEARCH_KEYWORDS):
+            items += got
 
     print("[3] 지역 언론 확인 중...")
     items += local_news.fetch()
 
-    print("[4] 네이버 뉴스 확인 중...")
-    for kw in config.SEARCH_KEYWORDS:
-        items += naver_news.fetch(kw)
+    # 네이버는 약관상(AI 입력·가공 금지) 수집·판정에 쓰지 않습니다.
+    # 규모 업데이트 알림에 기사 링크만 붙입니다 (followup.py → naver_links.py)
 
     print(f"    -> 총 {len(items)}건 수집")
     return items
@@ -170,6 +173,7 @@ def main():
 
     items = collect_all()
     fires = process(items)
+    followup.carry_over(previous, fires)   # 규모·텔레그램 번호 등 이전 값 유지
 
     now = datetime.now(KST).isoformat()
     new_ones = []
@@ -178,8 +182,7 @@ def main():
             f["first_seen"] = now     # 우리가 처음 본 시각
             new_ones.append(f)
 
-    save(merge_and_trim(previous, fires))
-
+    # 알림을 먼저 보내야 메시지 번호가 기록되고, 그 뒤에 저장합니다
     print(f"[10] 새 소식 {len(new_ones)}건 알림 발송")
     import collections
     sent = collections.Counter()
@@ -188,6 +191,10 @@ def main():
         sent[z] += 1
     if sent:
         print("     권역별:", dict(sent))
+
+    merged = merge_and_trim(previous, fires)
+    followup.run(merged)                   # 6시간 동안 규모 추적 → 바뀌면 재발송
+    save(merged)
 
 
 if __name__ == "__main__":

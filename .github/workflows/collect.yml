@@ -1,23 +1,32 @@
 name: fire-watch
 on:
   schedule:
-          - cron: "7,37 * * * *"
+    # 한국시간 07~22시: 30분마다 / 23~06시: 1시간마다 (무료 사용시간 절약)
+    - cron: "7,37 0-13,22-23 * * *"
+    - cron: "7 14-21 * * *"
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:            # 앞 회차가 안 끝났으면 기다렸다가 실행 (겹침 방지)
+  group: fire-watch
+  cancel-in-progress: false
 jobs:
   collect:
     runs-on: ubuntu-latest
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: "pip"
       - run: pip install -r requirements.txt
       - name: collect
         env:
           SAFETY_DATA_KEY: ${{ secrets.SAFETY_DATA_KEY }}
           KAKAO_REST_KEY: ${{ secrets.KAKAO_REST_KEY }}
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_CHAT_SEOUL_NORTH: ${{ secrets.TELEGRAM_CHAT_SEOUL_NORTH }}
@@ -35,3 +44,25 @@ jobs:
           git add docs/fires.json
           git diff --staged --quiet || git commit -m update-fires
           git push
+      - name: publish-map
+        # 지도는 공개 저장소(fire-map)에 '암호화된 데이터'만 올립니다
+        env:
+          MAP_PASSWORD: ${{ secrets.MAP_PASSWORD }}
+          MAP_DEPLOY_KEY: ${{ secrets.MAP_DEPLOY_KEY }}
+        run: |
+          python publish_map.py
+          # 배포 키(fire-map 에만 쓰기 가능)로 푸시합니다
+          mkdir -p ~/.ssh
+          printf '%s\n' "$MAP_DEPLOY_KEY" > ~/.ssh/map_key
+          chmod 600 ~/.ssh/map_key
+          ssh-keyscan -t ed25519 github.com >> ~/.ssh/known_hosts 2>/dev/null
+          export GIT_SSH_COMMAND="ssh -i ~/.ssh/map_key -o IdentitiesOnly=yes"
+          cd map_out
+          git init -q -b main
+          git config user.name fire-watch-bot
+          git config user.email bot@users.noreply.github.com
+          git add -A
+          git commit -q -m map
+          # 옛날 기록은 남기지 않고 매번 새로 덮어씁니다
+          git push -q -f git@github.com:cavin3641/fire-map.git main
+          rm -f ~/.ssh/map_key

@@ -128,7 +128,8 @@
 <script>
 /* ── 설정 ─────────────────────────────────────── */
 const CENTER = { lat: 37.6584, lon: 126.8320 };   // 고양시청 기준
-const DATA_URL = 'fires.json?t=' + Date.now();    // 캐시 방지
+const DATA_URL = 'fires.enc?t=' + Date.now();     // 암호화된 데이터 (캐시 방지)
+const PW_KEY = 'fw_pw';                             // 이 기기에 비밀번호 기억
 
 /* ── 지도 만들기 ──────────────────────────────── */
 const map = new kakao.maps.Map(document.getElementById('map'), {
@@ -255,15 +256,58 @@ document.getElementById('sortbtn').onclick = () => {
   if (_data) render(_data);
 };
 
-/* ── 데이터 불러오기 ──────────────────────────── */
-fetch(DATA_URL)
-  .then(r => r.json())
-  .then(render)
-  .catch(() => {
-    document.getElementById('updated').textContent = '데이터를 못 읽었습니다';
-    document.getElementById('list').innerHTML =
-      '<div class="empty">fires.json 파일을 찾을 수 없습니다.<br>collect.py 를 먼저 실행하세요.</div>';
+/* ── 데이터 불러오기 (비밀번호로 풀기) ────────── */
+const b64 = t => Uint8Array.from(atob(t), c => c.charCodeAt(0));
+
+async function decrypt(box, pw) {
+  const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(pw), 'PBKDF2', false, ['deriveKey']);
+  const key = await crypto.subtle.deriveKey(
+    { name: 'PBKDF2', salt: b64(box.salt), iterations: 200000, hash: 'SHA-256' },
+    base, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+  const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(box.iv) }, key, b64(box.ct));
+  return JSON.parse(new TextDecoder().decode(plain));
+}
+
+function askPassword(msg) {
+  return new Promise(resolve => {
+    const d = document.createElement('div');
+    d.style.cssText = 'position:fixed;inset:0;z-index:9999;background:var(--ink);display:flex;align-items:center;justify-content:center;padding:24px';
+    d.innerHTML = '<div style="width:100%;max-width:320px;display:flex;flex-direction:column;gap:12px">' +
+      '<div style="font-size:20px;font-weight:800">🔒 수도권 화재 상황판</div>' +
+      '<div style="color:var(--dim);font-size:15px">' + msg + '</div>' +
+      '<input id="pwin" type="password" placeholder="비밀번호" style="font-size:18px;padding:12px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--text)">' +
+      '<button id="pwok" style="font-size:18px;padding:12px;border-radius:8px;border:0;background:var(--hot);color:#fff;font-weight:700">열기</button></div>';
+    document.body.appendChild(d);
+    const go = () => { const v = d.querySelector('#pwin').value; d.remove(); resolve(v); };
+    d.querySelector('#pwok').onclick = go;
+    d.querySelector('#pwin').onkeydown = e => { if (e.key === 'Enter') go(); };
+    d.querySelector('#pwin').focus();
   });
+}
+
+async function load() {
+  let box;
+  try { box = await (await fetch(DATA_URL)).json(); }
+  catch (e) {
+    document.getElementById('updated').textContent = '데이터를 못 읽었습니다';
+    return;
+  }
+  let pw = null, msg = '비밀번호를 입력하세요. 이 기기에서는 한 번만 입력하면 됩니다.';
+  try { pw = localStorage.getItem(PW_KEY); } catch (e) {}
+  for (;;) {
+    if (!pw) pw = await askPassword(msg);
+    try {
+      const data = await decrypt(box, pw);
+      try { localStorage.setItem(PW_KEY, pw); } catch (e) {}
+      render(data);
+      return;
+    } catch (e) {
+      try { localStorage.removeItem(PW_KEY); } catch (e2) {}
+      pw = null; msg = '비밀번호가 틀렸습니다. 다시 입력하세요.';
+    }
+  }
+}
+load();
 
 /* 5분마다 새로고침 */
 setInterval(() => location.reload(), 5 * 60 * 1000);

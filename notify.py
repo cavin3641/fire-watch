@@ -19,24 +19,29 @@ import zones
 from config import TELEGRAM_TOKEN, TELEGRAM_CHAT_ID
 
 
-def send(text, chat_id=None):
+def send(text, chat_id=None, reply_to=None):
+    """보내고 나서 메시지 번호를 돌려줍니다 (나중에 답장 달 때 씀). 실패하면 None."""
     if not TELEGRAM_TOKEN:
         print("  [건너뜀] 텔레그램: 토큰이 없습니다")
         print("  --- 보낼 내용 ---")
         print(text)
-        return False
+        return None
 
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
+    data = {
+        "chat_id": chat_id or TELEGRAM_CHAT_ID,
+        "text": text,
+        "disable_web_page_preview": True,
+    }
+    if reply_to:
+        data["reply_to_message_id"] = reply_to
+        data["allow_sending_without_reply"] = True   # 원래 메시지가 지워졌어도 발송
     try:
-        requests.post(url, data={
-            "chat_id": chat_id or TELEGRAM_CHAT_ID,
-            "text": text,
-            "disable_web_page_preview": True,
-        }, timeout=10)
-        return True
+        r = requests.post(url, data=data, timeout=10)
+        return r.json().get("result", {}).get("message_id")
     except Exception as e:
         print(f"  [실패] 텔레그램 발송: {e}")
-        return False
+        return None
 
 
 def format_alert(fire):
@@ -129,7 +134,7 @@ def send_by_zone(fire, text):
 
     # 사장님이 직접 볼 건 (공장·숙박·요양병원·교육종교)
     if not fire.get("forpartner", True):
-        send(text)
+        _remember(fire, TELEGRAM_CHAT_ID, send(text))
         return zone + " (사장님)"
 
     target = zones.chat_id_of(zone)
@@ -137,8 +142,23 @@ def send_by_zone(fire, text):
         # 파트너 방에만 보냅니다.
         # 사장님 방에는 '사장님 전용 건'만 오도록 해서
         # 하루 40건에 묻히지 않게 합니다.
-        send(text, chat_id=target)
+        _remember(fire, target, send(text, chat_id=target))
     else:
         # 그 권역에 담당자 방이 아직 없으면 사장님이 받습니다
-        send(text)
+        _remember(fire, TELEGRAM_CHAT_ID, send(text))
     return zone
+
+
+def _remember(fire, chat_id, msg_id):
+    """어느 방 몇 번 메시지로 보냈는지 기록 → 규모가 바뀌면 거기에 답장."""
+    if msg_id:
+        fire["tg"] = {"chat": str(chat_id), "msg": msg_id}
+
+
+def send_update(fire, text):
+    """규모 변경 알림. 처음 보낸 메시지에 답장으로 붙입니다."""
+    tg = fire.get("tg")
+    if tg:
+        send(text, chat_id=tg["chat"], reply_to=tg["msg"])
+    else:
+        send_by_zone(fire, text)
