@@ -8,14 +8,19 @@
   규모   : 🔴 대형 / 🟢 소형 / 🟡 정보없음   (제목의 단어로 판정)
   신빙성 : 공식 기록(소방청·재난문자)인지, 언론 몇 곳이 보도했는지
 
-를 정합니다. 규모가 올라가거나 새 기사가 나오면
+를 정합니다. 같은 주소로 네이버 뉴스·블로그·카페도 찾아서
+그 주소 얘기이고 화재 이후에 올라온 글을 모아 둡니다.
+
+규모가 올라가거나 새 기사·글이 나오면
 처음 보낸 알림에 '답장' 형태로 다시 알립니다.
 결과는 db.py 가 월별 기록 파일(db/)에 계속 쌓습니다.
 
-※ 판정·기록은 구글 뉴스로만 합니다.
+※ 규모 판정과 기사 기록은 구글 뉴스로만 합니다.
 ※ 네이버 검색 결과는 약관(2026.9.7 개정: 가공·AI 입력 금지,
-  원문 그대로 노출)에 따라 판정·기록에 쓰지 않고 링크만 보여줍니다.
+  원문 그대로 노출)에 따라 판정에 쓰지 않고, 제목·링크를 그대로
+  알림에만 보여줍니다. 기록에는 찾은 건수만 남깁니다.
 """
+import hashlib
 import re
 from concurrent.futures import ThreadPoolExecutor
 import urllib.parse
@@ -34,7 +39,8 @@ OFFICIAL = ("소방출동", "재난문자")         # 공식 기록으로 보는
 MAX_NEWS = 8                              # 한 건당 기억해 둘 관련 기사 수
 
 # 다음 회차로 넘겨야 하는 값들 (collect.py 가 덮어써도 살려둡니다)
-KEEP_KEYS = ("size", "size_why", "size_news", "tg", "news", "trust")
+KEEP_KEYS = ("size", "size_why", "size_news", "tg", "news", "trust",
+             "naver_seen", "naver_count")
 
 LABEL = {"대형": "🔴 대형", "소형": "🟢 소형", "불명": "🟡 정보없음"}
 RANK = {"불명": 0, "소형": 1, "대형": 2}
@@ -209,6 +215,36 @@ def _seed_own_article(fire):
     fire["news"] = [{"title": title, "press": press, "url": fire.get("url") or ""}]
 
 
+# ── 네이버 (주소 맞는 글만 모아 그대로 보여주기) ─────────────
+def _naver_query(fire):
+    city, dong, bld = _names(fire)
+    return (f"{bld} 화재" if bld else f"{city} {dong} 화재").strip()
+
+
+def _link_id(url):
+    """이미 보낸 글인지 알아보기 위한 짧은 번호 (글 내용은 저장하지 않음)."""
+    return hashlib.sha1((url or "").encode()).hexdigest()[:10]
+
+
+def _naver_fresh(fire, found):
+    """처음 보는 네이버 글만 남기고, 종류별 누적 건수를 기록합니다."""
+    seen = set(fire.get("naver_seen", []))
+    fresh, counts = {}, dict(fire.get("naver_count", {}))
+    for kind, items in found.items():
+        new = []
+        for it in items:
+            lid = _link_id(it["url"])
+            if lid not in seen:
+                seen.add(lid)
+                new.append(it)
+        if new:
+            fresh[kind] = new
+            counts[kind] = counts.get(kind, 0) + len(new)
+    fire["naver_seen"] = sorted(seen)
+    fire["naver_count"] = counts
+    return fresh
+
+
 # ── 메인 ─────────────────────────────────────────────────
 def run(fires):
     """fires: 저장 직전의 전체 목록. 규모·신빙성을 갱신하고, 바뀐 건은 재발송."""
@@ -222,13 +258,16 @@ def run(fires):
         found = []
         for q in _queries(f):
             found += [n for n in _google_news(q, since) if _related(n["title"], f)]
-        return found
+        naver = naver_links.matching(_naver_query(f),
+                                     lambda title: _related(title, f), since)
+        return found, naver
 
     with ThreadPoolExecutor(max_workers=6) as pool:
-        all_found = list(pool.map(gather, targets))
+        results = list(pool.map(gather, targets))
 
     changed = 0
-    for f, found in zip(targets, all_found):
+    naver_total = 0
+    for f, (found, naver) in zip(targets, results):
         _seed_own_article(f)
         # 이미 본 기사와 합칩니다 (같은 제목은 한 번만)
         known = {n["title"] for n in f.get("news", [])}
@@ -236,7 +275,10 @@ def run(fires):
         fresh = list({n["title"]: n for n in fresh}.values())
         f["news"] = (f.get("news", []) + fresh)[:MAX_NEWS]
         f["trust"] = trust(f)
+        naver_new = _naver_fresh(f, naver)
+        naver_total += sum(len(v) for v in naver_new.values())
 
+        # 규모 판정은 구글 뉴스 제목으로만 합니다 (네이버는 약관상 판정에 안 씀)
         titles = [n["title"] for n in f["news"]]
         new_size, why = judge(titles)
         old_size = f.get("size", "불명")
@@ -248,19 +290,20 @@ def run(fires):
             f["size"], f["size_why"] = new_size, why
         f["size_news"] = len(titles)
 
-        if size_up or fresh:
+        if size_up or fresh or naver_new:
             changed += 1
-            print(f"    -> {f.get('region')} : {old_size} → {f['size']} "
-                  f"{why} / 새 기사 {len(fresh)}건")
-            notify.send_update(f, _update_text(f, old_size, fresh))
+            print(f"    -> {f.get('region')} : {old_size} → {f['size']} {why} / "
+                  f"새 기사 구글 {len(fresh)}건, 네이버 "
+                  f"{ {k: len(v) for k, v in naver_new.items()} }")
+            notify.send_update(f, _update_text(f, old_size, fresh, naver_new))
 
-    print(f"    -> 업데이트 {changed}건 재발송")
+    print(f"    -> 네이버 새 글 {naver_total}건 · 업데이트 {changed}건 재발송")
 
 
-def _update_text(f, old_size, fresh):
+def _update_text(f, old_size, fresh, naver_new):
     size = f["size"]
     head = (f"🔄 규모 업데이트: {LABEL[old_size]} → {LABEL[size]}"
-            if size != old_size else f"🔄 새 기사 · 규모 {LABEL[size]}")
+            if size != old_size else f"🔄 새 소식 · 규모 {LABEL[size]}")
     lines = [
         head,
         f"📍 {f.get('region') or ''} {f.get('building') or ''}".strip(),
@@ -275,13 +318,11 @@ def _update_text(f, old_size, fresh):
         press = f" - {n['press']}" if n.get("press") else ""
         lines.append(f"· {n['title']}{press}\n  {n['url']}")
 
-    # 네이버 기사: 판정에 쓰지 않고 제목·링크만 그대로 보여줍니다.
-    city, dong, bld = _names(f)
-    q = f"{bld} 화재" if bld else f"{city} {dong} 화재"
-    links = naver_links.search(q.strip(), n=3)
-    if links:
+    # 네이버: 판정에 쓰지 않고 제목·링크만 그대로 보여줍니다.
+    icon = {"뉴스": "📰", "블로그": "📝", "카페": "☕"}
+    for kind, items in naver_new.items():
         lines.append("")
-        lines.append("📰 네이버 뉴스")
-        for title, url in links:
-            lines.append(f"· {title}\n  {url}")
+        lines.append(f"{icon[kind]} 네이버 {kind}")
+        for it in items[:3]:
+            lines.append(f"· {it['title']}\n  {it['url']}")
     return "\n".join(lines)

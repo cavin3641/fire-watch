@@ -52,7 +52,8 @@ def collect_all():
     items += local_news.fetch()
 
     # 네이버는 약관상(AI 입력·가공 금지) 수집·판정에 쓰지 않습니다.
-    # 규모 업데이트 알림에 기사 링크만 붙입니다 (followup.py → naver_links.py)
+    # 후속 추적 때 주소로 뉴스·블로그·카페를 찾아 링크만 붙입니다
+    # (followup.py → naver_links.py)
 
     print(f"    -> 총 {len(items)}건 수집")
     return items

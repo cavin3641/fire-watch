@@ -23,7 +23,7 @@ OUT = "map_out"
 ITER = 200_000                  # 지도 페이지(index.html)와 같은 값이어야 함
 
 # 지도에 필요 없는 내부 정보는 빼고 올립니다
-DROP_KEYS = ("tg", "url", "raw_text", "news")
+DROP_KEYS = ("tg", "url", "raw_text", "news", "naver_seen", "naver_count")
 
 
 def main():
