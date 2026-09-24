@@ -1,6 +1,126 @@
 {
-  "updated_at": "2026-09-25T01:11:32.999683+09:00",
+  "updated_at": "2026-09-25T04:02:51.721048+09:00",
   "fires": [
+    {
+      "source": "소방출동",
+      "title": "기타화재 - 경기도 광주시 신현동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-25T03:43:24+09:00",
+      "region": "경기도 광주시 신현동",
+      "kind": "기타화재",
+      "scope": "1차출동",
+      "building": "태양빌",
+      "bkind": "주택·빌라",
+      "status": "현장도착보고",
+      "raw_text": "기타화재 경기도 광주시 신현동 화재 발생",
+      "lat": 37.36495492193822,
+      "lon": 127.16619164138224,
+      "id": "508ac69daeb7",
+      "distance_km": 44.0,
+      "score": 66,
+      "grade": "★",
+      "visit": "진화중",
+      "forpartner": true,
+      "first_seen": "2026-09-25T04:02:48.065198+09:00",
+      "tg": {
+        "chat": "-5490066480",
+        "msg": 1262
+      },
+      "news": [],
+      "trust": "공식",
+      "size": "불명",
+      "size_news": 0
+    },
+    {
+      "source": "소방출동",
+      "title": "기타화재 - 경기도 수원시 권선구 세류동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-25T02:13:58+09:00",
+      "region": "경기도 수원시 권선구 세류동",
+      "kind": "기타화재",
+      "scope": "1차출동",
+      "building": "영광교회",
+      "bkind": "교육·종교",
+      "status": "출동보고",
+      "raw_text": "기타화재 경기도 수원시 권선구 세류동 화재 발생",
+      "lat": 37.256270990225865,
+      "lon": 127.01290692719321,
+      "id": "49c2a069706c",
+      "distance_km": 47.5,
+      "score": 36,
+      "grade": "",
+      "visit": "진화중",
+      "forpartner": false,
+      "first_seen": "2026-09-25T04:02:48.065198+09:00",
+      "tg": {
+        "chat": "853242774",
+        "msg": 1264
+      },
+      "news": [],
+      "trust": "공식",
+      "size": "불명",
+      "size_news": 0
+    },
+    {
+      "source": "소방출동",
+      "title": "기타화재 - 경기도 안성시 대덕면 모산리",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-25T01:47:13+09:00",
+      "region": "경기도 안성시 대덕면 모산리",
+      "kind": "기타화재",
+      "scope": "1차출동",
+      "building": "비봉주택 6동 302호 신고자 신고",
+      "bkind": "주택·빌라",
+      "status": "귀소보고",
+      "raw_text": "기타화재 경기도 안성시 대덕면 모산리 화재 발생",
+      "lat": 37.021227116989394,
+      "lon": 127.24165328870167,
+      "id": "63d7c4d143dd",
+      "distance_km": 79.6,
+      "score": 78,
+      "grade": "★★★",
+      "visit": "방문가능",
+      "forpartner": true,
+      "first_seen": "2026-09-25T04:02:48.065198+09:00",
+      "tg": {
+        "chat": "-5479813970",
+        "msg": 1261
+      },
+      "news": [],
+      "trust": "공식",
+      "size": "불명",
+      "size_news": 0
+    },
+    {
+      "source": "소방출동",
+      "title": "기타화재 - 경기도 평택시 합정동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-25T01:34:52+09:00",
+      "region": "경기도 평택시 합정동",
+      "kind": "기타화재",
+      "scope": "1차출동",
+      "building": "수하우스 비동",
+      "bkind": "주택·빌라",
+      "status": "현장도착보고",
+      "raw_text": "기타화재 경기도 평택시 합정동 화재 발생",
+      "lat": 36.9918280124513,
+      "lon": 127.09194438322079,
+      "id": "a4f1973f79fe",
+      "distance_km": 77.6,
+      "score": 66,
+      "grade": "★",
+      "visit": "진화중",
+      "forpartner": true,
+      "first_seen": "2026-09-25T04:02:48.065198+09:00",
+      "tg": {
+        "chat": "-5479813970",
+        "msg": 1263
+      },
+      "news": [],
+      "trust": "공식",
+      "size": "불명",
+      "size_news": 0
+    },
     {
       "source": "소방출동",
       "title": "일반화재(차량,주택) - 서울특별시 금천구 시흥동",
@@ -22,13 +142,13 @@
       "visit": "진화중",
       "forpartner": false,
       "size": "불명",
+      "size_news": 0,
       "tg": {
         "chat": "853242774",
         "msg": 1258
       },
       "news": [],
-      "trust": "공식",
-      "size_news": 0
+      "trust": "공식"
     },
     {
       "source": "소방출동",
@@ -51,13 +171,13 @@
       "visit": "진화중",
       "forpartner": false,
       "size": "불명",
+      "size_news": 0,
       "tg": {
         "chat": "-5344602867",
         "msg": 1256
       },
       "news": [],
-      "trust": "공식",
-      "size_news": 0
+      "trust": "공식"
     },
     {
       "source": "소방출동",
@@ -80,13 +200,13 @@
       "visit": "진화중",
       "forpartner": true,
       "size": "불명",
+      "size_news": 0,
       "tg": {
         "chat": "-5479813970",
         "msg": 1257
       },
       "news": [],
-      "trust": "공식",
-      "size_news": 0
+      "trust": "공식"
     },
     {
       "source": "소방출동",
@@ -109,9 +229,9 @@
       "visit": "진화중",
       "forpartner": false,
       "size": "불명",
+      "size_news": 0,
       "news": [],
-      "trust": "공식",
-      "size_news": 0
+      "trust": "공식"
     },
     {
       "source": "소방출동",
@@ -134,13 +254,13 @@
       "visit": "진화중",
       "forpartner": false,
       "size": "불명",
+      "size_news": 0,
       "tg": {
         "chat": "853242774",
         "msg": 1259
       },
       "news": [],
-      "trust": "공식",
-      "size_news": 0
+      "trust": "공식"
     },
     {
       "source": "소방출동",
@@ -2337,48 +2457,6 @@
       "score": 67,
       "grade": "★",
       "visit": "방문가능",
-      "forpartner": true
-    },
-    {
-      "source": "소방출동",
-      "title": "기타화재 - 경기도 구리시 수택동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-23T03:08:57+09:00",
-      "region": "경기도 구리시 수택동",
-      "kind": "기타화재",
-      "scope": "1차출동",
-      "building": "푸른솔 빌라 인근",
-      "bkind": "주택·빌라",
-      "status": "현장도착보고",
-      "raw_text": "기타화재 경기도 구리시 수택동 화재 발생",
-      "lat": 37.59239550029881,
-      "lon": 127.14651865568852,
-      "id": "cf6420b5c339",
-      "distance_km": 28.7,
-      "score": 66,
-      "grade": "★",
-      "visit": "진화중",
-      "forpartner": true
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 구로구 구로동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-23T02:31:24+09:00",
-      "region": "서울특별시 구로구 구로동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "building": null,
-      "bkind": null,
-      "status": "현장도착",
-      "raw_text": "일반화재(차량,주택) 서울특별시 구로구 구로동 화재 발생",
-      "lat": 37.50199192494337,
-      "lon": 126.88889782276361,
-      "id": "cae37dafe0bb",
-      "distance_km": 18.1,
-      "score": 52,
-      "grade": "",
-      "visit": "진화중",
       "forpartner": true
     }
   ]
