@@ -33,6 +33,7 @@ import feedparser
 
 import naver_links
 import notify
+import zones
 
 KST = timezone(timedelta(hours=9))
 RSS_URL = "https://news.google.com/rss/search?q={q}&hl=ko&gl=KR&ceid=KR:ko"
@@ -48,8 +49,8 @@ KEEP_KEYS = ("size", "size_why", "size_news", "tg", "news", "trust",
 
 LABEL = {"대형": "🔴 대형", "소형": "🟢 소형", "불명": "🟡 정보없음"}
 RANK = {"불명": 0, "소형": 1, "대형": 2}
-TRUST_LABEL = {"공식+보도": "✅ 공식 기록 + 언론 보도",
-               "공식": "✅ 공식 기록 (보도 없음)",
+TRUST_LABEL = {"공식+보도": "✅ 공식 확인 + 기사 있음",
+               "공식": "✅ 공식 확인 (기사 없음)",
                "보도": "📰 언론 여러 곳 보도",
                "미확인": "⚠️ 기사 1곳뿐 · 확인 필요"}
 
@@ -189,7 +190,7 @@ def judge(titles):
 # 진화 상태: 단계가 높을수록 불이 더 꺼진 것
 OUT_WORDS = {
     "완진": ["완진", "완전 진화", "완전진화", "진화 완료", "진화완료",
-             "모두 꺼", "불 꺼져", "진화됐", "진화돼", "진화했"],
+             "모두 꺼", "불 꺼져", "진화됐", "진화돼", "진화했", "만에 진화", "만에 꺼"],
     "초진": ["초진", "큰 불길 잡", "큰불 잡", "불길 잡혀", "불길 잡아"],
 }
 OUT_RANK = {"": 0, "초진": 1, "완진": 2}
@@ -241,27 +242,28 @@ def _water(fire, titles, fire_fl):
 
 
 def extra_checks(fire, titles):
-    """진화 상태·층·물 피해를 갱신하고, 새로 알게 된 게 있으면 True."""
-    changed = False
+    """진화 상태·층·물 피해를 갱신하고, 새로 알게 된 것들의 목록을 돌려줍니다."""
+    changed = []
 
     out = _out_status(titles)
     if OUT_RANK[out] > OUT_RANK[fire.get("out", "")]:
         fire["out"] = out
-        changed = True
+        changed.append("진화")
 
     fire_fl, top = _floors(titles)
     if fire_fl and not fire.get("floor"):
         fire["floor"] = fire_fl
-        changed = True
+        changed.append("층")
     if top and not fire.get("floor_top"):
         fire["floor_top"] = top
-        changed = True
+        if "층" not in changed:
+            changed.append("층")
 
     water, why = _water(fire, titles, fire.get("floor", 0))
     old = fire.get("water", "")
     if water and (not old or (old == "가능" and water == "보도")):
         fire["water"], fire["water_why"] = water, why
-        changed = True
+        changed.append("물피해")
     return changed
 
 
@@ -403,40 +405,81 @@ def run(fires):
             print(f"    -> {f.get('region')} : {old_size} → {f['size']} {why} / "
                   f"새 기사 구글 {len(fresh)}건, 네이버 "
                   f"{ {k: len(v) for k, v in naver_new.items()} }")
-            notify.send_update(f, _update_text(f, old_size, fresh, naver_new))
+            notify.send_update(f, _update_text(f, old_size, fresh, naver_new, extra))
 
     print(f"    -> 네이버 새 글 {naver_total}건 · 업데이트 {changed}건 재발송")
 
 
-def _update_text(f, old_size, fresh, naver_new):
-    size = f["size"]
-    head = (f"🔄 규모 업데이트: {LABEL[old_size]} → {LABEL[size]}"
-            if size != old_size else f"🔄 새 소식 · 규모 {LABEL[size]}")
-    lines = [
-        head,
-        f"📍 {f.get('region') or ''} {f.get('building') or ''}".strip(),
-        f"신빙성: {TRUST_LABEL[f['trust']]}",
-    ]
-    if f.get("size_why"):
-        lines.append(f"근거: {', '.join(f['size_why'])} (기사 {f.get('size_news', 0)}건)")
-    if f.get("out"):
-        lines.append(f"진화: {OUT_LABEL[f['out']]}")
-    if floor_text(f):
-        lines.append(f"🏢 층: {floor_text(f)}")
-    if water_text(f):
-        lines.append(water_text(f))
-    if fresh:
-        lines.append("")
-        lines.append("🆕 새 기사")
-    for n in fresh[:3]:
-        press = f" - {n['press']}" if n.get("press") else ""
-        lines.append(f"· {n['title']}{press}\n  {n['url']}")
+def _todo(f):
+    """영업사원이 할 일 (가장 중요한 것부터)."""
+    todo = []
+    out, visit = f.get("out"), f.get("visit")
+    if out == "완진" or visit == "방문가능":
+        todo.append("✅ 불 다 꺼짐 → 지금 방문 가능")
+    elif out == "초진" or visit == "곧가능":
+        todo.append("🕐 큰 불길 잡힘 → 곧 방문 가능, 출발 준비")
+    elif visit == "진화중":
+        todo.append("⛔ 아직 불 끄는 중 → 방문 대기")
 
-    # 네이버: 판정에 쓰지 않고 제목·링크만 그대로 보여줍니다.
+    if f.get("water"):
+        fl = f.get("floor")
+        below = f" ({fl - 1}층 이하)" if fl and fl >= 2 else ""
+        sure = "물 피해 기사 있음" if f["water"] == "보도" else "물 피해 가능성"
+        todo.append(f"💧 아래층{below} {sure} → 누수복구도 같이 제안")
+
+    if f.get("size") == "대형":
+        todo.append("🔴 피해 큼 → 전체 복구 견적 준비")
+    elif f.get("size") == "소형":
+        todo.append("🟢 작은 불 → 부분 복구·청소 제안")
+
+    if f.get("trust") == "미확인":
+        todo.append("⚠️ 기사 1곳뿐 → 가기 전에 사실 확인")
+    return todo
+
+
+def _update_text(f, old_size, fresh, naver_new, extra=()):
+    """후속 알림. 영업사원이 한눈에 보도록 '할 일 → 핵심 정보 → 기사' 순서."""
+    size = f["size"]
+    zone = zones.zone_of(f.get("region"))
+    place = f"{f.get('region') or ''} {f.get('building') or ''}".strip()
+
+    # 제목: 무엇이 새로 바뀌었는지
+    what = []
+    if size != old_size:
+        what.append(f"규모 {LABEL[size]}")
+    if "진화" in extra:
+        what.append({"완진": "불 다 꺼짐", "초진": "큰 불길 잡힘"}[f["out"]])
+    if "물피해" in extra:
+        what.append("아래층 물 피해")
+    if "층" in extra:
+        what.append("층 확인")
+    if (fresh or naver_new) and not what:
+        what.append("새 기사")
+
+    lines = [f"🔄 [{zone}] 업데이트: {', '.join(what)}",
+             f"📍 {place}", "━━━━━━━━━━"]
+
+    todo = _todo(f)
+    if todo:
+        lines.append("👉 할 일")
+        lines += [f"  {t}" for t in todo]
+        lines.append("━━━━━━━━━━")
+
+    # 핵심 정보 (쉬운 말로)
+    why = f" ({', '.join(f['size_why'])})" if f.get("size_why") else ""
+    lines.append(f"규모: {LABEL[size]}{why}")
+    if floor_text(f):
+        lines.append(f"위치: {floor_text(f)}")
+    lines.append(f"확인: {TRUST_LABEL[f['trust']]}")
+
+    # 기사는 맨 아래에 (제목·링크 그대로)
+    arts = [(n["title"] + (f" - {n['press']}" if n.get("press") else ""), n["url"])
+            for n in fresh[:3]]
+    if arts:
+        lines += ["━━━━━━━━━━", "📰 새 기사"]
+        lines += [f"· {t}\n  {u}" for t, u in arts]
     icon = {"뉴스": "📰", "블로그": "📝"}
-    for kind, items in naver_new.items():
-        lines.append("")
-        lines.append(f"{icon[kind]} 네이버 {kind}")
-        for it in items[:3]:
-            lines.append(f"· {it['title']}\n  {it['url']}")
+    for i, (kind, items) in enumerate(naver_new.items()):
+        lines += ["━━━━━━━━━━" if not arts and i == 0 else "", f"{icon[kind]} 네이버 {kind}"]
+        lines += [f"· {it['title']}\n  {it['url']}" for it in items[:3]]
     return "\n".join(lines)
