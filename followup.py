@@ -2,7 +2,7 @@
 """
 화재 규모·신빙성 추적 (후속 확인)
 
-알림을 보낸 뒤 6시간 동안, 매 회차(30분)마다
+알림을 보낸 뒤 24시간 동안, 매 회차(30분)마다
 구글 뉴스에서 그 동네·건물 기사를 찾아
 
   규모   : 🔴 대형 / 🟢 소형 / 🟡 정보없음   (제목의 단어로 판정)
@@ -37,7 +37,7 @@ import notify
 KST = timezone(timedelta(hours=9))
 RSS_URL = "https://news.google.com/rss/search?q={q}&hl=ko&gl=KR&ceid=KR:ko"
 
-FOLLOW_HOURS = 6                          # 발생 후 몇 시간 동안 추적할지
+FOLLOW_HOURS = 24                         # 발생 후 몇 시간 동안 추적할지
 OFFICIAL = ("소방출동", "재난문자")         # 공식 기록으로 보는 출처
 MAX_NEWS = 8                              # 한 건당 기억해 둘 관련 기사 수
 
@@ -129,7 +129,7 @@ def _queries(fire):
 # ── 뉴스 찾기 (구글) ──────────────────────────────────────
 def _google_news(query, since):
     """[{title, press, url}, ...]  구글 제목은 '기사 제목 - 언론사' 형식입니다."""
-    url = RSS_URL.format(q=urllib.parse.quote(f"{query} when:1d"))
+    url = RSS_URL.format(q=urllib.parse.quote(f"{query} when:2d"))   # 화재 이전 기사는 아래에서 거름
     try:
         feed = feedparser.parse(url)
     except Exception as e:

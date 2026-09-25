@@ -191,7 +191,7 @@ def main():
         print("     권역별:", dict(sent))
 
     merged = merge_and_trim(previous, fires)
-    followup.run(merged)                   # 6시간 동안 규모·신빙성 추적 → 바뀌면 재발송
+    followup.run(merged)                   # 24시간 동안 규모·신빙성 추적 → 바뀌면 재발송
     save(merged)
     db.save(merged)                        # 지우지 않는 월별 기록
 
