@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-네이버 뉴스·블로그·카페 링크 (API HUB)
+네이버 뉴스·블로그 링크 (API HUB)
 
 우리가 수집한 주소(동·건물 이름)로 검색해서
 그 주소가 제목에 들어 있고 화재 이후에 올라온 글만 골라 알림에 붙입니다.
@@ -21,7 +21,7 @@ from config import NAVER_CLIENT_ID, NAVER_CLIENT_SECRET
 
 KST = timezone(timedelta(hours=9))
 BASE = "https://naverapihub.apigw.ntruss.com/search/v1/"
-KINDS = {"뉴스": "news", "블로그": "blog", "카페": "cafearticle"}
+KINDS = {"뉴스": "news", "블로그": "blog"}   # 카페는 작성 시각이 없어 옛날 글이 섞여서 뺐습니다
 
 
 def _clean(s):
@@ -30,7 +30,7 @@ def _clean(s):
 
 
 def _posted(item):
-    """글이 올라온 시각. 뉴스는 pubDate, 블로그는 postdate(날짜만), 카페는 없음."""
+    """글이 올라온 시각. 뉴스는 pubDate, 블로그는 postdate(날짜만)."""
     try:
         if item.get("pubDate"):
             return parsedate_to_datetime(item["pubDate"]).astimezone(KST)
@@ -63,11 +63,11 @@ def search(query, kind="뉴스", n=10):
 
 
 def matching(query, is_about, since):
-    """뉴스·블로그·카페에서 그 주소 얘기이고 화재 이후에 올라온 글만.
+    """뉴스·블로그에서 그 주소 얘기이고 화재 이후에 올라온 글만.
 
     is_about(title) : 제목에 동·건물 이름과 불 관련 단어가 있는지
     since           : 화재 발생 시각 (블로그는 날짜 단위라 그날 0시부터)
-    돌려주는 값     : {"뉴스": [...], "블로그": [...], "카페": [...]}
+    돌려주는 값     : {"뉴스": [...], "블로그": [...]}
     """
     out = {}
     for kind in KINDS:
