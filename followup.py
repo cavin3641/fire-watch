@@ -7,6 +7,9 @@
 
   규모   : 🔴 대형 / 🟢 소형 / 🟡 정보없음   (제목의 단어로 판정)
   신빙성 : 공식 기록(소방청·재난문자)인지, 언론 몇 곳이 보도했는지
+  진화   : 초진 / 완진 (완진이면 방문 가능)
+  층     : 몇 층 건물의 몇 층에서 났는지
+  물 피해: 아래층 물 피해 보도 또는 가능성 (누수복구 영업용)
 
 를 정합니다. 같은 주소로 네이버 뉴스·블로그·카페도 찾아서
 그 주소 얘기이고 화재 이후에 올라온 글을 모아 둡니다.
@@ -40,7 +43,8 @@ MAX_NEWS = 8                              # 한 건당 기억해 둘 관련 기�
 
 # 다음 회차로 넘겨야 하는 값들 (collect.py 가 덮어써도 살려둡니다)
 KEEP_KEYS = ("size", "size_why", "size_news", "tg", "news", "trust",
-             "naver_seen", "naver_count")
+             "naver_seen", "naver_count",
+             "out", "floor", "floor_top", "water", "water_why")
 
 LABEL = {"대형": "🔴 대형", "소형": "🟢 소형", "불명": "🟡 정보없음"}
 RANK = {"불명": 0, "소형": 1, "대형": 2}
@@ -181,6 +185,105 @@ def judge(titles):
     return "불명", []
 
 
+# ── 영업용 추가 판정 (진화 상태 · 발화 층 · 아래층 물 피해) ──────
+# 진화 상태: 단계가 높을수록 불이 더 꺼진 것
+OUT_WORDS = {
+    "완진": ["완진", "완전 진화", "완전진화", "진화 완료", "진화완료",
+             "모두 꺼", "불 꺼져", "진화됐", "진화돼", "진화했"],
+    "초진": ["초진", "큰 불길 잡", "큰불 잡", "불길 잡혀", "불길 잡아"],
+}
+OUT_RANK = {"": 0, "초진": 1, "완진": 2}
+OUT_LABEL = {"초진": "🧯 초진 (큰 불길 잡힘)", "완진": "✅ 완진 (불 다 꺼짐) → 방문 가능"}
+
+# 발화 층: '7층에서', '7층 베란다' 등 / 건물 높이: '15층 아파트', '15층짜리'
+FLOOR_FIRE = r"(\d{1,2})\s*층\s*(?:에서|서|의|베란다|주방|거실|안방|세대|집|집에서)"
+FLOOR_TOP = r"(\d{1,2})\s*층\s*(?:짜리\s*)?(?:아파트|건물|빌라|오피스텔|주상복합|상가)"
+
+# 아래층 물 피해: 기사에 직접 나온 경우
+WATER_WORDS = ["아래층", "아랫층", "아랫집", "아래 세대", "아래세대", "침수",
+               "물바다", "누수", "물 피해", "물피해", "수손", "물이 새", "물 새"]
+MULTI_UNIT = ("아파트", "빌라", "오피스텔", "주상복합", "다세대", "연립")
+
+
+def _out_status(titles):
+    best = ""
+    for t in titles:
+        for status, words in OUT_WORDS.items():
+            if OUT_RANK[status] > OUT_RANK[best] and any(w in t for w in words):
+                best = status
+    return best
+
+
+def _floors(titles):
+    """(발화 층, 건물 층수). 모르면 0."""
+    fire_fl = top = 0
+    for t in titles:
+        for m in re.finditer(FLOOR_TOP, t):
+            top = max(top, int(m.group(1)))
+        for m in re.finditer(FLOOR_FIRE, t):
+            fire_fl = fire_fl or int(m.group(1))
+    if top and fire_fl > top:          # '15층 아파트 20층에서' 같은 오인 방지
+        fire_fl = 0
+    return fire_fl, top
+
+
+def _water(fire, titles, fire_fl):
+    """아래층 물 피해: ('보도', 근거) / ('가능', 근거) / ('', '')."""
+    words = [w for w in WATER_WORDS if any(w in t for t in titles)]
+    if words:
+        return "보도", ", ".join(words[:3])
+    multi = (fire.get("bkind") == "아파트" or fire.get("bkind") == "주택·빌라"
+             or any(w in (fire.get("building") or "") for w in MULTI_UNIT)
+             or any(w in t for t in titles for w in MULTI_UNIT))
+    if multi and fire_fl >= 2:
+        return "가능", f"{fire_fl}층 발화"
+    return "", ""
+
+
+def extra_checks(fire, titles):
+    """진화 상태·층·물 피해를 갱신하고, 새로 알게 된 게 있으면 True."""
+    changed = False
+
+    out = _out_status(titles)
+    if OUT_RANK[out] > OUT_RANK[fire.get("out", "")]:
+        fire["out"] = out
+        changed = True
+
+    fire_fl, top = _floors(titles)
+    if fire_fl and not fire.get("floor"):
+        fire["floor"] = fire_fl
+        changed = True
+    if top and not fire.get("floor_top"):
+        fire["floor_top"] = top
+        changed = True
+
+    water, why = _water(fire, titles, fire.get("floor", 0))
+    old = fire.get("water", "")
+    if water and (not old or (old == "가능" and water == "보도")):
+        fire["water"], fire["water_why"] = water, why
+        changed = True
+    return changed
+
+
+def floor_text(fire):
+    if fire.get("floor") and fire.get("floor_top"):
+        return f"{fire['floor_top']}층 건물 중 {fire['floor']}층"
+    if fire.get("floor"):
+        return f"{fire['floor']}층"
+    if fire.get("floor_top"):
+        return f"{fire['floor_top']}층 건물 (발화 층 모름)"
+    return ""
+
+
+def water_text(fire):
+    w = fire.get("water")
+    if w == "보도":
+        return f"💧 아래층 물 피해 보도 ({fire.get('water_why', '')}) → 누수복구 영업"
+    if w == "가능":
+        return f"💧 아래층 물 피해 가능 ({fire.get('water_why', '')}) → 누수복구 영업"
+    return ""
+
+
 # ── 이전 회차 값 살리기 ───────────────────────────────────
 def carry_over(previous, current):
     """collect.py 가 새 결과로 덮어쓰기 전에, 추적용 값을 옮겨 둡니다."""
@@ -293,8 +396,9 @@ def run(fires):
         if size_up:
             f["size"], f["size_why"] = new_size, why
         f["size_news"] = len(titles)
+        extra = extra_checks(f, titles)        # 진화 상태·발화 층·아래층 물 피해
 
-        if size_up or fresh or naver_new:
+        if size_up or fresh or naver_new or extra:
             changed += 1
             print(f"    -> {f.get('region')} : {old_size} → {f['size']} {why} / "
                   f"새 기사 구글 {len(fresh)}건, 네이버 "
@@ -315,6 +419,12 @@ def _update_text(f, old_size, fresh, naver_new):
     ]
     if f.get("size_why"):
         lines.append(f"근거: {', '.join(f['size_why'])} (기사 {f.get('size_news', 0)}건)")
+    if f.get("out"):
+        lines.append(f"진화: {OUT_LABEL[f['out']]}")
+    if floor_text(f):
+        lines.append(f"🏢 층: {floor_text(f)}")
+    if water_text(f):
+        lines.append(water_text(f))
     if fresh:
         lines.append("")
         lines.append("🆕 새 기사")

@@ -26,7 +26,8 @@ MAX_ARTICLES = 5
 
 COLUMNS = ["id", "발생시각", "처음확인", "마지막변경", "권역", "보낸곳", "출처",
            "지역", "건물", "건물종류", "화재종류", "진행상태", "등급",
-           "신빙성", "규모", "규모근거", "관련기사수", "언론사", "관련기사",
+           "신빙성", "규모", "규모근거", "진화", "층", "아래층물피해",
+           "관련기사수", "언론사", "관련기사",
            "네이버뉴스", "네이버블로그", "네이버카페"]
 
 
@@ -64,6 +65,10 @@ def _row(fire):
         "신빙성": fire.get("trust") or "",
         "규모": {"불명": "정보없음"}.get(fire.get("size"), fire.get("size") or ""),
         "규모근거": ", ".join(fire.get("size_why") or []),
+        "진화": fire.get("out") or "",
+        "층": followup.floor_text(fire),
+        "아래층물피해": (f"{fire['water']} ({fire.get('water_why', '')})"
+                        if fire.get("water") else ""),
         "관련기사수": str(len(news)),
         "언론사": ", ".join(presses),
         "관련기사": " | ".join(f"{n['title']} ({n['url']})" for n in news[:MAX_ARTICLES]),
