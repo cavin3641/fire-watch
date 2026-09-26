@@ -1,6 +1,102 @@
 {
-  "updated_at": "2026-09-26T08:14:09.029488+09:00",
+  "updated_at": "2026-09-26T09:32:30.781287+09:00",
   "fires": [
+    {
+      "source": "소방출동",
+      "title": "기타화재 - 서울특별시 구로구 궁동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-26T09:20:30+09:00",
+      "region": "서울특별시 구로구 궁동",
+      "kind": "기타화재",
+      "scope": "2차출동",
+      "building": "어스빌리지",
+      "bkind": "주택·빌라",
+      "status": "출동지령",
+      "raw_text": "기타화재 서울특별시 구로구 궁동 화재 발생",
+      "lat": 37.50073382358639,
+      "lon": 126.83090680748532,
+      "id": "89601deb3f1e",
+      "distance_km": 17.5,
+      "score": 80,
+      "grade": "★★★",
+      "visit": "진화중",
+      "forpartner": true,
+      "first_seen": "2026-09-26T09:31:57.621723+09:00",
+      "tg": {
+        "chat": "-5427381657",
+        "msg": 1340
+      },
+      "news": [],
+      "trust": "공식",
+      "naver_seen": [],
+      "naver_count": {},
+      "size": "불명",
+      "size_news": 0
+    },
+    {
+      "source": "소방출동",
+      "title": "일반화재(차량,주택) - 경기도 시흥시 은행동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-26T09:16:36+09:00",
+      "region": "경기도 시흥시 은행동",
+      "kind": "일반화재(차량,주택)",
+      "scope": "1차출동",
+      "building": "한마음교회",
+      "bkind": "교육·종교",
+      "status": "추가출동지령",
+      "raw_text": "일반화재(차량,주택) 경기도 시흥시 은행동 화재 발생",
+      "lat": 37.43016882837971,
+      "lon": 126.79263968827313,
+      "id": "e16156d0c456",
+      "distance_km": 25.6,
+      "score": 25,
+      "grade": "",
+      "visit": "진화중",
+      "forpartner": false,
+      "first_seen": "2026-09-26T09:31:57.621723+09:00",
+      "tg": {
+        "chat": "853242774",
+        "msg": 1342
+      },
+      "news": [],
+      "trust": "공식",
+      "naver_seen": [],
+      "naver_count": {},
+      "size": "불명",
+      "size_news": 0
+    },
+    {
+      "source": "소방출동",
+      "title": "기타화재 - 경기도 광명시 하안동",
+      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
+      "published": "2026-09-26T08:43:30+09:00",
+      "region": "경기도 광명시 하안동",
+      "kind": "기타화재",
+      "scope": "1차출동",
+      "building": "하안12단지고층주공아파트) 1209동",
+      "bkind": "아파트",
+      "status": "현장도착보고",
+      "raw_text": "기타화재 경기도 광명시 하안동 화재 발생",
+      "lat": 37.46234168342543,
+      "lon": 126.88281883446187,
+      "id": "95bff2547cc3",
+      "distance_km": 22.3,
+      "score": 76,
+      "grade": "★★",
+      "visit": "진화중",
+      "forpartner": true,
+      "first_seen": "2026-09-26T09:31:57.621723+09:00",
+      "tg": {
+        "chat": "-5594167036",
+        "msg": 1341
+      },
+      "news": [],
+      "trust": "공식",
+      "naver_seen": [],
+      "naver_count": {},
+      "size": "불명",
+      "size_news": 0
+    },
     {
       "source": "소방출동",
       "title": "일반화재(차량,주택) - 인천광역시 연수구 옥련동",
@@ -11,17 +107,18 @@
       "scope": "1차출동",
       "building": null,
       "bkind": null,
-      "status": "현장도착보고",
+      "status": "귀소보고",
       "raw_text": "일반화재(차량,주택) 인천광역시 연수구 옥련동 화재 발생",
       "lat": 37.416027464953004,
       "lon": 126.65252563011647,
       "id": "fdf823e93a12",
       "distance_km": 31.3,
-      "score": 58,
-      "grade": "★",
-      "visit": "진화중",
+      "score": 70,
+      "grade": "★★",
+      "visit": "방문가능",
       "forpartner": false,
-      "first_seen": "2026-09-26T08:13:52.957936+09:00",
+      "size": "불명",
+      "size_news": 0,
       "tg": {
         "chat": "853242774",
         "msg": 1328
@@ -29,9 +126,7 @@
       "news": [],
       "trust": "공식",
       "naver_seen": [],
-      "naver_count": {},
-      "size": "불명",
-      "size_news": 0
+      "naver_count": {}
     },
     {
       "source": "소방출동",
@@ -53,7 +148,8 @@
       "grade": "",
       "visit": "진화중",
       "forpartner": false,
-      "first_seen": "2026-09-26T08:13:52.957936+09:00",
+      "size": "불명",
+      "size_news": 0,
       "tg": {
         "chat": "853242774",
         "msg": 1329
@@ -61,9 +157,7 @@
       "news": [],
       "trust": "공식",
       "naver_seen": [],
-      "naver_count": {},
-      "size": "불명",
-      "size_news": 0
+      "naver_count": {}
     },
     {
       "source": "소방출동",
@@ -986,12 +1080,15 @@
       "news": [],
       "trust": "공식",
       "naver_seen": [
+        "0abcbc0e49",
+        "174b01321b",
         "339d986490",
         "530b235234",
-        "72ca4337ce"
+        "72ca4337ce",
+        "76ee23cfe2"
       ],
       "naver_count": {
-        "블로그": 3
+        "블로그": 6
       },
       "size": "불명",
       "size_news": 0
@@ -2457,48 +2554,6 @@
       "score": 55,
       "grade": "★",
       "visit": "확인필요",
-      "forpartner": true
-    },
-    {
-      "source": "소방출동",
-      "title": "기타화재 - 서울특별시 송파구 잠실동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-24T08:43:05+09:00",
-      "region": "서울특별시 송파구 잠실동",
-      "kind": "기타화재",
-      "scope": "2차출동",
-      "building": "가산하우스",
-      "bkind": "주택·빌라",
-      "status": "현장도착",
-      "raw_text": "기타화재 서울특별시 송파구 잠실동 화재 발생",
-      "lat": 37.50607530368092,
-      "lon": 127.08749321134356,
-      "id": "0041d86cff05",
-      "distance_km": 28.2,
-      "score": 60,
-      "grade": "★",
-      "visit": "진화중",
-      "forpartner": true
-    },
-    {
-      "source": "소방출동",
-      "title": "일반화재(차량,주택) - 서울특별시 영등포구 대림동",
-      "url": "https://www.safekorea.go.kr/safekorea-kor/ctim/csim/fireInfo.do",
-      "published": "2026-09-24T08:38:26+09:00",
-      "region": "서울특별시 영등포구 대림동",
-      "kind": "일반화재(차량,주택)",
-      "scope": "2차출동",
-      "building": null,
-      "bkind": null,
-      "status": "현장도착",
-      "raw_text": "일반화재(차량,주택) 서울특별시 영등포구 대림동 화재 발생",
-      "lat": 37.48883147859295,
-      "lon": 126.90281395578111,
-      "id": "392b7eaebdb2",
-      "distance_km": 19.9,
-      "score": 52,
-      "grade": "",
-      "visit": "진화중",
       "forpartner": true
     }
   ]
